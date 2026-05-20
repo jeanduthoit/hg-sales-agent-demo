@@ -135,7 +135,30 @@ def build_seller_profile_web(
     apply_streamlit_secrets()
     client = HgMcpClient()
     company = company.strip()
-    guess_slug = (slug or company).strip().lower()
+    company_slug = company.lower()
+    # Streamlit session state can keep a stale prefetch/slug from a previous seller.
+    # Only trust prefetch when it still matches the current company input.
+    resolved_prefetch: dict[str, Any] | None = None
+    if prefetch:
+        pre_company = str(prefetch.get("company_name") or "").strip().lower()
+        pre_domain = str(prefetch.get("domain") or "").strip().lower()
+        if (
+            company_slug == pre_company
+            or company_slug in pre_company
+            or pre_company in company_slug
+            or company_slug == pre_domain
+            or company_slug in pre_domain
+        ):
+            resolved_prefetch = prefetch
+
+    guess_slug = (
+        _output_slug(
+            str(resolved_prefetch.get("company_name") or company),
+            str(resolved_prefetch.get("domain") or ""),
+        )
+        if resolved_prefetch
+        else company_slug
+    )
     profile_path = profile_path_for_slug(guess_slug)
 
     stored_floors = read_icp_user_floors(profile_path)
@@ -144,7 +167,7 @@ def build_seller_profile_web(
 
     if needs_full:
         path, payload = build_seller_profile(
-            client, company, product_index, prefetch=prefetch, icp_floors=icp_floors
+            client, company, product_index, prefetch=resolved_prefetch, icp_floors=icp_floors
         )
     else:
         path, payload = update_product_binding_only(

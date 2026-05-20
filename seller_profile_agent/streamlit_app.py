@@ -75,6 +75,8 @@ if "profile_slug" not in st.session_state:
     st.session_state.profile_slug = None
 if "pipeline_logs" not in st.session_state:
     st.session_state.pipeline_logs = []
+if "profile_company_input_prev" not in st.session_state:
+    st.session_state.profile_company_input_prev = ""
 
 tab_profile, tab_pipeline, tab_prs, tab_reports = st.tabs(
     ["1 · Seller profile", "2 · Pipeline", "3 · Single PRS", "Reports"]
@@ -84,6 +86,14 @@ tab_profile, tab_pipeline, tab_prs, tab_reports = st.tabs(
 with tab_profile:
     st.subheader("Step 1 — Seller profile & ICP floors")
     company_input = st.text_input("Seller company name", placeholder="e.g. Amazon, Microsoft")
+    current_company_key = company_input.strip().lower()
+    previous_company_key = str(st.session_state.profile_company_input_prev).strip().lower()
+    if current_company_key != previous_company_key:
+        # Avoid reusing stale product list/prefetch from a different seller.
+        st.session_state.prefetch = None
+        st.session_state.profile_slug = None
+        st.session_state.product_labels = []
+        st.session_state.profile_company_input_prev = company_input.strip()
 
     col1, col2, col3 = st.columns(3)
     with col1:
