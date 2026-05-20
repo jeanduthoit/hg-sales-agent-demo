@@ -23,7 +23,6 @@ from prompt_inputs import (
     prompt_prs_count,
     prompt_run_folder,
 )
-from prospect_preflight import preflight_firmographic
 from prospect_scorer import score_prospect
 from methodology_formulas import PROSPECT_REVENUE_SCORE_NAME, WEIGHTED_RELIABILITY_LABEL
 from report_format import fmt_money, reliability_pct
@@ -396,6 +395,10 @@ def _run_pipeline_body(
     _log(f"--- Step 3/3: Deep analysis of prospects to score deeply ---")
     sampled_rows, sample_stats = sample_icp_candidates(candidates, prs_count, seed=sample_seed)
     candidate_stats["sample"] = sample_stats
+    (iteration_dir / "sampled_prospects.json").write_text(
+        json.dumps({"stats": sample_stats, "prospects": sampled_rows}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
     _log(
         f"  Randomly selected {len(sampled_rows)} companies from "
         f"{len(candidates)} ICP-compatible candidates."
@@ -403,39 +406,6 @@ def _run_pipeline_body(
     if sample_seed is not None:
         _log(f"  Sample seed: {sample_seed}")
     _log("")
-
-    # Quietly pre-check a limited random pool for firmographic resolvability
-    # so Step 3 can usually score the requested prospect count.
-    screening_pool = min(len(candidates), max(prs_count * 4, 8))
-    screening_rows, _ = sample_icp_candidates(candidates, screening_pool, seed=sample_seed)
-    screened: list[dict[str, Any]] = []
-    for row in screening_rows:
-        if len(screened) >= prs_count:
-            break
-        pf = preflight_firmographic(client, row)
-        if not pf.get("scorable"):
-            continue
-        canonical = pf.get("canonical_domain") or row.get("domain") or row.get("companyDomain")
-        screened.append(
-            {
-                **row,
-                "domain": canonical,
-                "companyDomain": canonical,
-                "companyName": pf.get("company_name") or row.get("companyName"),
-                "_preflight": pf,
-            }
-        )
-
-    sampled_rows = screened
-    sample_stats = {
-        **sample_stats,
-        "preflight_pool_size": screening_pool,
-        "sampled_count": len(sampled_rows),
-    }
-    (iteration_dir / "sampled_prospects.json").write_text(
-        json.dumps({"stats": sample_stats, "prospects": sampled_rows}, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
 
     binding_loaded = _load_binding(seller)
     results = []
