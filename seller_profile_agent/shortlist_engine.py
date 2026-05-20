@@ -9,6 +9,7 @@ from typing import Any
 
 from hg_client import HgMcpClient
 from methodology_binding import MAX_SEARCH_LIMIT
+from hg_value_parser import is_hg_bucket_range, parse_hg_numeric
 from prospect_preflight import normalize_hg_id
 from prospect_scorer import _company_args, _pick_total_it_spend
 
@@ -168,6 +169,39 @@ def _passes_floor(value: float | int | None, floor: float | int) -> bool | None:
     return value >= floor
 
 
+def _has_employee_bucket_range(row: dict[str, Any]) -> bool:
+    emp_range = row.get("employeesRange")
+    return bool(emp_range and is_hg_bucket_range(emp_range))
+
+
+def _row_floor_check(
+    raw_value: Any,
+    parsed_value: float | int | None,
+    floor: float | int,
+    *,
+    row: dict[str, Any] | None = None,
+    metric: str = "",
+) -> bool | None:
+    """
+    Row-level ICP floor check. HG search rows often carry bucket bands, not point estimates.
+    When the field is a range string, defer to search_companies API filters (return None).
+    Only fail when a non-bucket numeric value is explicitly below the floor.
+    """
+    if is_hg_bucket_range(raw_value):
+        return None
+    if row and metric == "revenue" and _has_employee_bucket_range(row):
+        try:
+            if parsed_value is not None and float(parsed_value) == float(floor):
+                return None
+        except (TypeError, ValueError):
+            pass
+    if row and metric == "employees" and _has_employee_bucket_range(row):
+        return None
+    if parsed_value is None:
+        return None
+    return parsed_value >= floor
+
+
 def build_icp_candidate_list(
     companies: list[dict[str, Any]],
     seller: dict[str, Any],
@@ -278,14 +312,29 @@ def build_icp_candidate_list(
 
     eligible: list[dict[str, Any]] = []
     for row in cleaned:
-        rev = _to_float(row.get("revenueAmount") or row.get("revenue"))
-        emp = _to_int(row.get("employeeCount") or row.get("employees"))
+        rev_raw = row.get("revenueAmount") or row.get("revenue")
+        emp_raw = row.get("employeeCount") or row.get("employees")
+        emp_range_raw = row.get("employeesRange")
+        rev = _to_float(parse_hg_numeric(rev_raw, strategy="lower"))
+        emp = _to_int(parse_hg_numeric(emp_raw, strategy="lower"))
         it_spend = _to_float(row.get("itSpend") or row.get("it_spend"))
         flags: list[str] = []
 
-        rev_ok = _passes_floor(rev, min_rev)
-        emp_ok = _passes_floor(emp, min_emp)
+        rev_ok = _row_floor_check(rev_raw, rev, min_rev, row=row, metric="revenue")
+        emp_ok = _row_floor_check(emp_range_raw or emp_raw, emp, min_emp, row=row, metric="employees")
         it_ok = _passes_floor(it_spend, min_it_spend)
+
+        if rev_ok is None and (
+            is_hg_bucket_range(rev_raw)
+            or (rev is not None and rev == min_rev and _has_employee_bucket_range(row))
+        ):
+            flags.append("revenue_search_bucket_proxy")
+        if emp_ok is None and (
+            is_hg_bucket_range(emp_range_raw)
+            or is_hg_bucket_range(emp_raw)
+            or _has_employee_bucket_range(row)
+        ):
+            flags.append("employees_search_bucket_proxy")
 
         failed: list[str] = []
         if rev_ok is False:
@@ -309,9 +358,9 @@ def build_icp_candidate_list(
             )
             continue
 
-        if rev_ok is None:
+        if rev_ok is None and "revenue_search_bucket_proxy" not in flags:
             flags.append("revenue_unknown_in_search")
-        if emp_ok is None:
+        if emp_ok is None and "employees_search_bucket_proxy" not in flags:
             flags.append("employees_unknown_in_search")
         if it_ok is None:
             flags.append("it_spend_unknown_in_search")
@@ -331,7 +380,8 @@ def build_icp_candidate_list(
                 "_flags": flags,
                 "icp_status": "passed",
                 "icp_pass_reason": (
-                    "Passed deterministic search/filter constraints; no score or rank assigned."
+                    "Retained after HG search_companies filters (revenueMin/employeesMin) "
+                    "and hygiene; row-level bucket values are not treated as exact firmographics."
                 )
             }
         )

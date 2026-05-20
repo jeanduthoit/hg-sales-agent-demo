@@ -25,6 +25,7 @@ from prompt_inputs import (
 )
 from prospect_scorer import score_prospect
 from methodology_formulas import PROSPECT_REVENUE_SCORE_NAME, WEIGHTED_RELIABILITY_LABEL
+from hg_value_parser import is_hg_bucket_range, parse_hg_numeric
 from report_format import fmt_money, reliability_pct
 from score_cli import _load_binding
 from seller_profile_builder import build_seller_profile, update_product_binding_only
@@ -105,27 +106,60 @@ def _render_candidate_companies_md(
 
     def pass_mark(ok: bool | None) -> str:
         if ok is True:
-            return "Pass"
+            return "Verified (numeric)"
         if ok is False:
             return "Fail"
-        return "Not in search row"
+        return "Search API filter"
 
-    def money_threshold_cell(value: Any, threshold: Any, *, missing_label: str) -> str:
+    def money_threshold_cell(
+        raw_value: Any,
+        threshold: Any,
+        *,
+        missing_label: str,
+        row: dict[str, Any] | None = None,
+        metric: str = "",
+    ) -> str:
+        if raw_value is None or raw_value == "":
+            return missing_label
+        if is_hg_bucket_range(raw_value):
+            return (
+                f"{raw_value} (HG bucket — meets `revenueMin`, not exact revenue; "
+                f"{pass_mark(None)})"
+            )
+        if (
+            row
+            and metric == "revenue"
+            and row.get("employeesRange")
+            and is_hg_bucket_range(row.get("employeesRange"))
+        ):
+            try:
+                if float(parse_hg_numeric(raw_value, strategy="lower")) == float(threshold):
+                    return (
+                        f"{fmt_money(raw_value)} (likely search bucket floor for "
+                        f"`revenueMin`={fmt_money(threshold)}; {pass_mark(None)})"
+                    )
+            except (TypeError, ValueError):
+                pass
         try:
-            ok = float(value) >= float(threshold)
+            ok = float(parse_hg_numeric(raw_value, strategy="lower")) >= float(threshold)
         except (TypeError, ValueError):
             return missing_label
-        return f"{fmt_money(value)} >= {fmt_money(threshold)} ({pass_mark(ok)})"
+        return f"{fmt_money(raw_value)} >= {fmt_money(threshold)} ({pass_mark(ok)})"
 
     def employee_cell(row: dict[str, Any]) -> str:
-        raw_emp = row.get("employeeCount") or row.get("employees")
         emp_range = row.get("employeesRange")
+        raw_emp = row.get("employeeCount") or row.get("employees")
+        if emp_range and is_hg_bucket_range(emp_range):
+            return (
+                f"{emp_range} (HG bucket — meets `employeesMin`, not exact headcount; "
+                f"{pass_mark(None)})"
+            )
+        if raw_emp is None or raw_emp == "":
+            return "Not in search row"
         try:
-            ok = int(raw_emp) >= int(min_employees)
+            ok = int(parse_hg_numeric(raw_emp, strategy="lower")) >= int(min_employees)
         except (TypeError, ValueError):
             return "Not in search row"
-        if emp_range:
-            return f"{emp_range} (HG bucket lower bound {raw_emp} >= {min_employees}: {pass_mark(ok)})"
         return f"{raw_emp} >= {min_employees} ({pass_mark(ok)})"
 
     lines = [
@@ -211,8 +245,10 @@ def _render_candidate_companies_md(
         [
             "## Candidate Companies",
             "",
-            "Note on employees: when HG returns `employeesRange` like `From 200 to 499`, "
-            "`employeeCount = 200` is the **lower bound of the bucket**, not an exact headcount.",
+            "Note on employees/revenue: when HG returns bands like `From 200 to 499` or "
+            "`From $10M to $49M`, the numeric fields are **bucket bounds**, not exact firmographics. "
+            "Step 2 retention relies on `search_companies` (`revenueMin` / `employeesMin`); "
+            "the audit table marks those rows as **Search API filter**, not a row-level numeric Pass.",
             "",
             "Note on IT spend: Step 2 uses `search_companies` rows only (fast). If IT spend is "
             "not in the search row, the column shows *Not in search row* — the floor is still "
@@ -230,6 +266,8 @@ def _render_candidate_companies_md(
             row.get("revenueAmount") or row.get("revenue"),
             min_revenue,
             missing_label="Not in search row",
+            row=row,
+            metric="revenue",
         )
         employees = employee_cell(row)
         it_spend = money_threshold_cell(

@@ -69,6 +69,16 @@ def _domain_candidates(company_input: str) -> list[str]:
     return ordered
 
 
+def pick_best_search_company(
+    query: str,
+    companies: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    """Return the best HG search_companies row for a name or domain query."""
+    if not companies:
+        return None
+    return max(companies, key=lambda company: _score_search_hit(query, company))
+
+
 def _score_search_hit(query: str, company: dict[str, Any]) -> int:
     q = _normalize_name(query)
     name = _normalize_name(company.get("companyName", ""))

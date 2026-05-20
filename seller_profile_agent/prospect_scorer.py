@@ -17,8 +17,8 @@ from prs_engine import (
     score_dynamique,
     score_taille,
 )
-from hg_value_parser import extract_firmographic_size, parse_hg_numeric
-from prospect_preflight import is_search_range_proxy, normalize_hg_id
+from hg_value_parser import extract_firmographic_size, is_hg_bucket_range, parse_hg_numeric
+from prospect_preflight import is_search_range_proxy, normalize_hg_id, resolve_prospect_firmographic
 
 
 def _company_args(domain: str, hg_id: str | None) -> dict[str, Any]:
@@ -166,25 +166,64 @@ def score_prospect(
     intent_name = binding.get("hg_intent_topic_name") or product_name
     category_name = binding.get("hg_category_name")
 
+    firmo = preflight.get("firmographic")
+    resolution_method = preflight.get("resolution_method")
+    resolution_trace = preflight.get("resolution_trace")
+
+    if not firmo:
+        resolved = resolve_prospect_firmographic(client, company)
+        if not resolved.get("found"):
+            trace_summary = ", ".join(
+                f"{step.get('method')}:{step.get('found')}"
+                for step in (resolved.get("resolution_trace") or [])
+            )
+            raise HgMcpError(
+                f"Firmographic required but failed for {search_domain or domain}: "
+                f"{resolved.get('reason')} [{trace_summary}]"
+            )
+        firmo = resolved["firmographic"]
+        domain = (resolved.get("canonical_domain") or domain).lower().strip()
+        hg_id = resolved.get("hg_id") or hg_id
+        company_name = resolved.get("company_name") or company_name
+        resolution_method = resolved.get("resolution_method")
+        resolution_trace = resolved.get("resolution_trace")
+
     base_args = _company_args(domain, hg_id)
 
-    firmo = preflight.get("firmographic")
-    if not firmo:
-        firmo, err = client.call_tool_safe("company_firmographic", base_args)
-        if err or not firmo or not firmo.get("found"):
-            raise HgMcpError(f"Firmographic required but failed for {domain}: {err}")
-    mcp_evidence["firmographic"] = {"found": True, "domain": domain}
+    if resolution_method and resolution_method not in ("search_domain", "hg_id"):
+        notes.append(
+            f"Prospect resolved via {resolution_method} "
+            f"(search row domain was {search_domain or 'n/a'}; scoring uses {domain})."
+        )
+    elif search_domain and domain and search_domain != domain:
+        notes.append(
+            f"Canonical HG domain {domain} used instead of search row domain {search_domain}."
+        )
+
+    mcp_evidence["firmographic"] = {
+        "found": True,
+        "domain": domain,
+        "search_domain": search_domain,
+        "resolution_method": resolution_method,
+        "resolution_trace": resolution_trace,
+    }
 
     revenue_raw = firmo.get("revenue") or firmo.get("revenueAmount")
     employees_raw = firmo.get("employeeCount") or firmo.get("employees")
-    revenue, employees = extract_firmographic_size(firmo, company)
+    revenue, employees = extract_firmographic_size(firmo)
+    revenue_is_range = is_hg_bucket_range(revenue_raw)
+    employees_is_range = is_hg_bucket_range(employees_raw)
+    if revenue_is_range or employees_is_range:
+        notes.append(
+            "HG firmographic uses size bands; PRS uses raw HG band lower bounds for revenue/headcount."
+        )
     if is_search_range_proxy(
         company.get("revenueAmount"),
         company.get("employeeCount"),
         company.get("employeesRange"),
     ):
         notes.append(
-            "Search row uses HG bucket floors; size metrics prefer parsed firmographic values."
+            "Search row bucket values were not used for PRS sizing (firmographic only)."
         )
 
     c_taille = score_taille(revenue, employees)
@@ -194,12 +233,15 @@ def score_prospect(
             "employee_count": employees,
             "revenue_raw": revenue_raw,
             "employees_raw": employees_raw,
+            "revenue_parse_strategy": "lower" if revenue_is_range else "point",
+            "employees_parse_strategy": "lower" if employees_is_range else "point",
             "data_source": "company_firmographic",
         }
     )
     _attach_meta(
         c_taille,
-        f"Account scale from HG revenue/headcount (rev={revenue}, emp={employees}).",
+        f"Account scale from HG firmographic (rev={revenue}, emp={employees}; "
+        f"{'lower bounds of bands' if revenue_is_range or employees_is_range else 'point values'}).",
     )
 
     it_budget = parse_hg_numeric(firmo.get("itSpend") or firmo.get("it_spend"))

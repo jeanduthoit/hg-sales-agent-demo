@@ -13,6 +13,7 @@ from executive_reports import write_company_prs_report
 from hg_client import HgMcpClient, HgMcpError
 from last_run_state import load_last_profile_run
 from prompt_inputs import is_interactive, prompt_prospect_company
+from prospect_preflight import resolve_prospect_firmographic
 from prospect_scorer import score_prospect
 from sales_insights import build_prospect_card
 from score_cli import _load_binding
@@ -78,15 +79,27 @@ def resolve_prospect_row(client: HgMcpClient, company_query: str) -> dict[str, A
     looks_like_domain = "." in query and " " not in query
 
     if looks_like_domain:
-        firmo, err = client.call_tool_safe("company_firmographic", {"companyDomain": query})
-        if err:
-            raise HgMcpError(f"company_firmographic failed for {query}: {err}")
-        if firmo and firmo.get("found"):
-            domain = (firmo.get("domain") or query).lower().strip()
+        resolved = resolve_prospect_firmographic(
+            client,
+            {"domain": query, "companyDomain": query},
+        )
+        if resolved.get("found"):
+            firmo = resolved["firmographic"]
+            domain = (resolved.get("canonical_domain") or query).lower().strip()
             return {
-                "companyName": firmo.get("name") or firmo.get("companyName") or query,
+                "companyName": resolved.get("company_name")
+                or firmo.get("name")
+                or firmo.get("companyName")
+                or query,
                 "domain": domain,
                 "companyDomain": domain,
+                "_preflight": {
+                    "firmographic": firmo,
+                    "canonical_domain": domain,
+                    "search_domain": query,
+                    "resolution_method": resolved.get("resolution_method"),
+                    "resolution_trace": resolved.get("resolution_trace"),
+                },
             }
 
     data, err = client.call_tool_safe(
