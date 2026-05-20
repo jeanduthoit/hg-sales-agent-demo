@@ -70,7 +70,7 @@ def render_icp_funnel_section(ctx: dict[str, Any]) -> list[str]:
         lines.append("")
 
     lines.append(
-        "**ICP thresholds applied** (set at seller profile setup; full list: `candidate_companies.md`)"
+        "**ICP thresholds applied** (prospect filters from seller profile setup; full table: `candidate_companies.md`)"
     )
     lines.append("")
     lines.append(f"- Minimum revenue: **{fmt_money(min_rev)}** (user-defined `min_revenue_usd`)")

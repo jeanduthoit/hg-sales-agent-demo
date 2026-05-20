@@ -394,11 +394,17 @@ def _run_pipeline_body(
 
     _log(f"--- Step 3/3: Deep analysis of prospects to score deeply ---")
     sampled_rows, sample_stats = sample_icp_candidates(candidates, prs_count, seed=sample_seed)
+    full_pool_rows, _ = sample_icp_candidates(candidates, len(candidates), seed=sample_seed)
+    sampled_domains = {
+        (row.get("domain") or row.get("companyDomain") or "").lower().strip()
+        for row in sampled_rows
+    }
+    replacement_rows = [
+        row
+        for row in full_pool_rows
+        if (row.get("domain") or row.get("companyDomain") or "").lower().strip() not in sampled_domains
+    ]
     candidate_stats["sample"] = sample_stats
-    (iteration_dir / "sampled_prospects.json").write_text(
-        json.dumps({"stats": sample_stats, "prospects": sampled_rows}, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
     _log(
         f"  Randomly selected {len(sampled_rows)} companies from "
         f"{len(candidates)} ICP-compatible candidates."
@@ -410,18 +416,59 @@ def _run_pipeline_body(
     binding_loaded = _load_binding(seller)
     results = []
     skipped: list[dict[str, Any]] = []
-    for row in sampled_rows:
+    scored_domains: set[str] = set()
+    selected_trace: list[dict[str, Any]] = []
+    initial_queue = list(sampled_rows)
+    queue = initial_queue + replacement_rows
+
+    for idx, row in enumerate(queue, start=1):
+        if len(results) >= prs_count:
+            break
         domain = row.get("domain") or "?"
-        _log(f"  Scoring: {domain}...")
+        domain_key = str(domain).lower().strip()
+        if domain_key in scored_domains:
+            continue
+        scored_domains.add(domain_key)
+        source = "initial_sample" if idx <= len(initial_queue) else "replacement_candidate"
+        _log(f"  Scoring ({source}): {domain}...")
         try:
-            results.append(score_prospect(client, row, binding_loaded))
+            scored = score_prospect(client, row, binding_loaded)
+            results.append(scored)
+            selected_trace.append(
+                {
+                    **row,
+                    "sample_position": len(selected_trace) + 1,
+                    "sample_status": "selected_for_deep_prs",
+                    "selection_source": source,
+                }
+            )
         except Exception as exc:  # noqa: BLE001
             _log(f"    Skipped: {exc}")
-            skipped.append({"domain": domain, "reason": str(exc)})
+            skipped.append({"domain": domain, "reason": str(exc), "selection_source": source})
 
     if not results:
         _log("ERROR: no prospects scored.")
         return 1
+    if len(results) < prs_count:
+        _log(
+            f"  Warning: requested {prs_count} deep PRS scores but only {len(results)} were scorable "
+            f"after trying {len(scored_domains)} candidates."
+        )
+
+    sampled_payload_stats = {
+        **sample_stats,
+        "replacement_pool_count": len(replacement_rows),
+        "replacement_attempts": max(0, len(scored_domains) - len(initial_queue)),
+        "attempted_count": len(scored_domains),
+        "scored_count": len(results),
+        "skipped_count": len(skipped),
+        "final_selected_count": len(selected_trace),
+    }
+    (iteration_dir / "sampled_prospects.json").write_text(
+        json.dumps({"stats": sampled_payload_stats, "prospects": selected_trace}, indent=2, ensure_ascii=False)
+        + "\n",
+        encoding="utf-8",
+    )
 
     _log("\n--- Reports: Markdown + JSON ---")
     results.sort(key=lambda r: r.prs, reverse=True)
@@ -431,6 +478,8 @@ def _run_pipeline_body(
     candidate_stats["deep_prs"] = {
         "requested_count": prs_count,
         "sampled_count": len(sampled_rows),
+        "replacement_pool_count": len(replacement_rows),
+        "attempted_count": len(scored_domains),
         "scored_count": len(results),
         "skipped": skipped,
     }
@@ -529,7 +578,7 @@ def main() -> int:
 
     if interactive:
         print("=== PRS Pipeline — manual input ===")
-        last = load_last_profile_run() if company is None else None
+        last = load_last_profile_run()
         if last and company is None:
             company = last.get("company_name") or last["company_input"]
             profile_slug = last.get("company_slug")
@@ -546,7 +595,16 @@ def main() -> int:
             slug = company.strip().lower()
             profile_path = PROFILE_DIR / f"seller_profile_{slug}.json"
             if product_index is None:
-                product_index = prompt_product_index(profile_path, default=1)
+                if last and last.get("company_slug") == slug:
+                    product_index = int(last["product_index"])
+                    profile_slug = last.get("company_slug")
+                    pname = last.get("product_name") or "—"
+                    print(
+                        f"\nReusing seller profile product #{product_index} from last `npm run profile:seller` "
+                        f"({pname}). Pass `--product-index N` to override.\n"
+                    )
+                else:
+                    product_index = prompt_product_index(profile_path, default=1)
         if prs_count is None:
             prs_count = prompt_prs_count(3)
         if run_name is None and not ask_run_name:
