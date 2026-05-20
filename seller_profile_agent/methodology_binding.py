@@ -95,6 +95,12 @@ COMPETITOR_SOURCE_KEYS = {
     "alternatives",
 }
 
+GENERIC_PRODUCT_CATEGORY_LABELS = {
+    "hg technographic product",
+    "technographic product",
+    "product",
+}
+
 
 def _normalize_product_name(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value or "").strip()).lower()
@@ -330,7 +336,12 @@ def build_hg_product_binding(
     product_name = selected.get("product_name", "")
     examples = _parse_examples(selected.get("reasoning", ""))
     intent_query = catalog_pick.get("product_name") if catalog_pick else (examples[0] if examples else product_name)
-    category_query = selected.get("product_category") or product_name
+    raw_category = str(selected.get("product_category") or "").strip()
+    # "HG technographic product" is a generic catalog label, not a usable HG category query.
+    if raw_category.lower() in GENERIC_PRODUCT_CATEGORY_LABELS:
+        category_query = product_name
+    else:
+        category_query = raw_category or product_name
 
     category = _lookup_category(client, category_query)
     if not category and "data" in category_query.lower():

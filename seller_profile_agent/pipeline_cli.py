@@ -82,9 +82,16 @@ def _render_candidate_companies_md(
     category_applied = bool(attempted.get("technologies"))
     product_exclusion_applied = bool(attempted.get("excludeTechnologies"))
     missing_rows = hygiene.get("removed_missing_domain_rows") or []
+    invalid_rows = hygiene.get("removed_invalid_domain_rows") or []
     duplicate_rows = hygiene.get("removed_duplicate_domain_rows") or []
     seller_rows = hygiene.get("removed_seller_domain_rows") or []
     missing_summary = "; ".join(row.get("company_name") or "Unknown" for row in missing_rows)
+    invalid_summary = "; ".join(
+        (
+            f"{row.get('company_name') or 'Unknown'} (`{row.get('normalized_domain') or row.get('raw_domain') or ''}`)"
+        )
+        for row in invalid_rows
+    )
     duplicate_summary = "; ".join(
         (
             f"{row.get('company_name') or 'Unknown'} (`{row.get('domain') or ''}`, "
@@ -185,6 +192,10 @@ def _render_candidate_companies_md(
         "  - Meaning: HG returned a company row, but neither `domain` nor `companyDomain` provided a usable value.",
         "  - Why removed: if no usable domain is available and `companyId` is serialized in scientific notation, the agent has no reliable identifier for the next deep calls (`company_firmographic`, `company_spend`, `company_technographic`, `company_intent`).",
         f"  - Rows removed: {missing_summary or 'none'}.",
+        f"- Removed because domain format failed hygiene: **{hygiene.get('removed_invalid_domain', 0)}**",
+        "  - Meaning: normalized host looked malformed (invalid labels/TLD), so deep HG company calls are unreliable.",
+        "  - Why removed: prevent wasting Step 3 scoring attempts on domains that almost always fail firmographic resolution.",
+        f"  - Rows removed: {invalid_summary or 'none'}.",
         f"- Removed because domain was duplicated: **{hygiene.get('removed_duplicate_domain', 0)}**",
         "  - Meaning: HG returned another company row with a domain already seen earlier in the same search response.",
         "  - Why removed: we want distinct companies in the candidate list, not several subsidiaries or rows attached to the same corporate website.",

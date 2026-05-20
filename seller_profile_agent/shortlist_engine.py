@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import random
+import re
 from datetime import datetime, timezone
 from typing import Any
 
@@ -10,6 +11,39 @@ from hg_client import HgMcpClient
 from methodology_binding import MAX_SEARCH_LIMIT
 from prospect_preflight import normalize_hg_id
 from prospect_scorer import _company_args, _pick_total_it_spend
+
+DOMAIN_LABEL_RE = re.compile(r"^[a-z0-9-]{1,63}$")
+
+
+def _normalize_domain(raw: str) -> str:
+    text = (raw or "").strip().lower()
+    text = text.replace("https://", "").replace("http://", "").split("/")[0]
+    if text.startswith("www."):
+        text = text[4:]
+    return text.strip(".")
+
+
+def _domain_hygiene_reason(domain: str) -> str | None:
+    if not domain:
+        return "missing_domain"
+    if "." not in domain:
+        return "domain_without_tld"
+    if "_" in domain or " " in domain:
+        return "invalid_domain_characters"
+    labels = domain.split(".")
+    if len(labels) < 2:
+        return "domain_without_tld"
+    tld = labels[-1]
+    if not tld.isalpha() or len(tld) < 2 or len(tld) > 24:
+        return "invalid_tld"
+    for label in labels:
+        if not label:
+            return "empty_domain_label"
+        if label.startswith("-") or label.endswith("-"):
+            return "invalid_domain_hyphen_position"
+        if not DOMAIN_LABEL_RE.match(label):
+            return "invalid_domain_label"
+    return None
 
 
 def _icp_values(seller: dict[str, Any]) -> dict[str, Any]:
@@ -156,13 +190,16 @@ def build_icp_candidate_list(
             "function": "shortlist_engine.build_icp_candidate_list",
             "criteria": [
                 "domain is present",
+                "domain format is valid (host + TLD + RFC-like labels)",
                 "domain is unique after lowercasing",
                 "domain is not the seller domain",
             ],
             "removed_missing_domain": 0,
+            "removed_invalid_domain": 0,
             "removed_duplicate_domain": 0,
             "removed_seller_domain": 0,
             "removed_missing_domain_rows": [],
+            "removed_invalid_domain_rows": [],
             "removed_duplicate_domain_rows": [],
             "removed_seller_domain_rows": [],
         },
@@ -181,7 +218,7 @@ def build_icp_candidate_list(
     cleaned: list[dict[str, Any]] = []
     for row in companies:
         raw_domain = row.get("domain") or row.get("companyDomain") or ""
-        domain = raw_domain.lower().strip()
+        domain = _normalize_domain(raw_domain)
         if not domain:
             stats["hygiene"]["removed_missing_domain"] += 1
             stats["hygiene"]["removed_missing_domain_rows"].append(
@@ -191,6 +228,20 @@ def build_icp_candidate_list(
                     "country": row.get("country"),
                     "industry": row.get("industry"),
                     "reason": "HG search returned no usable domain/companyDomain.",
+                }
+            )
+            continue
+        bad_reason = _domain_hygiene_reason(domain)
+        if bad_reason:
+            stats["hygiene"]["removed_invalid_domain"] += 1
+            stats["hygiene"]["removed_invalid_domain_rows"].append(
+                {
+                    "company_name": _row_label(row),
+                    "raw_domain": raw_domain,
+                    "normalized_domain": domain,
+                    "country": row.get("country"),
+                    "industry": row.get("industry"),
+                    "reason": f"Domain rejected by hygiene: {bad_reason}.",
                 }
             )
             continue
