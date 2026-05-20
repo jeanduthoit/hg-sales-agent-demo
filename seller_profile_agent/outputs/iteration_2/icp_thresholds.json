@@ -1,0 +1,46 @@
+{
+  "purpose": "Filter prospect universe before PRS; does not replace PRS scoring.",
+  "derived_from_seller_profile": false,
+  "user_defined_floors": true,
+  "filters": [
+    {
+      "filter_id": "min_revenue_usd",
+      "operator": ">=",
+      "value": 2000000,
+      "hg_field": "company_firmographic.revenue",
+      "rationale": "Threshold entered by the sales user when creating the seller profile."
+    },
+    {
+      "filter_id": "min_employees",
+      "operator": ">=",
+      "value": 20,
+      "hg_field": "company_firmographic.employeeCount",
+      "rationale": "Threshold entered by the sales user when creating the seller profile."
+    },
+    {
+      "filter_id": "min_it_spend_usd",
+      "operator": ">=",
+      "value": 100000,
+      "hg_field": "company_spend.totalSpendAmount (Total IT)",
+      "rationale": "Threshold entered by the sales user when creating the seller profile."
+    },
+    {
+      "filter_id": "category_adjacency_search",
+      "operator": "technographic_signal",
+      "value": "HG technographic product",
+      "hg_field": "company_technographic.categories / search_companies",
+      "rationale": "Prospects should show activity in the same HG category as the sold product to avoid scoring random accounts with zero category fit."
+    },
+    {
+      "filter_id": "exclude_target_product_installed",
+      "operator": "excludeTechnologies",
+      "value": "Amazon AppFlow",
+      "hg_field": "search_companies.excludeTechnologies",
+      "rationale": "Land motion only: exclude accounts where the seller HG SKU is already installed."
+    }
+  ],
+  "product_context": {
+    "hg_product_name": "Amazon AppFlow",
+    "note": "Seller SKU exclusion is enforced at universe retrieval (land motion)."
+  }
+}

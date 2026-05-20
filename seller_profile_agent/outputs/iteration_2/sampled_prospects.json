@@ -1,0 +1,66 @@
+{
+  "stats": {
+    "sample_method": "uniform_random_without_replacement",
+    "sample_seed": null,
+    "requested_count": 3,
+    "sampled_count": 3,
+    "candidate_count": 149,
+    "sample_fraction": 0.020134228187919462
+  },
+  "prospects": [
+    {
+      "companyId": "7.920148528538232e+37",
+      "companyName": "Northland Clothing Company",
+      "domain": "northland-clothing.com",
+      "revenue": "From $1,000,000 to $9,999,999",
+      "revenueAmount": 3000000,
+      "employeeCount": 20,
+      "employeesRange": "From 10 to 49",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 1,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "3.103506341294213e+37",
+      "companyName": "SUPERIOR MACHINES LTD",
+      "domain": "superiormachines.co.uk",
+      "revenue": "From $1,000,000 to $9,999,999",
+      "revenueAmount": 3463155,
+      "employeeCount": 20,
+      "employeesRange": "From 10 to 49",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 2,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "6.083126662976875e+36",
+      "companyName": "Meitai Investment (Suzhou) Co.,Ltd.",
+      "domain": "spigroups.com",
+      "revenue": "From $1,000,000 to $9,999,999",
+      "revenueAmount": 2935680,
+      "employeeCount": 20,
+      "employeesRange": "From 10 to 49",
+      "country": "China",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 3,
+      "sample_status": "selected_for_deep_prs"
+    }
+  ]
+}

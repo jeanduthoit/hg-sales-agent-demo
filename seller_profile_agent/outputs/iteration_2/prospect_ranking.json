@@ -1,0 +1,32 @@
+{
+  "iteration": "Iteration 2",
+  "seller": "Amazon.com, Inc.",
+  "target_product": "Amazon AppFlow",
+  "hg_product_name": "Amazon AppFlow",
+  "ranking": [
+    {
+      "rank": 1,
+      "company_name": "Northland Clothing Company",
+      "domain": "northland-clothing.com",
+      "prospect_revenue_score": 14.35,
+      "reliability_pct": "42%",
+      "reliability_raw": 0.425
+    },
+    {
+      "rank": 2,
+      "company_name": "SUPERIOR MACHINES LTD",
+      "domain": "superiormachines.co.uk",
+      "prospect_revenue_score": 11.2,
+      "reliability_pct": "52%",
+      "reliability_raw": 0.525
+    },
+    {
+      "rank": 3,
+      "company_name": "Meitai Investment (Suzhou) Co.,Ltd.",
+      "domain": "spigroups.com",
+      "prospect_revenue_score": 9.4,
+      "reliability_pct": "52%",
+      "reliability_raw": 0.525
+    }
+  ]
+}

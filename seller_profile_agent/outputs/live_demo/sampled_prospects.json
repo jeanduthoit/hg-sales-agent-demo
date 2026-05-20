@@ -1,0 +1,66 @@
+{
+  "stats": {
+    "sample_method": "uniform_random_without_replacement",
+    "sample_seed": null,
+    "requested_count": 3,
+    "sampled_count": 3,
+    "candidate_count": 164,
+    "sample_fraction": 0.018292682926829267
+  },
+  "prospects": [
+    {
+      "companyId": "6.412958994094623e+37",
+      "companyName": "MacLife Boise",
+      "domain": "maclifeboise.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 10000000,
+      "employeeCount": 200,
+      "employeesRange": "From 200 to 499",
+      "country": "United States of America (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 1,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "2.8467129852081826e+37",
+      "companyName": "NEC Canada",
+      "domain": "necus.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 2,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "8.34018253239408e+37",
+      "companyName": "GBTL",
+      "domain": "grasimbhiwanitextiles.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 10000000,
+      "employeeCount": 200,
+      "employeesRange": "From 200 to 499",
+      "country": "India",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 3,
+      "sample_status": "selected_for_deep_prs"
+    }
+  ]
+}

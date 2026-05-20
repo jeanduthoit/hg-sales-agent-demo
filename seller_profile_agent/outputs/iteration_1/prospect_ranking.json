@@ -1,0 +1,24 @@
+{
+  "iteration": "Iteration 1",
+  "seller": "Amazon.com, Inc.",
+  "target_product": "Managed databases",
+  "hg_product_name": "Amazon Aurora PostgreSQL",
+  "ranking": [
+    {
+      "rank": 1,
+      "company_name": "Guangzhou Orsan Gourmet Powder Co. Ltd.",
+      "domain": "tateandlyle.com",
+      "prospect_revenue_score": 45.68,
+      "reliability_pct": "62%",
+      "reliability_raw": 0.625
+    },
+    {
+      "rank": 2,
+      "company_name": "J.V. Driver Projects Inc",
+      "domain": "jvdriver.com",
+      "prospect_revenue_score": 19.68,
+      "reliability_pct": "38%",
+      "reliability_raw": 0.375
+    }
+  ]
+}

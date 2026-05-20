@@ -1,0 +1,66 @@
+{
+  "stats": {
+    "sample_method": "uniform_random_without_replacement",
+    "sample_seed": null,
+    "requested_count": 3,
+    "sampled_count": 3,
+    "candidate_count": 158,
+    "sample_fraction": 0.0189873417721519
+  },
+  "prospects": [
+    {
+      "companyId": "3.0397927879747937e+37",
+      "companyName": "Nigerite Ltd.",
+      "domain": "nigeritelimited.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 92650000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Nigeria",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 1,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "7.987256259874388e+37",
+      "companyName": "J.V. Driver Projects Inc",
+      "domain": "jvdriver.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 349196000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 2,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "3.0812407205310773e+37",
+      "companyName": "Guangzhou Orsan Gourmet Powder Co. Ltd.",
+      "domain": "tateandlyle.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 82201746,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 3,
+      "sample_status": "selected_for_deep_prs"
+    }
+  ]
+}

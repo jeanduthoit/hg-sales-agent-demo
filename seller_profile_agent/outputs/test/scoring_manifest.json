@@ -1,0 +1,1241 @@
+{
+  "iteration": "Test",
+  "documents": {
+    "icp_thresholds.json": "icp_thresholds.json",
+    "prospect_universe.json": "prospect_universe.json",
+    "candidate_companies.json": "candidate_companies.json",
+    "candidate_companies.md": "candidate_companies.md",
+    "sampled_prospects.json": "sampled_prospects.json",
+    "prospect_ranking.json": "prospect_ranking.json",
+    "detailed_prospects.json": "detailed_prospects.json",
+    "seller_profile.json": "seller_profile.json",
+    "executive_summary.md": "executive_summary.md",
+    "technical_scoring.md": "technical_scoring.md"
+  },
+  "pipeline": {
+    "iteration_key": "test",
+    "candidate_stats": {
+      "input_count": 165,
+      "after_hygiene": 164,
+      "candidate_count": 164,
+      "hygiene": {
+        "function": "shortlist_engine.build_icp_candidate_list",
+        "criteria": [
+          "domain is present",
+          "domain is unique after lowercasing",
+          "domain is not the seller domain"
+        ],
+        "removed_missing_domain": 1,
+        "removed_duplicate_domain": 0,
+        "removed_seller_domain": 0,
+        "removed_missing_domain_rows": [
+          {
+            "company_name": "Initech",
+            "raw_domain": "",
+            "country": "United States of America (the)",
+            "industry": "Professional, Scientific and Technical Services",
+            "reason": "HG search returned no usable domain/companyDomain."
+          }
+        ],
+        "removed_duplicate_domain_rows": [],
+        "removed_seller_domain_rows": [],
+        "kept_after_hygiene": 164
+      },
+      "icp_thresholds": {
+        "min_revenue": 10000000.0,
+        "min_employees": 200,
+        "min_it_spend": 1000000.0,
+        "category": "HG technographic product"
+      },
+      "eliminated_by_threshold": [],
+      "retained_with_unknown_fields": [
+        {
+          "company_name": "Realty ONE Group Lifestyles",
+          "domain": "localbeachhomes.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "P&G Ventures Studio",
+          "domain": "pgventureslab.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Vulcabras | Azaleia",
+          "domain": "vulcabrasazaleiari.com.br",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Marquette MSN",
+          "domain": "mastersnursing.marquette.edu",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Diamond Safety Inc",
+          "domain": "diamondsafety.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Los Angeles County Department Of Public Social Services",
+          "domain": "joom.ag",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Python Development Company",
+          "domain": "pythondevelopmentcompany.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Mescoctc",
+          "domain": "mescoindia.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "United Human Rights Federation",
+          "domain": "uhrfinternational.org",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Kruger Capital",
+          "domain": "krugercapital.co.za",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "ITW Deltar Fasteners",
+          "domain": "itwef.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Continuing Education Center For Scientists (CEC)",
+          "domain": "esspegypt.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Part time job platform",
+          "domain": "partatime.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Aramark K12",
+          "domain": "aramarkeducation.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Украинская ассоциация владельцев оружия",
+          "domain": "zbroya.info",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Click or Call Mobile Grocery",
+          "domain": "clickorcallmobilegrocery.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "H.U.S.T.L.E. Industries",
+          "domain": "ilove2hustle.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Numb",
+          "domain": "numb.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "World Wide Welding",
+          "domain": "worldwidewelding.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "blockXblock DAO",
+          "domain": "digitalassetholdings.net",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Bakers Concepts Advertising and Affiliate Network",
+          "domain": "bcaani.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Iqoption LTD",
+          "domain": "iqoptions.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Ranjit Ghatge Legal Services Private Limited",
+          "domain": "rglegalservices.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Morrison Healthcare",
+          "domain": "iammorrison.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Cofounder.Tv",
+          "domain": "cofounder.tv",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Myktongco.Com",
+          "domain": "myktongco.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "NEC Canada",
+          "domain": "necus.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Guangzhou Jintian Auto Parts & Accessories Manufacturing Industry",
+          "domain": "jtautoparts.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "GREENLYCOIN",
+          "domain": "greenlycoin.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "ICMA Bangladesh",
+          "domain": "icmab.org.bd",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Greenway USA",
+          "domain": "greenwayusa.shop",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Taganrog Institute of Technology",
+          "domain": "tsure.ru",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Woman Corp.",
+          "domain": "womancorp.org",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Findjobs",
+          "domain": "findjobs.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Online Konnect",
+          "domain": "onlinekonnect.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Jc Insurance",
+          "domain": "themcquadeagency.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Mey Diageo",
+          "domain": "mey.com.tr",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Vionta",
+          "domain": "vionta.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Apleni Towers",
+          "domain": "aplenitowers.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Uko Associates Inc.",
+          "domain": "ukoassociates.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Alex Luna",
+          "domain": "alexlunamarketing.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "TSEBO Egypt",
+          "domain": "tseboegypt.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "British Film Festival",
+          "domain": "britishfilmfestival.co.uk",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Renewable Energy Jobs",
+          "domain": "renewableenergyjobs.co.uk",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Nukraft LTD",
+          "domain": "nukraft.co.uk",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Guarantor",
+          "domain": "guarante.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Universal flow University",
+          "domain": "chernobyladventure.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "TATANA - Nệm Drap Gối Cao Cấp (Mattress)",
+          "domain": "tatana.vn",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Elite Interior Designers",
+          "domain": "eliteinteriordesigners.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Sapna HR",
+          "domain": "sapnahr.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Logisys Inc.",
+          "domain": "logisys.co.kr",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Integerz",
+          "domain": "integerz.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Apurva Natvar Parikh Group",
+          "domain": "anpg.in",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Veiling Rhein Maas GmbH & Co KG",
+          "domain": "veilingrheinmaas.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "SPECIALTY CHEESE CO INC.",
+          "domain": "specialcheese.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Alu - Guss Wittich",
+          "domain": "aluguss-wittich.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "MUA Rwanda",
+          "domain": "mua.rw",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "TV Vitria",
+          "domain": "portalredevitoria.com.br",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "CRISTALPET DO BRASIL",
+          "domain": "cristalpet.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Instituto Uruguayo de Meteorología (INUMET)",
+          "domain": "inumet.gub.uy",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Malatic",
+          "domain": "malatic.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Saint James Shipping Limited",
+          "domain": "stjms.co.uk",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "UNIFIPMoc - Centro Universitário FIPMoc",
+          "domain": "unifipmoc.edu.br",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Souto Correa Advogados",
+          "domain": "soutocorrea.com.br",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Universitas Quality",
+          "domain": "universitasquality.ac.id",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "ET&S Engineering Import Export Co., Ltd.",
+          "domain": "etsengineering.com.kh",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Baby Outlet Cambodia",
+          "domain": "parenting-tip.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Hebei AORUNTE Trading Co., ltd.",
+          "domain": "hbopt.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Pralana Industria e Comercio LTDA",
+          "domain": "pralana.com.br",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Thavorn Palm Beach Resort",
+          "domain": "thavornpalmbeach.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Goodera",
+          "domain": "goodera.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Hugo",
+          "domain": "hugoapp.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Mk Industries",
+          "domain": "mkpro.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "6Sigma EPCM",
+          "domain": "6s.co.za",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Hoàng Hà Label Co., Ltd",
+          "domain": "hhlc.com.vn",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Macs Shipping Corporation",
+          "domain": "macsvietnam.com.vn",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Seguridad Privada Seprovi",
+          "domain": "seprovi.com.mx",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Qingdao Jiahua Plastics Co., Ltd.",
+          "domain": "jiahuapvb.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "YUHENG Digital science Co. LTD",
+          "domain": "yh1898.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Galaxy Machinery PVT LTD",
+          "domain": "galaxymachinery.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Ghadq Logistics",
+          "domain": "ghadqsa.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Park State Bank",
+          "domain": "parkstatebank.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Carmel College Salland",
+          "domain": "carmelcollegesalland.nl",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Farmacias Farmapronto",
+          "domain": "grupofarmapronto.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Herbert Spencer University",
+          "domain": "herbertspencer.university",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Horizon Care Center",
+          "domain": "horizoncarecenter.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Clout Consulting, LLC",
+          "domain": "cloutconsulting.us",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Boltpower Energy",
+          "domain": "boltpowerenergy.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Zibox Inc.",
+          "domain": "zibox.io",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Henan Bon Industrial(Cosmetic) Co.,Ltd",
+          "domain": "boncosmetic.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "PageUp Software Services PVT LTD",
+          "domain": "pageupsoft.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Sigma Technologies LTD",
+          "domain": "teamsigma.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "A.R.Life Sciences PVT LTD",
+          "domain": "arlifesciences.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "XUYANG Lamps and electrical appliances Factory",
+          "domain": "xuyanglighting.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "CanadaOne Auto Group",
+          "domain": "canadaoneauto.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Tiger Fuel Company",
+          "domain": "workwithtiger.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Nikita Distributors",
+          "domain": "nikitadistributors.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Abacus International",
+          "domain": "homy.sg",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "RWAM Insurance Administrators",
+          "domain": "rwam.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Laurel BMW of Westmont",
+          "domain": "laurelbmw.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Canteen Services Co.",
+          "domain": "canteenmaine.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "FARET Packaging S.A.",
+          "domain": "faretimpresores.cl",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Azad Steel Inc",
+          "domain": "azadsteel.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Castlebridge Systems",
+          "domain": "castlebridge.co",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Fun Prime Technology",
+          "domain": "funprimetechnology.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Tianjin Xinhua High School 天津市新华中学",
+          "domain": "tj.edu.cn",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Diserva Ltda.",
+          "domain": "diserva.cl",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Texas HHSC Office of Inspector General",
+          "domain": "oig.hhs.texas.gov",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Gurugram Naturopathy Cure Centre",
+          "domain": "gncc.co.in",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Strategic Insource Solutions",
+          "domain": "strategicinsource.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Gail & Rice",
+          "domain": "gail-rice.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "BMotors",
+          "domain": "bmotors.com.pe",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Java User Group Macedonia",
+          "domain": "jug.mk",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Future Market Insights",
+          "domain": "futuremarketinsights.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "PT Rentracks Creative Works",
+          "domain": "rentracks.co.id",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "PT. Panthera Biru Indonesia",
+          "domain": "biruindonesia.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Lps Brasil - Consultoria De Imoveis",
+          "domain": "lopesconsultoria.com.br",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Askyourjob Consultancy",
+          "domain": "askyourjobs.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "myrobin.id",
+          "domain": "myrobin.id",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Cinjoejaya",
+          "domain": "asia-paper.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Bush's Chicken",
+          "domain": "bushschicken.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Feel Good Brands Corp.",
+          "domain": "feelgoodbrandscorp.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "PrintingShell",
+          "domain": "printingshell.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "北京会小二信息技术有限公司",
+          "domain": "huixiaoer.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Isover South Africa",
+          "domain": "isover.co.za",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "VIBGYOR TECHNOPLUS PVT LTD",
+          "domain": "vibgyortechnoplus.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "IHT Rehabilitation Centre (Johor)",
+          "domain": "ihtrehab.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Mechanical Project Services",
+          "domain": "mechps.com.au",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Promservis",
+          "domain": "promservis.ru",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Jiaxing Duoduo Packaging Material Co., Ltd.",
+          "domain": "duoduopackaging.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Intersand",
+          "domain": "intersand.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Changsha Minjon Electronic Technology Co.,Ltd",
+          "domain": "minjon.com.cn",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Okaway Automation(Dalian)Co., Ltd",
+          "domain": "okaway.com.cn",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Sichuan Kintes Technology Co., Ltd",
+          "domain": "kintes.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "佛山市南海叁拾加农业发展有限公司",
+          "domain": "30fresh.com.cn",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Fukuzushi-Okayama.Jp",
+          "domain": "fukuzushi-okayama.jp",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "HonorCare Health",
+          "domain": "honorcarehealth.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Prestigious Homes Limited",
+          "domain": "prestigioushomeslimited.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Sintesa Peninsula Hotel",
+          "domain": "sintesapeninsulahotel.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "（社福）草加福祉会",
+          "domain": "soukafukushikai.jp",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "（株）こっこー",
+          "domain": "cocco-at.jp",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "iLending",
+          "domain": "ilendingcarloanrefinancing.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "（株）フコックス",
+          "domain": "fucox.co.jp",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Tri-global Solutions Group Inc.",
+          "domain": "tri-global.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Linguistic Service LLC",
+          "domain": "linguisticservice.com.ua",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Kisumu Water & Sanitation Company Limited",
+          "domain": "kiwasco.co.ke",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Association for India's Development",
+          "domain": "aidindia.org",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "METZ India",
+          "domain": "metzindia.in",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Rajesh Machine Tools Pvt. Ltd.",
+          "domain": "rajeshcnc.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Media Proprietor",
+          "domain": "mediaproprietor.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Ace Beauty Saloon",
+          "domain": "acecreation.in",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "70 Million Jobs",
+          "domain": "70millionjobs.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "5 Star Medical Staffing",
+          "domain": "5starmedicalstaffing.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Bharat N Dorris",
+          "domain": "bharatdorris.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "AIET, Alexandria Higher Institute of Engineering & Technology",
+          "domain": "aiet.edu.eg",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Friends 4 Life Covenant Church",
+          "domain": "friends4lifechurch.org",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "M outtrip com",
+          "domain": "myouttrip.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Arm Exporter",
+          "domain": "armhandicrafts.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Buildintech Private Limited",
+          "domain": "buildintech.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Oak Grove School",
+          "domain": "ogschool.org",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Novochem",
+          "domain": "novochem.net",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Genesis Pharma",
+          "domain": "genesispharma.healthcare",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Air Borne Mumbai",
+          "domain": "airbornebombay.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        },
+        {
+          "company_name": "Clarityefiling",
+          "domain": "clarityefiling.com",
+          "unknown_fields": [
+            "it_spend_unknown_in_search"
+          ]
+        }
+      ],
+      "selection_policy": "deterministic_icp_filter_only_no_scoring_no_ranking",
+      "after_hard_filter": 164,
+      "it_spend_enrichment": {
+        "skipped": true,
+        "reason": "Use --enrich-icp-it-spend to fetch company_spend for every ICP row (slow)."
+      },
+      "sample": {
+        "sample_method": "uniform_random_without_replacement",
+        "sample_seed": null,
+        "requested_count": 3,
+        "sampled_count": 3,
+        "candidate_count": 164,
+        "sample_fraction": 0.018292682926829267
+      },
+      "deep_prs": {
+        "requested_count": 3,
+        "sampled_count": 3,
+        "scored_count": 1,
+        "skipped": [
+          {
+            "domain": "greenwayusa.shop",
+            "reason": "Firmographic required but failed for greenwayusa.shop: None"
+          },
+          {
+            "domain": "vulcabrasazaleiari.com.br",
+            "reason": "Firmographic required but failed for vulcabrasazaleiari.com.br: None"
+          }
+        ]
+      }
+    },
+    "sample_stats": {
+      "sample_method": "uniform_random_without_replacement",
+      "sample_seed": null,
+      "requested_count": 3,
+      "sampled_count": 3,
+      "candidate_count": 164,
+      "sample_fraction": 0.018292682926829267
+    }
+  },
+  "formula": "Prospect Revenue Score = 25% × Company Size Fit + 20% × Estimated IT Budget Capacity + 20% × Technology Category Need + 20% × Purchase Intent Signal + 15% × Product Adoption Momentum"
+}

@@ -1,0 +1,3726 @@
+{
+  "stats": {
+    "input_count": 165,
+    "after_hygiene": 158,
+    "candidate_count": 158,
+    "hygiene": {
+      "function": "shortlist_engine.build_icp_candidate_list",
+      "criteria": [
+        "domain is present",
+        "domain is unique after lowercasing",
+        "domain is not the seller domain"
+      ],
+      "removed_missing_domain": 0,
+      "removed_duplicate_domain": 7,
+      "removed_seller_domain": 0,
+      "removed_missing_domain_rows": [],
+      "removed_duplicate_domain_rows": [
+        {
+          "company_name": "Orafol Americas Inc.",
+          "domain": "orafol.com",
+          "kept_company_name": "Orafol International, Inc.",
+          "country": "United States of America (the)",
+          "industry": "Manufacturing",
+          "reason": "Duplicate normalized domain; first occurrence was kept."
+        },
+        {
+          "company_name": "Magna Automotive Mirrors (Shanghai) Co., Ltd.",
+          "domain": "magna.com",
+          "kept_company_name": "Magna BÖCO GmbH",
+          "country": "China",
+          "industry": "Manufacturing",
+          "reason": "Duplicate normalized domain; first occurrence was kept."
+        },
+        {
+          "company_name": "Changchun Pepsi-Cola Beverage Co., Ltd.",
+          "domain": "pepsico.com",
+          "kept_company_name": "Wimm-Bill-Dann Georgia, LLC",
+          "country": "China",
+          "industry": "Manufacturing",
+          "reason": "Duplicate normalized domain; first occurrence was kept."
+        },
+        {
+          "company_name": "Pepsico Beverage (Guangzhou) Co., Ltd.",
+          "domain": "pepsico.com",
+          "kept_company_name": "Wimm-Bill-Dann Georgia, LLC",
+          "country": "China",
+          "industry": "Manufacturing",
+          "reason": "Duplicate normalized domain; first occurrence was kept."
+        },
+        {
+          "company_name": "Pepsi-Cola Metropolitan Bottling Company Inc",
+          "domain": "pepsico.com",
+          "kept_company_name": "Wimm-Bill-Dann Georgia, LLC",
+          "country": "United States of America (the)",
+          "industry": "Manufacturing",
+          "reason": "Duplicate normalized domain; first occurrence was kept."
+        },
+        {
+          "company_name": "Doncasters Inc.",
+          "domain": "doncasters.com",
+          "kept_company_name": "Fastentech, Inc.",
+          "country": "United States of America (the)",
+          "industry": "Manufacturing",
+          "reason": "Duplicate normalized domain; first occurrence was kept."
+        },
+        {
+          "company_name": "Eldon Adient Inc",
+          "domain": "adient.com",
+          "kept_company_name": "Yanfeng (Shenyang) Seating Systems Co., Ltd.",
+          "country": "United States of America (the)",
+          "industry": "Wholesale Trade",
+          "reason": "Duplicate normalized domain; first occurrence was kept."
+        }
+      ],
+      "removed_seller_domain_rows": [],
+      "kept_after_hygiene": 158
+    },
+    "icp_thresholds": {
+      "min_revenue": 71692400.0,
+      "min_employees": 200,
+      "min_it_spend": 2613988.0,
+      "category": "Database Development"
+    },
+    "eliminated_by_threshold": [],
+    "retained_with_unknown_fields": [
+      {
+        "company_name": "hypeone",
+        "domain": "hypeone.com.br",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HD Capital",
+        "domain": "baike.baidu.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "NY'ER ROMANIA SRL",
+        "domain": "newyorker.de",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CIRCANA SCS",
+        "domain": "iriworldwide.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Alaska International Airports System",
+        "domain": "alaska.gov",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "LUMENTUM TECHNOLOGY UK LIMITED",
+        "domain": "lumentum.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Shemin Nurseries, Inc.",
+        "domain": "siteone.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "TRIXELL",
+        "domain": "trixell.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CORNING SAS",
+        "domain": "corning.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HCL Canada Inc",
+        "domain": "hcltech.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Giw Industries, Inc.",
+        "domain": "ksb.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Gorilla Logic, LLC",
+        "domain": "gorillalogic.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "National Entertainment Network LLC",
+        "domain": "nen-inc.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Toll Global Forwarding Scs (usa) Inc.",
+        "domain": "tollgroup.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Bollore Logistics USA Inc.",
+        "domain": "bollore-logistics.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Siemens Logistics LLC",
+        "domain": "siemens-logistics.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Semcon Sweden AB",
+        "domain": "semcon.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Wimm-Bill-Dann Georgia, LLC",
+        "domain": "pepsico.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Summit Funding, Inc.",
+        "domain": "summitfunding.net",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Seco Tools, LLC",
+        "domain": "secotools.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "PRESTIGE & COLLECTIONS INTERNATIONAL",
+        "domain": "loreal.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Agf Canadian Resources Fund Ltd.",
+        "domain": "agf.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CLEARVIEW LIFE ASSURANCE LIMITED",
+        "domain": "clearview.com.au",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "COVESTRO SL",
+        "domain": "covestro.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "OBJETS ET CIE",
+        "domain": "adeo.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "MAAF ASSURANCES",
+        "domain": "covea.eu",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "EA Digital Illusions CE AB",
+        "domain": "dice.se",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Borealis Investments Inc",
+        "domain": "omers.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Zygo Corporation",
+        "domain": "zygo.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Arden Companies, LLC",
+        "domain": "ardencompanies.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SURA BANGYIKHAN COMPANY LIMITED",
+        "domain": "thaibev.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Currenex, Inc.",
+        "domain": "currenex.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Sichuan Dongxin Construction Engineering Co.,Ltd.",
+        "domain": "cscec.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Taylor Farms Maryland, Inc.",
+        "domain": "taylorfarms.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "China Comfort Travel Group Co., Ltd.",
+        "domain": "cct.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Yves Rocher Amérique Du Nord Inc.",
+        "domain": "groupe-rocher.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Aleris Aluminium Canada S.E.C.",
+        "domain": "novelis.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Amada America, Inc.",
+        "domain": "amada.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Carlisle (Meizhou) Rubber Manufacturing Co. Ltd.",
+        "domain": "carlisle.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Mirvac Property Trust",
+        "domain": "mirvac.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Griffith Energy Services, Inc.",
+        "domain": "griffithenergyservices.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Intertrust (Luxembourg) SARL",
+        "domain": "cscglobal.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "P.T. Freeport Indonesia Company (pt-Fi)",
+        "domain": "ptfi.co.id",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Mondelez (China) Co. Ltd.",
+        "domain": "mondelezinternational.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Distribuidora Megamak, S.A. de C.V.",
+        "domain": "megamak.com.mx",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Orafol International, Inc.",
+        "domain": "orafol.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Fastentech, Inc.",
+        "domain": "doncasters.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Cloudbees, Inc.",
+        "domain": "cloudbees.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Lindsay Irrigation Solutions, LLC",
+        "domain": "lindsay.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "TELECOM NEW ZEALAND AUSTRALIA PTY LTD",
+        "domain": "tpg.com.au",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Al Khorayef Industries",
+        "domain": "alkhorayef.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Biogen MA Inc.",
+        "domain": "biogen.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ossur Americas, Inc.",
+        "domain": "ossur.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Bouygues Construction Materiel",
+        "domain": "bouygues-construction.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CGG Services (Canada) Inc",
+        "domain": "cgg.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "EECOL Electric Corp",
+        "domain": "eecol.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Park Cotati-Rohnert Unified School District",
+        "domain": "crpusd.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Lvdi City Investment Group Co., Ltd.",
+        "domain": "ldjt.com.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Delpharm Boucherville Canada Inc",
+        "domain": "delpharm.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Alverno Clinical Laboratories, Inc.",
+        "domain": "franciscanhealth.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "LUDENDO COMMERCE FRANCE",
+        "domain": "ludendo.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "THANACHART INSURANCE PUBLIC COMPANY LIMITED",
+        "domain": "thanachart.co.th",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Solvay Specialty Polymers Usa, L.L.C.",
+        "domain": "solvay.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CA Global",
+        "domain": "caglobal.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Cavisson Systems, Inc.",
+        "domain": "cavisson.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SENER GRUPO DE INGENIERIA SOCIEDAD ANONIMA",
+        "domain": "group.sener",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "PACE FARM PTY LIMITED",
+        "domain": "pacefarm.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "AMS Retail Solutions",
+        "domain": "merchandisers.net",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "KCC ENGINEERING & CONTRACTING CO. KSC CLOSED",
+        "domain": "kccec.com.kw",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Jiangxi Yinhe Meter Co. Ltd.",
+        "domain": "inhemeter.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "New Sabina Industries, Inc.",
+        "domain": "nippon-seiki.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "DSV AIR & SEA SINGAPORE PTE. LTD.",
+        "domain": "dsv.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Midasplayer AB",
+        "domain": "king.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "The Moore Company",
+        "domain": "themooreco.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "The Christman Company",
+        "domain": "christmanco.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HealthPlanOne",
+        "domain": "hpone.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Richardson Oilseed (us) Holdings Limited",
+        "domain": "richardson.ca",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "St Andrew Goldfields Ltd",
+        "domain": "klgold.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Apac-Central, Inc.",
+        "domain": "apaccentralinc.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Coltène/Whaledent AG",
+        "domain": "coltene.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Modernizing Medicine, Inc.",
+        "domain": "modmed.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "THE KOOPLES DIFFUSION",
+        "domain": "thekooples.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Associated Brands Inc",
+        "domain": "treehousefoods.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Walker Stainless Equipment Company LLC",
+        "domain": "onewabash.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Nigerite Ltd.",
+        "domain": "nigeritelimited.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "DEPARTMENT OF STATE GROWTH",
+        "domain": "stategrowth.tas.gov.au",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "3 Day Blinds LLC",
+        "domain": "3dayblinds.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Magna BÖCO GmbH",
+        "domain": "magna.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "JOHNSON & JOHNSON CONSUMER HOLDINGS FRANCE",
+        "domain": "kenvue.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Advanced Bionics, LLC",
+        "domain": "advancedbionics.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Powerchina Chengdu Electric Power Fittings Co., Ltd.",
+        "domain": "powerchina.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Nokia Solutions And Networks do Brasil Telecomunicacoes",
+        "domain": "nokia.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "MUBADALA PETROLEUM SERVICES COMPANY L L C",
+        "domain": "mubadalaenergy.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Niels Bohr Institute, University of Copenhagen",
+        "domain": "nbi.ku.dk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Glacier Publications Limited Partnership",
+        "domain": "glaciermedia.ca",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Millennium Pharmacy Systems, LLC",
+        "domain": "pharmerica.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ravensdown Australian Holdings Ltd.",
+        "domain": "ravensdown.co.nz",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "DENIS MATERIAUX",
+        "domain": "denismateriaux.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Clair Global",
+        "domain": "clairglobal.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Altair Global Services, LLC",
+        "domain": "altairglobal.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "The Byng Group Ltd.",
+        "domain": "thebynggroup.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Aspire Health Alliance",
+        "domain": "aspirehealthalliance.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Credsystem",
+        "domain": "credsystem.com.br",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Advanced Integration Technology, LP",
+        "domain": "aint.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Orascom E&C USA Inc.",
+        "domain": "orascom.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hiram Walker & Sons Limited",
+        "domain": "corby.ca",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Sunwing Canada Inc",
+        "domain": "sunwing.ca",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Bigge Crane and Rigging Co.",
+        "domain": "bigge.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hospice of Dayton Inc.",
+        "domain": "hospiceofdayton.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Fairlife, LLC",
+        "domain": "fairlife.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Montgomery Coca-Cola Bottling Company, Ltd.",
+        "domain": "cocacolaunited.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Asrc Energy Services Omega, LLC",
+        "domain": "asrcenergy.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Security Benefit Group, Inc.",
+        "domain": "securitybenefit.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Rokid Corporation Ltd.",
+        "domain": "rokid.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Grouphealth Benefit Solutions",
+        "domain": "grouphealth.ca",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Corby Energy Services, Inc.",
+        "domain": "corbyenergy.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Zhuhai Agricultural Investment Holding Group Co., Ltd.",
+        "domain": "zhnk.com.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Lewis University",
+        "domain": "lewisu.edu",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Topco Associates, LLC",
+        "domain": "topco.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "R. W. Tomlinson Limited",
+        "domain": "tomlinsongroup.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Richter",
+        "domain": "richter.ca",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "International Food Policy Research Institute",
+        "domain": "ifpri.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ea Engineering, Science, and Technology, Inc., Pbc",
+        "domain": "eaest.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "PATHEON FRANCE",
+        "domain": "patheon.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Premier Image Technology (China) Ltd.",
+        "domain": "foxconn.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Liebherr-Components Deggendorf GmbH",
+        "domain": "liebherr.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Rawlings Sporting Goods Company, Inc.",
+        "domain": "rawlings.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Pearl River Life Insurance Co.,Ltd.",
+        "domain": "prlife.com.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Dentistry For Children, Inc.",
+        "domain": "dentistry4children.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "J.V. Driver Projects Inc",
+        "domain": "jvdriver.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "MANGO T.R TEKSTIL TICARET LIMITED SIRKETI",
+        "domain": "mango.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Southland Truck Center, LLC",
+        "domain": "mhc.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hulcher Services Inc.",
+        "domain": "hulcher.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hempel (Guangzhou) Coatings Ltd.",
+        "domain": "hempel.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Chongqing Haier Electric Appliance Sales Co., Ltd.",
+        "domain": "haier.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Heidelberg Usa, Inc.",
+        "domain": "heidelberg.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Warburg Pincus Private Equity Viii, L.P.",
+        "domain": "warburgpincus.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SOUTH PACIFIC LAUNDRY GROUP PTY LTD",
+        "domain": "splservices.com.au",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "I & P GROUP SDN. BERHAD",
+        "domain": "pnb.com.my",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "THALES AVIONICS ELECTRICAL SYSTEMS SAS",
+        "domain": "thalesgroup.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "mytheresa.com GmbH",
+        "domain": "mytheresa.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Pos-Sea Pte. Ltd.",
+        "domain": "posco.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Mckinley Inc.",
+        "domain": "mckinley.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Versata, Inc.",
+        "domain": "versata.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Yanfeng (Shenyang) Seating Systems Co., Ltd.",
+        "domain": "adient.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hormel Foods Corporate Services, LLC",
+        "domain": "hormelfoods.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ais Data Services, L.P.",
+        "domain": "aisinfo.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Norton Rose Fulbright Canada S.E.N.C.R.L. S.R.L.",
+        "domain": "nortonrosefulbright.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Jacor Communications Company",
+        "domain": "iheartmedia.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Novateur Education Inc.",
+        "domain": "ecpi.edu",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Honigman LLP",
+        "domain": "honigman.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Chengdu Xique Household Products Co. Ltd.",
+        "domain": "xique.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Becton Dickinson Rowa Germany GmbH",
+        "domain": "rowa.de",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Shanghai Valeo Automotive Electrical Systems Co. Ltd.",
+        "domain": "valeo.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Detroit Diesel Remanufacturing-East, Inc.",
+        "domain": "demanddetroit.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Guangzhou Orsan Gourmet Powder Co. Ltd.",
+        "domain": "tateandlyle.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Jani-King, Inc.",
+        "domain": "janiking.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Vista Community Clinic",
+        "domain": "vistacommunityclinic.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      }
+    ],
+    "selection_policy": "deterministic_icp_filter_only_no_scoring_no_ranking",
+    "after_hard_filter": 158
+  },
+  "companies": [
+    {
+      "companyId": "2.5443759024343684e+37",
+      "companyName": "hypeone",
+      "domain": "hypeone.com.br",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Brazil",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.2675994340153593e+37",
+      "companyName": "HD Capital",
+      "domain": "baike.baidu.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "China",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.8021525812721276e+37",
+      "companyName": "NY'ER ROMANIA SRL",
+      "domain": "newyorker.de",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 128269054,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "Romania",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.304911604616287e+37",
+      "companyName": "CIRCANA SCS",
+      "domain": "iriworldwide.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 102266648,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "France",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.361170056165521e+37",
+      "companyName": "Alaska International Airports System",
+      "domain": "alaska.gov",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 121977545,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "United States of America (the)",
+      "industry": "Transportation and Warehousing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.6296778705814847e+37",
+      "companyName": "LUMENTUM TECHNOLOGY UK LIMITED",
+      "domain": "lumentum.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 309731698,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.2204776354063874e+37",
+      "companyName": "Shemin Nurseries, Inc.",
+      "domain": "siteone.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 105925929,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.317477049759595e+37",
+      "companyName": "TRIXELL",
+      "domain": "trixell.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 159159505,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "France",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.769823097113213e+37",
+      "companyName": "CORNING SAS",
+      "domain": "corning.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 128405120,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "France",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.9071948767325925e+37",
+      "companyName": "HCL Canada Inc",
+      "domain": "hcltech.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 364943915,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "Canada",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.4545139971620484e+37",
+      "companyName": "Giw Industries, Inc.",
+      "domain": "ksb.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 101133077,
+      "employeeCount": 499,
+      "employeesRange": "From 200 to 499",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.330436904293737e+37",
+      "companyName": "Gorilla Logic, LLC",
+      "domain": "gorillalogic.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.543407390786249e+37",
+      "companyName": "National Entertainment Network LLC",
+      "domain": "nen-inc.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 120000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.553468472003415e+37",
+      "companyName": "Toll Global Forwarding Scs (usa) Inc.",
+      "domain": "tollgroup.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 96035154,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Transportation and Warehousing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.506038983574856e+36",
+      "companyName": "Bollore Logistics USA Inc.",
+      "domain": "bollore-logistics.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 338429312,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Transportation and Warehousing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.8489141331387737e+37",
+      "companyName": "Siemens Logistics LLC",
+      "domain": "siemens-logistics.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.0554118627021783e+37",
+      "companyName": "Semcon Sweden AB",
+      "domain": "semcon.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 87013272,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Sweden",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.7522661391005055e+37",
+      "companyName": "Wimm-Bill-Dann Georgia, LLC",
+      "domain": "pepsico.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 200939500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Georgia",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.361060761778485e+37",
+      "companyName": "Summit Funding, Inc.",
+      "domain": "summitfunding.net",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 79322398,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.80400730626871e+37",
+      "companyName": "Seco Tools, LLC",
+      "domain": "secotools.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 82577472,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.93484060930334e+37",
+      "companyName": "PRESTIGE & COLLECTIONS INTERNATIONAL",
+      "domain": "loreal.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 993919666,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.483583545913162e+37",
+      "companyName": "Agf Canadian Resources Fund Ltd.",
+      "domain": "agf.com",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 2918462500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.7957978346692064e+35",
+      "companyName": "CLEARVIEW LIFE ASSURANCE LIMITED",
+      "domain": "clearview.com.au",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 436570445,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.889898303059006e+37",
+      "companyName": "COVESTRO SL",
+      "domain": "covestro.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 609783175,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Spain",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.103609843325846e+37",
+      "companyName": "OBJETS ET CIE",
+      "domain": "adeo.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 135243336,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.141078681195512e+37",
+      "companyName": "MAAF ASSURANCES",
+      "domain": "covea.eu",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 92465750,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.5346366334224436e+37",
+      "companyName": "EA Digital Illusions CE AB",
+      "domain": "dice.se",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 158276851,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Sweden",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.5012796548711187e+37",
+      "companyName": "Borealis Investments Inc",
+      "domain": "omers.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 182754500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.972836550393131e+37",
+      "companyName": "Zygo Corporation",
+      "domain": "zygo.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 86384881,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.492321504449717e+37",
+      "companyName": "Arden Companies, LLC",
+      "domain": "ardencompanies.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 146953397,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.252397378245415e+37",
+      "companyName": "SURA BANGYIKHAN COMPANY LIMITED",
+      "domain": "thaibev.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 511012596,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Thailand",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.498519513140905e+37",
+      "companyName": "Currenex, Inc.",
+      "domain": "currenex.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 140000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.7852272632743277e+37",
+      "companyName": "Sichuan Dongxin Construction Engineering Co.,Ltd.",
+      "domain": "cscec.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 109966000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.943355012444924e+37",
+      "companyName": "Taylor Farms Maryland, Inc.",
+      "domain": "taylorfarms.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 150000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.383836213076207e+37",
+      "companyName": "China Comfort Travel Group Co., Ltd.",
+      "domain": "cct.cn",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 141812226,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Travel and Tourism",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.329987917614887e+37",
+      "companyName": "Yves Rocher Amérique Du Nord Inc.",
+      "domain": "groupe-rocher.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 91768500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.4862867506613295e+37",
+      "companyName": "Aleris Aluminium Canada S.E.C.",
+      "domain": "novelis.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 121615500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.729462720900927e+37",
+      "companyName": "Amada America, Inc.",
+      "domain": "amada.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 185259149,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.078078439561834e+37",
+      "companyName": "Carlisle (Meizhou) Rubber Manufacturing Co. Ltd.",
+      "domain": "carlisle.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 78382206,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.9645099670225645e+36",
+      "companyName": "Mirvac Property Trust",
+      "domain": "mirvac.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 485193058,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.727906863378167e+37",
+      "companyName": "Griffith Energy Services, Inc.",
+      "domain": "griffithenergyservices.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 84298221,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.0941330467311865e+37",
+      "companyName": "Intertrust (Luxembourg) SARL",
+      "domain": "cscglobal.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 128840001,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Luxembourg",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.917646670843755e+37",
+      "companyName": "P.T. Freeport Indonesia Company (pt-Fi)",
+      "domain": "ptfi.co.id",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 258145455,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Mining and Natural Resources",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.974217477862686e+37",
+      "companyName": "Mondelez (China) Co. Ltd.",
+      "domain": "mondelezinternational.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 73392000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.687988005945717e+37",
+      "companyName": "Distribuidora Megamak, S.A. de C.V.",
+      "domain": "megamak.com.mx",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 125607904,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Mexico",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.3031362020527664e+37",
+      "companyName": "Orafol International, Inc.",
+      "domain": "orafol.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 80533404,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.0457334926007197e+36",
+      "companyName": "Fastentech, Inc.",
+      "domain": "doncasters.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 137670825,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.7126201442568167e+37",
+      "companyName": "Cloudbees, Inc.",
+      "domain": "cloudbees.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 150000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.281971769366251e+36",
+      "companyName": "Lindsay Irrigation Solutions, LLC",
+      "domain": "lindsay.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 105225287,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.318720324722535e+37",
+      "companyName": "TELECOM NEW ZEALAND AUSTRALIA PTY LTD",
+      "domain": "tpg.com.au",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 128288500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Telecommunications",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.174382457441787e+37",
+      "companyName": "Al Khorayef Industries",
+      "domain": "alkhorayef.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 97206000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Saudi Arabia",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.535879910771212e+37",
+      "companyName": "Biogen MA Inc.",
+      "domain": "biogen.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 440617699,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.0336201945309535e+36",
+      "companyName": "Ossur Americas, Inc.",
+      "domain": "ossur.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 98041563,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.333863896469075e+37",
+      "companyName": "Bouygues Construction Materiel",
+      "domain": "bouygues-construction.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 302948673,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.0659293337171277e+36",
+      "companyName": "CGG Services (Canada) Inc",
+      "domain": "cgg.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 92286500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.696477428805305e+37",
+      "companyName": "EECOL Electric Corp",
+      "domain": "eecol.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 290123500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.436983564686066e+37",
+      "companyName": "Park Cotati-Rohnert Unified School District",
+      "domain": "crpusd.org",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 89595391,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.379650551931717e+37",
+      "companyName": "Lvdi City Investment Group Co., Ltd.",
+      "domain": "ldjt.com.cn",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 73392000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.126951877553613e+37",
+      "companyName": "Delpharm Boucherville Canada Inc",
+      "domain": "delpharm.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 421108310,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.361825380306534e+37",
+      "companyName": "Alverno Clinical Laboratories, Inc.",
+      "domain": "franciscanhealth.org",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 94322122,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.124115468332941e+37",
+      "companyName": "LUDENDO COMMERCE FRANCE",
+      "domain": "ludendo.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 196685783,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.1159264414437448e+37",
+      "companyName": "THANACHART INSURANCE PUBLIC COMPANY LIMITED",
+      "domain": "thanachart.co.th",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 219415295,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Thailand",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.361814846054896e+37",
+      "companyName": "Solvay Specialty Polymers Usa, L.L.C.",
+      "domain": "solvay.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 553187339,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.064101424505951e+37",
+      "companyName": "CA Global",
+      "domain": "caglobal.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 235867064,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.885902634312195e+37",
+      "companyName": "Cavisson Systems, Inc.",
+      "domain": "cavisson.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 75000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.168436999670368e+37",
+      "companyName": "SENER GRUPO DE INGENIERIA SOCIEDAD ANONIMA",
+      "domain": "group.sener",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 489596651,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Spain",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.155883529231888e+37",
+      "companyName": "PACE FARM PTY LIMITED",
+      "domain": "pacefarm.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 80811614,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Agriculture, Forestry and Fishing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.009611009719683e+37",
+      "companyName": "AMS Retail Solutions",
+      "domain": "merchandisers.net",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.6580867214828598e+37",
+      "companyName": "KCC ENGINEERING & CONTRACTING CO. KSC CLOSED",
+      "domain": "kccec.com.kw",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 145000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Kuwait",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.148809642710286e+37",
+      "companyName": "Jiangxi Yinhe Meter Co. Ltd.",
+      "domain": "inhemeter.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 102987000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.062492617209836e+37",
+      "companyName": "New Sabina Industries, Inc.",
+      "domain": "nippon-seiki.co.jp",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 89923836,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.0978462201601e+37",
+      "companyName": "DSV AIR & SEA SINGAPORE PTE. LTD.",
+      "domain": "dsv.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 155452972,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Singapore",
+      "industry": "Transportation and Warehousing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.778549774216281e+37",
+      "companyName": "Midasplayer AB",
+      "domain": "king.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 726259946,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Sweden",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.13814596461039e+37",
+      "companyName": "The Moore Company",
+      "domain": "themooreco.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 81319456,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.5267703606074423e+37",
+      "companyName": "The Christman Company",
+      "domain": "christmanco.com",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 2000000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.1113576928497665e+37",
+      "companyName": "HealthPlanOne",
+      "domain": "hpone.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.800711395211942e+37",
+      "companyName": "Richardson Oilseed (us) Holdings Limited",
+      "domain": "richardson.ca",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 246126898,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.282232718610636e+37",
+      "companyName": "St Andrew Goldfields Ltd",
+      "domain": "klgold.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 127887000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Mining and Natural Resources",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.977531172838502e+36",
+      "companyName": "Apac-Central, Inc.",
+      "domain": "apaccentralinc.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 177984055,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.421798413174364e+37",
+      "companyName": "Coltène/Whaledent AG",
+      "domain": "coltene.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 174589122,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Switzerland",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.9623816623670768e+37",
+      "companyName": "Modernizing Medicine, Inc.",
+      "domain": "modmed.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 118466262,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.1486214737803356e+37",
+      "companyName": "THE KOOPLES DIFFUSION",
+      "domain": "thekooples.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 105616569,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.602797417354502e+37",
+      "companyName": "Associated Brands Inc",
+      "domain": "treehousefoods.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 243692500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.062517818498429e+37",
+      "companyName": "Walker Stainless Equipment Company LLC",
+      "domain": "onewabash.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 93334461,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.0397927879747937e+37",
+      "companyName": "Nigerite Ltd.",
+      "domain": "nigeritelimited.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 92650000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Nigeria",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.473089815207139e+37",
+      "companyName": "DEPARTMENT OF STATE GROWTH",
+      "domain": "stategrowth.tas.gov.au",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 403092866,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Public Administration",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.456479856143206e+37",
+      "companyName": "3 Day Blinds LLC",
+      "domain": "3dayblinds.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 191000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.3303731995147308e+37",
+      "companyName": "Magna BÖCO GmbH",
+      "domain": "magna.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 129341200,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.70675504951286e+37",
+      "companyName": "JOHNSON & JOHNSON CONSUMER HOLDINGS FRANCE",
+      "domain": "kenvue.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 128753000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.686970584496945e+37",
+      "companyName": "Advanced Bionics, LLC",
+      "domain": "advancedbionics.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 91603414,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.7724995932676384e+37",
+      "companyName": "Powerchina Chengdu Electric Power Fittings Co., Ltd.",
+      "domain": "powerchina.cn",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 188184455,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.355080868352339e+37",
+      "companyName": "Nokia Solutions And Networks do Brasil Telecomunicacoes",
+      "domain": "nokia.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 418354424,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Brazil",
+      "industry": "Telecommunications",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.10107253813893e+37",
+      "companyName": "MUBADALA PETROLEUM SERVICES COMPANY L L C",
+      "domain": "mubadalaenergy.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 351667000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United Arab Emirates (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.404691552403446e+37",
+      "companyName": "Niels Bohr Institute, University of Copenhagen",
+      "domain": "nbi.ku.dk",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 185000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Denmark",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.36860589296393e+37",
+      "companyName": "Glacier Publications Limited Partnership",
+      "domain": "glaciermedia.ca",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 96887000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Media and Entertainment",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.725272267058773e+37",
+      "companyName": "Millennium Pharmacy Systems, LLC",
+      "domain": "pharmerica.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 80835300,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.604070787278604e+37",
+      "companyName": "Ravensdown Australian Holdings Ltd.",
+      "domain": "ravensdown.co.nz",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 454851774,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "New Zealand",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.138196682057644e+37",
+      "companyName": "DENIS MATERIAUX",
+      "domain": "denismateriaux.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 138377325,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.740571126800135e+37",
+      "companyName": "Clair Global",
+      "domain": "clairglobal.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 150000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Media and Entertainment",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.035730889704328e+37",
+      "companyName": "Altair Global Services, LLC",
+      "domain": "altairglobal.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 96199203,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.5984216736408925e+37",
+      "companyName": "The Byng Group Ltd.",
+      "domain": "thebynggroup.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 334454000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.7938837793489034e+37",
+      "companyName": "Aspire Health Alliance",
+      "domain": "aspirehealthalliance.org",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 82000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.3055380896359094e+37",
+      "companyName": "Credsystem",
+      "domain": "credsystem.com.br",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 120000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Brazil",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.108504577929145e+37",
+      "companyName": "Advanced Integration Technology, LP",
+      "domain": "aint.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 220644467,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.484546166436331e+36",
+      "companyName": "Orascom E&C USA Inc.",
+      "domain": "orascom.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 149726440,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.447252583627165e+37",
+      "companyName": "Hiram Walker & Sons Limited",
+      "domain": "corby.ca",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 243692500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.80399295899777e+37",
+      "companyName": "Sunwing Canada Inc",
+      "domain": "sunwing.ca",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 158676000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Travel and Tourism",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.770872477106581e+37",
+      "companyName": "Bigge Crane and Rigging Co.",
+      "domain": "bigge.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.16340734119204e+37",
+      "companyName": "Hospice of Dayton Inc.",
+      "domain": "hospiceofdayton.org",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 88829330,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.619003216779444e+37",
+      "companyName": "Fairlife, LLC",
+      "domain": "fairlife.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 782628137,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.33725780137331e+37",
+      "companyName": "Montgomery Coca-Cola Bottling Company, Ltd.",
+      "domain": "cocacolaunited.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 73445771,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.231901715322346e+37",
+      "companyName": "Asrc Energy Services Omega, LLC",
+      "domain": "asrcenergy.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 99202699,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.9316488012982693e+37",
+      "companyName": "Security Benefit Group, Inc.",
+      "domain": "securitybenefit.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 209083792,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.584522595334019e+37",
+      "companyName": "Rokid Corporation Ltd.",
+      "domain": "rokid.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 77927500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Cayman Islands (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.6125062188188787e+37",
+      "companyName": "Grouphealth Benefit Solutions",
+      "domain": "grouphealth.ca",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 80000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.927916440525753e+37",
+      "companyName": "Corby Energy Services, Inc.",
+      "domain": "corbyenergy.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 110400000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.705692383540684e+37",
+      "companyName": "Zhuhai Agricultural Investment Holding Group Co., Ltd.",
+      "domain": "zhnk.com.cn",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100238000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.2862981420088357e+36",
+      "companyName": "Lewis University",
+      "domain": "lewisu.edu",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 131768948,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.309421476037311e+37",
+      "companyName": "Topco Associates, LLC",
+      "domain": "topco.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 110000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.254479455314998e+37",
+      "companyName": "R. W. Tomlinson Limited",
+      "domain": "tomlinsongroup.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 206554500,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Mining and Natural Resources",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.380544829449968e+36",
+      "companyName": "Richter",
+      "domain": "richter.ca",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 80000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.1765318713360586e+37",
+      "companyName": "International Food Policy Research Institute",
+      "domain": "ifpri.org",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 102800367,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.165745535071902e+37",
+      "companyName": "Ea Engineering, Science, and Technology, Inc., Pbc",
+      "domain": "eaest.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 133374700,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.450458586173139e+37",
+      "companyName": "PATHEON FRANCE",
+      "domain": "patheon.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 88016109,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.6562880240177996e+37",
+      "companyName": "Premier Image Technology (China) Ltd.",
+      "domain": "foxconn.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 89898411,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.022865821537738e+37",
+      "companyName": "Liebherr-Components Deggendorf GmbH",
+      "domain": "liebherr.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 106141269,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.453623418641401e+37",
+      "companyName": "Rawlings Sporting Goods Company, Inc.",
+      "domain": "rawlings.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 300000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.1566672233035352e+37",
+      "companyName": "Pearl River Life Insurance Co.,Ltd.",
+      "domain": "prlife.com.cn",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100000000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.006459437628302e+36",
+      "companyName": "Dentistry For Children, Inc.",
+      "domain": "dentistry4children.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 77410287,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.987256259874388e+37",
+      "companyName": "J.V. Driver Projects Inc",
+      "domain": "jvdriver.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 349196000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.2274630445070025e+37",
+      "companyName": "MANGO T.R TEKSTIL TICARET LIMITED SIRKETI",
+      "domain": "mango.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 167808384,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Turkey",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.9309781512159083e+37",
+      "companyName": "Southland Truck Center, LLC",
+      "domain": "mhc.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 91711644,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.337420448112737e+37",
+      "companyName": "Hulcher Services Inc.",
+      "domain": "hulcher.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 487390624,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Transportation and Warehousing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.8709709364946934e+37",
+      "companyName": "Hempel (Guangzhou) Coatings Ltd.",
+      "domain": "hempel.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 87619085,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.081739888056636e+37",
+      "companyName": "Chongqing Haier Electric Appliance Sales Co., Ltd.",
+      "domain": "haier.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 74910000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.478659327926169e+37",
+      "companyName": "Heidelberg Usa, Inc.",
+      "domain": "heidelberg.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 415612787,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.432097313371539e+37",
+      "companyName": "Warburg Pincus Private Equity Viii, L.P.",
+      "domain": "warburgpincus.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 494541755,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.186120537889122e+37",
+      "companyName": "SOUTH PACIFIC LAUNDRY GROUP PTY LTD",
+      "domain": "splservices.com.au",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 92437629,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.859496556233134e+37",
+      "companyName": "I & P GROUP SDN. BERHAD",
+      "domain": "pnb.com.my",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 315519624,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Malaysia",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.392993002330579e+37",
+      "companyName": "THALES AVIONICS ELECTRICAL SYSTEMS SAS",
+      "domain": "thalesgroup.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 121307195,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.522993252081412e+37",
+      "companyName": "mytheresa.com GmbH",
+      "domain": "mytheresa.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 413180503,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.316221444774325e+37",
+      "companyName": "Pos-Sea Pte. Ltd.",
+      "domain": "posco.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 496508009,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Singapore",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.698556631040267e+37",
+      "companyName": "Mckinley Inc.",
+      "domain": "mckinley.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 90545608,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.222699704158783e+37",
+      "companyName": "Versata, Inc.",
+      "domain": "versata.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 155113503,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.3202049885061612e+37",
+      "companyName": "Yanfeng (Shenyang) Seating Systems Co., Ltd.",
+      "domain": "adient.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 97754030,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.2146065808974215e+37",
+      "companyName": "Hormel Foods Corporate Services, LLC",
+      "domain": "hormelfoods.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 124648072,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.870878857832728e+37",
+      "companyName": "Ais Data Services, L.P.",
+      "domain": "aisinfo.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 96612529,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.345390940220735e+37",
+      "companyName": "Norton Rose Fulbright Canada S.E.N.C.R.L. S.R.L.",
+      "domain": "nortonrosefulbright.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 102938000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.2737377765481965e+37",
+      "companyName": "Jacor Communications Company",
+      "domain": "iheartmedia.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 164999840,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Media and Entertainment",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.3175677440202713e+35",
+      "companyName": "Novateur Education Inc.",
+      "domain": "ecpi.edu",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 88517024,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.715110494357129e+37",
+      "companyName": "Honigman LLP",
+      "domain": "honigman.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 90214034,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.934525082847735e+37",
+      "companyName": "Chengdu Xique Household Products Co. Ltd.",
+      "domain": "xique.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 76680000,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.44606798319972e+37",
+      "companyName": "Becton Dickinson Rowa Germany GmbH",
+      "domain": "rowa.de",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 219185952,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.5647112701502165e+37",
+      "companyName": "Shanghai Valeo Automotive Electrical Systems Co. Ltd.",
+      "domain": "valeo.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 657236768,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.307674060262844e+37",
+      "companyName": "Detroit Diesel Remanufacturing-East, Inc.",
+      "domain": "demanddetroit.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 75559721,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.0812407205310773e+37",
+      "companyName": "Guangzhou Orsan Gourmet Powder Co. Ltd.",
+      "domain": "tateandlyle.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 82201746,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.586488832809397e+37",
+      "companyName": "Jani-King, Inc.",
+      "domain": "janiking.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 114698599,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.368024883352666e+37",
+      "companyName": "Vista Community Clinic",
+      "domain": "vistacommunityclinic.org",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 98044336,
+      "employeeCount": 500,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    }
+  ]
+}

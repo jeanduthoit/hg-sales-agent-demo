@@ -1,0 +1,15 @@
+{
+  "name": "jd-hg-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HG Insights sales agent — run npm scripts from the repo root",
+  "scripts": {
+    "profile:seller": "npm run profile:seller --prefix seller_profile_agent",
+    "profile": "npm run profile:seller --prefix seller_profile_agent",
+    "pipeline": "npm run pipeline --prefix seller_profile_agent",
+    "prs": "npm run prs --prefix seller_profile_agent",
+    "prs:company": "npm run prs:company --prefix seller_profile_agent",
+    "start": "npm run start --prefix seller_profile_agent",
+    "demo:web": "npm run demo:web --prefix seller_profile_agent"
+  }
+}

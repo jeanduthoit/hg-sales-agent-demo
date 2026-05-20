@@ -1,0 +1,16 @@
+{
+  "iteration": "Test",
+  "seller": "Amazon.com, Inc.",
+  "target_product": "Alexa Certify",
+  "hg_product_name": "Alexa Certify",
+  "ranking": [
+    {
+      "rank": 1,
+      "company_name": "6Sigma EPCM",
+      "domain": "6s.co.za",
+      "prospect_revenue_score": 19.79,
+      "reliability_pct": "42%",
+      "reliability_raw": 0.425
+    }
+  ]
+}

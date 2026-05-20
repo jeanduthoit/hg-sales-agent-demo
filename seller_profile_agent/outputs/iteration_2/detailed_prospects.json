@@ -1,0 +1,427 @@
+{
+  "iteration": "Iteration 2",
+  "prospects": [
+    {
+      "rank": 1,
+      "company_name": "Northland Clothing Company",
+      "domain": "northland-clothing.com",
+      "prospect_revenue_score": 14.35,
+      "reliability_pct": "42%",
+      "reliability_raw": 0.425,
+      "sales_card": {
+        "rank": 1,
+        "company_name": "Northland Clothing Company",
+        "domain": "northland-clothing.com",
+        "prs": 14.35,
+        "prs_display": "14.3",
+        "prospect_revenue_score_line": "**Prospect Revenue Score:** 14.3/100",
+        "prs_calculation_lines": [
+          "- Company Size Fit = 15.9/100 because the score uses the stronger signal: revenue score 15.9 from $3.0M revenue, employee score 0.2 from 20 employees.",
+          "- Technology Category Need = 0/100 because the category `HG technographic product` is known, but `company_technographic` did not return a usable installed-product intensity in that category.",
+          "- Purchase Intent Signal = 0/100 because `company_intent` returned no matched topic score for `Amazon AppFlow`.",
+          "- Product Adoption Momentum = 50/100 because `company_install_time_series` did not find the target product; the scoring engine uses a neutral momentum value.",
+          "- Estimated IT Budget Capacity is not included in the PRS because it is not calculable.",
+          "- Final PRS = weighted average of calculable criteria only (active weight: 80%) = 14.3/100."
+        ],
+        "reliability_pct": "42%",
+        "reliability_detail_lines": [
+          "**PRS score reliability:** 42%",
+          "",
+          "- Company Size Fit: **2/2** HG fields (`company_firmographic.revenue`, `company_firmographic.employeeCount`) → reliability **100%**",
+          "- Estimated IT Budget Capacity: **0/2** HG fields (none among expected: `company_spend.spendByCategory[Total IT].totalSpendAmount`, `company_spend.unknownRowCount`) → reliability **0%**",
+          "- Technology Category Need: **1/2** HG fields (`list_product_categories (category)` (missing: `company_technographic.products.intensity`)) → reliability **50%**",
+          "- Purchase Intent Signal: **0/3** HG fields (none among expected: `company_intent.topics[].score`, `company_intent.topics[].last_seen_at`, `intent topic match`) → reliability **0%**",
+          "- Product Adoption Momentum: **0/1** HG fields (none among expected: `company_install_time_series.products[].intensity_momentum`) → reliability **50%**"
+        ],
+        "reliability_raw": 0.425,
+        "best_sales_opportunity": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "weakest_fit": "**No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+        "recommended_sales_angle": "Validate budget, category adjacency, and timing before proposing a deal structure.",
+        "strategic_interest": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "what_to_sell": "Lead with **Amazon AppFlow** (HG SKU: `Amazon AppFlow`).",
+        "timing": "No HG intent on the bound topic — build timing from business triggers only.",
+        "strongest_infrastructure_signal": "HG tracks **0** products at this domain. Category **`HG technographic product`** is identified but max intensity is 0 — limited proof of database-adjacent spend in HG.",
+        "sale_blockers": [
+          "HG `company_spend` did not return a usable Total IT line — budget capacity unverified."
+        ],
+        "sales_positive_signals": [],
+        "sales_risk_signals": [
+          "- **No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+          "- **Data gap:** PRS score reliability 42% — validate HG spend and technographics before executive sponsorship."
+        ],
+        "seller_impact_bullets": [
+          "- HG category **`HG technographic product`** drives Technology Category Need.",
+          "- Intent topic **`None`** drives Purchase Intent Signal.",
+          "- Product line **Amazon AppFlow** selected in `seller_profile.json` (see `seller_profile.md`)."
+        ],
+        "comparative_notes": [
+          "Highest Prospect Revenue Score: **Northland Clothing Company** (14.3/100).",
+          "Highest Estimated IT Budget Capacity: **SUPERIOR MACHINES LTD** (Estimated IT Budget Capacity Score = -4.0/100).",
+          "Strongest Technology Category Need: **Northland Clothing Company** (intensity score 0/100).",
+          "Weakest Purchase Intent signals: **no prospect** shows HG intent on the product topic.",
+          "Highest PRS score reliability: **SUPERIOR MACHINES LTD** (52%).",
+          "Lowest PRS score reliability in cohort: **Northland Clothing Company** (42%)."
+        ]
+      },
+      "criteria": {
+        "company_size_fit": {
+          "display_name": "Company Size Fit",
+          "score": 15.904041823988749,
+          "reliability_pct": "100%",
+          "reliability_raw": 1.0,
+          "weight": 0.25,
+          "contribution": 3.98,
+          "raw_inputs": {
+            "revenue": 3000000,
+            "employees": 20,
+            "revenue_usd": 3000000,
+            "employee_count": 20,
+            "data_source": "company_firmographic"
+          },
+          "explanation": "Account scale from HG revenue/headcount (rev=3000000, emp=20)."
+        },
+        "estimated_it_budget_capacity": {
+          "display_name": "Estimated IT Budget Capacity",
+          "score": null,
+          "reliability_pct": "0%",
+          "reliability_raw": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "it_budget": null,
+            "unknown_row_count": null,
+            "it_budget_usd": null,
+            "data_source": "company_firmographic"
+          },
+          "explanation": "IT budget from Total IT spend line when available; drives funding capacity."
+        },
+        "technology_category_need": {
+          "display_name": "Technology Category Need",
+          "score": 0.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "intensity_max": null,
+            "category_name": "HG technographic product",
+            "max_category_intensity": null
+          },
+          "explanation": "Max HG intensity in 'HG technographic product' category among installed products."
+        },
+        "purchase_intent_signal": {
+          "display_name": "Purchase Intent Signal",
+          "score": 0.0,
+          "reliability_pct": "0%",
+          "reliability_raw": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "topic_score": null,
+            "last_seen_at": null,
+            "intent_topic": "Amazon AppFlow",
+            "intent_score": null
+          },
+          "explanation": "Purchase intent from HG topic score with freshness tiers."
+        },
+        "product_adoption_momentum": {
+          "display_name": "Product Adoption Momentum",
+          "score": 50.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.15,
+          "contribution": 7.5,
+          "raw_inputs": {
+            "intensity_momentum": null,
+            "series_found": false,
+            "time_series_found": false
+          },
+          "explanation": "HG intensity_momentum on the bound seller SKU (24 months): rising, flat, or declining."
+        }
+      },
+      "notes": [
+        "company_spend: Error executing company_spend: Tool 'company_spend' execution failed: Company spend lookup failed: No spend data found for company: northland-clothing.com. This error cannot be fixed by retrying with the same parameters. Report this error to the user."
+      ]
+    },
+    {
+      "rank": 2,
+      "company_name": "SUPERIOR MACHINES LTD",
+      "domain": "superiormachines.co.uk",
+      "prospect_revenue_score": 11.2,
+      "reliability_pct": "52%",
+      "reliability_raw": 0.525,
+      "sales_card": {
+        "rank": 2,
+        "company_name": "SUPERIOR MACHINES LTD",
+        "domain": "superiormachines.co.uk",
+        "prs": 11.2,
+        "prs_display": "11.2",
+        "prospect_revenue_score_line": "**Prospect Revenue Score:** 11.2/100",
+        "prs_calculation_lines": [
+          "- Company Size Fit = 18.0/100 because the score uses the stronger signal: revenue score 18.0 from $3.5M revenue, employee score 0.2 from 20 employees.",
+          "- Estimated IT Budget Capacity = -4.0/100 because `company_spend` returned Total IT spend of $69,457, normalized on a log scale.",
+          "- Technology Category Need = 0/100 because the category `HG technographic product` is known, but `company_technographic` did not return a usable installed-product intensity in that category.",
+          "- Purchase Intent Signal = 0/100 because `company_intent` returned no matched topic score for `Amazon AppFlow`.",
+          "- Product Adoption Momentum = 50/100 because `company_install_time_series` did not find the target product; the scoring engine uses a neutral momentum value.",
+          "- Final PRS = weighted average of calculable criteria only (active weight: 100%) = 11.2/100."
+        ],
+        "reliability_pct": "52%",
+        "reliability_detail_lines": [
+          "**PRS score reliability:** 52%",
+          "",
+          "- Company Size Fit: **2/2** HG fields (`company_firmographic.revenue`, `company_firmographic.employeeCount`) → reliability **100%**",
+          "- Estimated IT Budget Capacity: **1/2** HG fields (`company_spend.spendByCategory[Total IT].totalSpendAmount` (missing: `company_spend.unknownRowCount`)) → reliability **50%**",
+          "- Technology Category Need: **1/2** HG fields (`list_product_categories (category)` (missing: `company_technographic.products.intensity`)) → reliability **50%**",
+          "- Purchase Intent Signal: **0/3** HG fields (none among expected: `company_intent.topics[].score`, `company_intent.topics[].last_seen_at`, `intent topic match`) → reliability **0%**",
+          "- Product Adoption Momentum: **0/1** HG fields (none among expected: `company_install_time_series.products[].intensity_momentum`) → reliability **50%**"
+        ],
+        "reliability_raw": 0.525,
+        "best_sales_opportunity": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "weakest_fit": "**No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+        "recommended_sales_angle": "Validate budget, category adjacency, and timing before proposing a deal structure.",
+        "strategic_interest": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "what_to_sell": "Lead with **Amazon AppFlow** (HG SKU: `Amazon AppFlow`).",
+        "timing": "No HG intent on the bound topic — build timing from business triggers only.",
+        "strongest_infrastructure_signal": "HG tracks **12** products at this domain. Category **`HG technographic product`** is identified but max intensity is 0 — limited proof of database-adjacent spend in HG.",
+        "sale_blockers": [],
+        "sales_positive_signals": [],
+        "sales_risk_signals": [
+          "- **No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+          "- **Data gap:** PRS score reliability 52% — validate HG spend and technographics before executive sponsorship."
+        ],
+        "seller_impact_bullets": [
+          "- HG category **`HG technographic product`** drives Technology Category Need.",
+          "- Intent topic **`None`** drives Purchase Intent Signal.",
+          "- Product line **Amazon AppFlow** selected in `seller_profile.json` (see `seller_profile.md`)."
+        ],
+        "comparative_notes": [
+          "Highest Prospect Revenue Score: **Northland Clothing Company** (14.3/100).",
+          "Highest Estimated IT Budget Capacity: **SUPERIOR MACHINES LTD** (Estimated IT Budget Capacity Score = -4.0/100).",
+          "Strongest Technology Category Need: **Northland Clothing Company** (intensity score 0/100).",
+          "Weakest Purchase Intent signals: **no prospect** shows HG intent on the product topic.",
+          "Highest PRS score reliability: **SUPERIOR MACHINES LTD** (52%).",
+          "Lowest PRS score reliability in cohort: **Northland Clothing Company** (42%)."
+        ]
+      },
+      "criteria": {
+        "company_size_fit": {
+          "display_name": "Company Size Fit",
+          "score": 17.98239765496233,
+          "reliability_pct": "100%",
+          "reliability_raw": 1.0,
+          "weight": 0.25,
+          "contribution": 4.5,
+          "raw_inputs": {
+            "revenue": 3463155,
+            "employees": 20,
+            "revenue_usd": 3463155,
+            "employee_count": 20,
+            "data_source": "company_firmographic"
+          },
+          "explanation": "Account scale from HG revenue/headcount (rev=3463155, emp=20)."
+        },
+        "estimated_it_budget_capacity": {
+          "display_name": "Estimated IT Budget Capacity",
+          "score": -3.957099468757851,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.2,
+          "contribution": -0.79,
+          "raw_inputs": {
+            "it_budget": 69457,
+            "unknown_row_count": null,
+            "it_budget_usd": 69457,
+            "data_source": "company_firmographic"
+          },
+          "explanation": "IT budget from Total IT spend line when available; drives funding capacity."
+        },
+        "technology_category_need": {
+          "display_name": "Technology Category Need",
+          "score": 0.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "intensity_max": null,
+            "category_name": "HG technographic product",
+            "max_category_intensity": null
+          },
+          "explanation": "Max HG intensity in 'HG technographic product' category among installed products."
+        },
+        "purchase_intent_signal": {
+          "display_name": "Purchase Intent Signal",
+          "score": 0.0,
+          "reliability_pct": "0%",
+          "reliability_raw": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "topic_score": null,
+            "last_seen_at": null,
+            "intent_topic": "Amazon AppFlow",
+            "intent_score": null
+          },
+          "explanation": "Purchase intent from HG topic score with freshness tiers."
+        },
+        "product_adoption_momentum": {
+          "display_name": "Product Adoption Momentum",
+          "score": 50.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.15,
+          "contribution": 7.5,
+          "raw_inputs": {
+            "intensity_momentum": null,
+            "series_found": false,
+            "time_series_found": false
+          },
+          "explanation": "HG intensity_momentum on the bound seller SKU (24 months): rising, flat, or declining."
+        }
+      },
+      "notes": [
+        "company_spend: Error executing company_spend: Tool 'company_spend' execution failed: Company spend lookup failed: No spend data found for company: superiormachines.co.uk. This error cannot be fixed by retrying with the same parameters. Report this error to the user."
+      ]
+    },
+    {
+      "rank": 3,
+      "company_name": "Meitai Investment (Suzhou) Co.,Ltd.",
+      "domain": "spigroups.com",
+      "prospect_revenue_score": 9.4,
+      "reliability_pct": "52%",
+      "reliability_raw": 0.525,
+      "sales_card": {
+        "rank": 3,
+        "company_name": "Meitai Investment (Suzhou) Co.,Ltd.",
+        "domain": "spigroups.com",
+        "prs": 9.4,
+        "prs_display": "9.4",
+        "prospect_revenue_score_line": "**Prospect Revenue Score:** 9.4/100",
+        "prs_calculation_lines": [
+          "- Company Size Fit = 0.1/100 because the score uses the stronger signal: revenue score -31.5 from $113,596 revenue, employee score 0.1 from 7 employees.",
+          "- Technology Category Need = 0/100 because the category `HG technographic product` is known, but `company_technographic` did not return a usable installed-product intensity in that category.",
+          "- Purchase Intent Signal = 0/100 because `company_intent` returned no matched topic score for `Amazon AppFlow`.",
+          "- Product Adoption Momentum = 50/100 because `company_install_time_series` did not find the target product; the scoring engine uses a neutral momentum value.",
+          "- Estimated IT Budget Capacity is not included in the PRS because it is not calculable.",
+          "- Final PRS = weighted average of calculable criteria only (active weight: 80%) = 9.4/100."
+        ],
+        "reliability_pct": "52%",
+        "reliability_detail_lines": [
+          "**PRS score reliability:** 52%",
+          "",
+          "- Company Size Fit: **2/2** HG fields (`company_firmographic.revenue`, `company_firmographic.employeeCount`) → reliability **100%**",
+          "- Estimated IT Budget Capacity: **1/2** HG fields (`company_spend.spendByCategory[Total IT].totalSpendAmount` (missing: `company_spend.unknownRowCount`)) → reliability **50%**",
+          "- Technology Category Need: **1/2** HG fields (`list_product_categories (category)` (missing: `company_technographic.products.intensity`)) → reliability **50%**",
+          "- Purchase Intent Signal: **0/3** HG fields (none among expected: `company_intent.topics[].score`, `company_intent.topics[].last_seen_at`, `intent topic match`) → reliability **0%**",
+          "- Product Adoption Momentum: **0/1** HG fields (none among expected: `company_install_time_series.products[].intensity_momentum`) → reliability **50%**"
+        ],
+        "reliability_raw": 0.525,
+        "best_sales_opportunity": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "weakest_fit": "**No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+        "recommended_sales_angle": "Validate budget, category adjacency, and timing before proposing a deal structure.",
+        "strategic_interest": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "what_to_sell": "Lead with **Amazon AppFlow** (HG SKU: `Amazon AppFlow`).",
+        "timing": "No HG intent on the bound topic — build timing from business triggers only.",
+        "strongest_infrastructure_signal": "HG tracks **8** products at this domain. Category **`HG technographic product`** is identified but max intensity is 0 — limited proof of database-adjacent spend in HG.",
+        "sale_blockers": [
+          "HG `company_spend` did not return a usable Total IT line — budget capacity unverified."
+        ],
+        "sales_positive_signals": [],
+        "sales_risk_signals": [
+          "- **No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+          "- **Data gap:** PRS score reliability 52% — validate HG spend and technographics before executive sponsorship."
+        ],
+        "seller_impact_bullets": [
+          "- HG category **`HG technographic product`** drives Technology Category Need.",
+          "- Intent topic **`None`** drives Purchase Intent Signal.",
+          "- Product line **Amazon AppFlow** selected in `seller_profile.json` (see `seller_profile.md`)."
+        ],
+        "comparative_notes": [
+          "Highest Prospect Revenue Score: **Northland Clothing Company** (14.3/100).",
+          "Highest Estimated IT Budget Capacity: **SUPERIOR MACHINES LTD** (Estimated IT Budget Capacity Score = -4.0/100).",
+          "Strongest Technology Category Need: **Northland Clothing Company** (intensity score 0/100).",
+          "Weakest Purchase Intent signals: **no prospect** shows HG intent on the product topic.",
+          "Highest PRS score reliability: **SUPERIOR MACHINES LTD** (52%).",
+          "Lowest PRS score reliability in cohort: **Northland Clothing Company** (42%)."
+        ]
+      },
+      "criteria": {
+        "company_size_fit": {
+          "display_name": "Company Size Fit",
+          "score": 0.07,
+          "reliability_pct": "100%",
+          "reliability_raw": 1.0,
+          "weight": 0.25,
+          "contribution": 0.02,
+          "raw_inputs": {
+            "revenue": 113596,
+            "employees": 7,
+            "revenue_usd": 113596,
+            "employee_count": 7,
+            "data_source": "company_firmographic"
+          },
+          "explanation": "Account scale from HG revenue/headcount (rev=113596, emp=7)."
+        },
+        "estimated_it_budget_capacity": {
+          "display_name": "Estimated IT Budget Capacity",
+          "score": null,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "it_budget": null,
+            "unknown_row_count": 135,
+            "it_budget_usd": null,
+            "data_source": "company_spend"
+          },
+          "explanation": "IT budget from Total IT spend line when available; drives funding capacity."
+        },
+        "technology_category_need": {
+          "display_name": "Technology Category Need",
+          "score": 0.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "intensity_max": null,
+            "category_name": "HG technographic product",
+            "max_category_intensity": null
+          },
+          "explanation": "Max HG intensity in 'HG technographic product' category among installed products."
+        },
+        "purchase_intent_signal": {
+          "display_name": "Purchase Intent Signal",
+          "score": 0.0,
+          "reliability_pct": "0%",
+          "reliability_raw": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "topic_score": null,
+            "last_seen_at": null,
+            "intent_topic": "Amazon AppFlow",
+            "intent_score": null
+          },
+          "explanation": "Purchase intent from HG topic score with freshness tiers."
+        },
+        "product_adoption_momentum": {
+          "display_name": "Product Adoption Momentum",
+          "score": 50.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.15,
+          "contribution": 7.5,
+          "raw_inputs": {
+            "intensity_momentum": null,
+            "series_found": false,
+            "time_series_found": false
+          },
+          "explanation": "HG intensity_momentum on the bound seller SKU (24 months): rising, flat, or declining."
+        }
+      },
+      "notes": []
+    }
+  ]
+}

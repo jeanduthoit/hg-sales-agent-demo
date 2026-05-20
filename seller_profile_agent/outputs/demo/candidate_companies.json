@@ -1,0 +1,3691 @@
+{
+  "stats": {
+    "input_count": 165,
+    "after_hygiene": 156,
+    "candidate_count": 156,
+    "hygiene": {
+      "function": "shortlist_engine.build_icp_candidate_list",
+      "criteria": [
+        "domain is present",
+        "domain is unique after lowercasing",
+        "domain is not the seller domain"
+      ],
+      "removed_missing_domain": 9,
+      "removed_duplicate_domain": 0,
+      "removed_seller_domain": 0,
+      "removed_missing_domain_rows": [
+        {
+          "company_name": "Initech",
+          "raw_domain": "",
+          "country": "United States of America (the)",
+          "industry": "Professional, Scientific and Technical Services",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "Changsha Xima Experimental Devices and Materials Co. Ltd.",
+          "raw_domain": "",
+          "country": "China",
+          "industry": "Wholesale Trade",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "Jilin Water Resource and Hydropower Consultative Company of P. R. China",
+          "raw_domain": "",
+          "country": "China",
+          "industry": "Utilities",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "Elite Consultancy",
+          "raw_domain": "",
+          "country": "India",
+          "industry": "Professional, Scientific and Technical Services",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "Vlaams Instituut voor Biotechnologie - Flanders Institute for Biotechnology",
+          "raw_domain": "",
+          "country": "Belgium",
+          "industry": "Professional, Scientific and Technical Services",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "AO \"DMZ\"",
+          "raw_domain": "",
+          "country": "Russian Federation (the)",
+          "industry": "Manufacturing",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "Sengar Sainik Security Services",
+          "raw_domain": "",
+          "country": "India",
+          "industry": "Professional, Scientific and Technical Services",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "Yi Xing Telecommunication Bureau",
+          "raw_domain": "",
+          "country": "China",
+          "industry": "Professional, Scientific and Technical Services",
+          "reason": "HG search returned no usable domain/companyDomain."
+        },
+        {
+          "company_name": "Xuzhou Xuwang Supermarket Co. Ltd.",
+          "raw_domain": "",
+          "country": "China",
+          "industry": "Retail Trade",
+          "reason": "HG search returned no usable domain/companyDomain."
+        }
+      ],
+      "removed_duplicate_domain_rows": [],
+      "removed_seller_domain_rows": [],
+      "kept_after_hygiene": 156
+    },
+    "icp_thresholds": {
+      "min_revenue": 10000000.0,
+      "min_employees": 20,
+      "min_it_spend": 500000.0,
+      "category": "HG technographic product"
+    },
+    "eliminated_by_threshold": [],
+    "retained_with_unknown_fields": [
+      {
+        "company_name": "Realty ONE Group Lifestyles",
+        "domain": "localbeachhomes.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "P&G Ventures Studio",
+        "domain": "pgventureslab.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Vulcabras | Azaleia",
+        "domain": "vulcabrasazaleiari.com.br",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Marquette MSN",
+        "domain": "mastersnursing.marquette.edu",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Diamond Safety Inc",
+        "domain": "diamondsafety.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Los Angeles County Department Of Public Social Services",
+        "domain": "joom.ag",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Python Development Company",
+        "domain": "pythondevelopmentcompany.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Mescoctc",
+        "domain": "mescoindia.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "United Human Rights Federation",
+        "domain": "uhrfinternational.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Kruger Capital",
+        "domain": "krugercapital.co.za",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "ITW Deltar Fasteners",
+        "domain": "itwef.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Continuing Education Center For Scientists (CEC)",
+        "domain": "esspegypt.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Part time job platform",
+        "domain": "partatime.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Aramark K12",
+        "domain": "aramarkeducation.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Украинская ассоциация владельцев оружия",
+        "domain": "zbroya.info",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Click or Call Mobile Grocery",
+        "domain": "clickorcallmobilegrocery.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "H.U.S.T.L.E. Industries",
+        "domain": "ilove2hustle.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Numb",
+        "domain": "numb.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "World Wide Welding",
+        "domain": "worldwidewelding.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "blockXblock DAO",
+        "domain": "digitalassetholdings.net",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Bakers Concepts Advertising and Affiliate Network",
+        "domain": "bcaani.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Iqoption LTD",
+        "domain": "iqoptions.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ranjit Ghatge Legal Services Private Limited",
+        "domain": "rglegalservices.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Morrison Healthcare",
+        "domain": "iammorrison.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Cofounder.Tv",
+        "domain": "cofounder.tv",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Myktongco.Com",
+        "domain": "myktongco.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "NEC Canada",
+        "domain": "necus.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Guangzhou Jintian Auto Parts & Accessories Manufacturing Industry",
+        "domain": "jtautoparts.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "GREENLYCOIN",
+        "domain": "greenlycoin.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "ICMA Bangladesh",
+        "domain": "icmab.org.bd",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Greenway USA",
+        "domain": "greenwayusa.shop",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Taganrog Institute of Technology",
+        "domain": "tsure.ru",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Woman Corp.",
+        "domain": "womancorp.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Findjobs",
+        "domain": "findjobs.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Online Konnect",
+        "domain": "onlinekonnect.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Jc Insurance",
+        "domain": "themcquadeagency.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Mey Diageo",
+        "domain": "mey.com.tr",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Vionta",
+        "domain": "vionta.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Apleni Towers",
+        "domain": "aplenitowers.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Uko Associates Inc.",
+        "domain": "ukoassociates.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Alex Luna",
+        "domain": "alexlunamarketing.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "TSEBO Egypt",
+        "domain": "tseboegypt.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "British Film Festival",
+        "domain": "britishfilmfestival.co.uk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Renewable Energy Jobs",
+        "domain": "renewableenergyjobs.co.uk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Nukraft LTD",
+        "domain": "nukraft.co.uk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Guarantor",
+        "domain": "guarante.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Universal flow University",
+        "domain": "chernobyladventure.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "FUJI MACHINERY CO.LTD.",
+        "domain": "fmc.subaru.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Oda Group Holding AS",
+        "domain": "oda.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "ASTILLEROS ARMON SA",
+        "domain": "astillerosarmon.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Must AS",
+        "domain": "fondsfinans.no",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "VISIONLAB SA",
+        "domain": "visionlab.es",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SOLXYZ CO., LTD.",
+        "domain": "solxyz.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SOMPO SIGORTA ANONIM SIRKETI",
+        "domain": "somposigorta.com.tr",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "VINCENZO ZUCCHI - SPA",
+        "domain": "zucchi.it",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "LifeTech Scientific Corporation",
+        "domain": "lifetechmed.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ellos AB",
+        "domain": "ellos.se",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Operation Smile Inc.",
+        "domain": "operationsmile.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "EVS Broadcast Equipment",
+        "domain": "evs.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Stulz Investment Corporation of America",
+        "domain": "stulz-usa.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "MN INTER-FASHION LTD.",
+        "domain": "mn-interfashion.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "WERNICK GROUP (HOLDINGS) LIMITED",
+        "domain": "wernick.co.uk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Qingdao Radio and Tv University (Qingdao Venture University)",
+        "domain": "qdtvu.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HATAY PHARMACEUTICAL JOINT STOCK COMPANY",
+        "domain": "hataphar.com.vn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "TAISEI ONCHO CO.,LTD.",
+        "domain": "taisei-oncho.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "ENERGY ASSETS TOPCO LIMITED",
+        "domain": "energyassets.co.uk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "POLICLINICO DI MONZA CASA DI CURA PRIVATA SPA",
+        "domain": "policlinicodimonza.it",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Aava Terveyspalvelut OY",
+        "domain": "aava.fi",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SALUBRIZARE SECTOR 5 S.A.",
+        "domain": "salubrizare5.ro",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "PAROC POLSKA SP Z O O",
+        "domain": "paroc.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Waterlogic USA Inc.",
+        "domain": "waterlogic.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Huarun Dadong Dockyard Co., Ltd.",
+        "domain": "hrdd.com.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "FUJISAWA CITY HOSPITAL",
+        "domain": "fujisawacity-hosp.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SHOWROOMPRIVE.COM",
+        "domain": "showroomprive.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "TOTTENHAM HOTSPUR LIMITED",
+        "domain": "tottenhamhotspur.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "YASUDAYA CO., LTD.",
+        "domain": "yasudaya.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Alten Belgium",
+        "domain": "alten.be",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hitachi High-Tech America, Inc.",
+        "domain": "hitachi-hightech.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "THUN SPA",
+        "domain": "thun.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "KURUME CITY PLAZA",
+        "domain": "kurumecityplaza.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Youngy Co. Ltd.",
+        "domain": "younergy.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "BETA GLASS PLC",
+        "domain": "frigoglass.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Zhuhai Speedbird Pvc Film Laminated Metal Sheet Co.,Ltd.",
+        "domain": "zhspb.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Cyberlinks Co. Ltd.",
+        "domain": "cyber-l.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "FEU - DR. NICANOR REYES MEDICAL FOUNDATION, INC.",
+        "domain": "feu-nrmf.edu.ph",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "NESTLE HELLAS SINGLE MEMBER S.A.",
+        "domain": "nestle.gr",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Korea Testing and Research Institute",
+        "domain": "ktr.or.kr",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "AMALGAMATED TELECOM HOLDINGS LIMITED",
+        "domain": "ath.com.fj",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "IJS",
+        "domain": "ijs.si",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HKBN Enterprise Solutions HK Limited",
+        "domain": "hkbnes.net",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Social Discovery Group",
+        "domain": "socialdiscoverygroup.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Army War College",
+        "domain": "armywarcollege.edu",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "KELLOGG COMPANY OF GREAT BRITAIN,LIMITED",
+        "domain": "kelloggs.co.uk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Krungthai-Axa Life Insurance Public Co. Ltd.",
+        "domain": "krungthai-axa.co.th",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ter Hell & Co. GmbH",
+        "domain": "terchemicals.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "FOUR CS MAT",
+        "domain": "arthurmellows.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hamburger Energiewerke GmbH",
+        "domain": "hamburger-energiewerke.de",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Torghatten Nord AS",
+        "domain": "torghatten-nord.no",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Huntington Union Free School District 3",
+        "domain": "hufsd.edu",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Yunnan Bingchen Highway Engineering Co. Ltd.",
+        "domain": "yncegc.com.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "TIGERAIR TAIWAN CO., LTD.",
+        "domain": "tigerairtw.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Splendid Drinks Holding GmbH",
+        "domain": "splendid-drinks.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Bømlo Kommune Helse- og Sosialadministrasjon",
+        "domain": "bomlo.kommune.no",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "L'ACTION GIROD",
+        "domain": "signaux-girod.fr",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Oblastní nemocnice Trutnov a.s.",
+        "domain": "nemtru.cz",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Elior India Food Services LLP",
+        "domain": "elior.in",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CHARLES TYRWHITT SHIRTS LIMITED",
+        "domain": "charlestyrwhitt.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CITYSPRINT (UK) LIMITED",
+        "domain": "citysprint.co.uk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "KAULIN MFG. CO., LTD.",
+        "domain": "siruba.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "IWB Renewable Power AG",
+        "domain": "iwb.ch",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CASSA CENTRALE BANCA CREDITO COOPERATIVO ITALIANO S.P.A. IN FORMA ABBREVIATO CASSA CENTRAL",
+        "domain": "cassacentrale.it",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Seah Steel Corp.",
+        "domain": "seahsteel.co.kr",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Heilongjiang Interchina Water Treatment Co., Ltd.",
+        "domain": "interchinawater.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "F.W. FARNSWORTH LIMITED",
+        "domain": "2sfg.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Hubei Heyuan Gas Co., Ltd.",
+        "domain": "hbhy-gas.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Ted's Montana Grill, Inc.",
+        "domain": "tedsmontanagrill.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "MARCHE CORPORATION",
+        "domain": "marche.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CNPC East China Design Institute Co., Ltd.",
+        "domain": "cnpc.com.cn",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Link-Belt Cranes, L.P., LLLP",
+        "domain": "linkbelt.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "THE ARSENAL FOOTBALL CLUB LIMITED",
+        "domain": "arsenal.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "BGF HUMANNET CO.,LTD.",
+        "domain": "bgfhumannet.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HUON AQUACULTURE GROUP PTY LTD",
+        "domain": "huonaqua.com.au",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "BANCO COLUMBIA S.A.",
+        "domain": "bancocolumbia.com.ar",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Municipio de Nioaque",
+        "domain": "nioaque.ms.gov.br",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Fujian Newland Payment Technology Co., Ltd.",
+        "domain": "newlandnpt.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SHATE-M PLYUS, OOO",
+        "domain": "shate-m.ru",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CHENG SHIU UNIVERSITY",
+        "domain": "csu.edu.tw",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Sichuan Xichang Electric Power Co., Ltd.",
+        "domain": "scxcdl.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HONOUR LAB LIMITED",
+        "domain": "honourlab.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Jinzhou Forklift General Factory",
+        "domain": "forkliftnet.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Sfc Holdings Co. Ltd.",
+        "domain": "suntekcorps.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Mccormick Hospital",
+        "domain": "mccormick.in.th",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "LEADERS IT SERVICES PTY LTD",
+        "domain": "leaders.com.au",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Association District Association Frankfurt am Main eV",
+        "domain": "awo-frankfurt.de",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SATOE GAKUEN EDUCATIONAL ASSOCIATION",
+        "domain": "satoegakuen.ac.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SENDAI CITY HOSPITAL",
+        "domain": "hospital.city.sendai.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "MedMen",
+        "domain": "medmen.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "J.J. Darboven Holding AG & Co. KG",
+        "domain": "darboven.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "T H C, K.K.",
+        "domain": "trial-holdings.inc",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "HAKUEI-KAI MEDICAL CO.",
+        "domain": "hakueikai.or.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "KINKI SANGYO SHINYO KUMIAI",
+        "domain": "kinsan.co.jp",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "GRUPO AGROINDUSTRIAL HACIENDA LA GLORIA S A SUCURSAL COLOMBIA",
+        "domain": "haciendalagloria.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "VEEDA CLINICAL RESEARCH LIMITED",
+        "domain": "veedacr.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "CHARLES TAYLOR ADMINISTRATION SERVICES LIMITED",
+        "domain": "charlestaylor.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "GAZSTROIPROEKT, AO",
+        "domain": "zaogsp.ru",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Bornholms Regionskommune",
+        "domain": "brk.dk",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Bethlehem Central School District Music Association Inc.",
+        "domain": "bethlehemschools.org",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "SOC COOPER GROUPEM ACHAT CENTRE LECLERC",
+        "domain": "e.leclerc",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Luis Losi S.A.",
+        "domain": "luislosiweb.com.ar",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Vermaat Bedrijfshoreca B.V.",
+        "domain": "vermaatgroep.nl",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "OTIS a.s.",
+        "domain": "otis.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "hagebau Handelsgesellschaft für Baustoffe mbH & Co. KG",
+        "domain": "hagebau.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "MALAY-SINO CHEMICAL INDUSTRIES SDN. BHD.",
+        "domain": "malay-sino.com.my",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Gerdau Metaldom S.A.",
+        "domain": "gerdaumetaldom.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "Shanghai Gaodi Property Management Co.,Ltd.",
+        "domain": "fosun.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      },
+      {
+        "company_name": "DELEK GROUP LTD.",
+        "domain": "delek-group.com",
+        "unknown_fields": [
+          "it_spend_unknown_in_search"
+        ]
+      }
+    ],
+    "selection_policy": "deterministic_icp_filter_only_no_scoring_no_ranking",
+    "after_hard_filter": 156,
+    "it_spend_enrichment": {
+      "skipped": true,
+      "reason": "Use --enrich-icp-it-spend to fetch company_spend for every ICP row (slow)."
+    }
+  },
+  "companies": [
+    {
+      "companyId": "8.774819266408731e+36",
+      "companyName": "Realty ONE Group Lifestyles",
+      "domain": "localbeachhomes.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.8218178867684894e+37",
+      "companyName": "P&G Ventures Studio",
+      "domain": "pgventureslab.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.810729787222504e+37",
+      "companyName": "Vulcabras | Azaleia",
+      "domain": "vulcabrasazaleiari.com.br",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 200000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Brazil",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.482896132420395e+37",
+      "companyName": "Marquette MSN",
+      "domain": "mastersnursing.marquette.edu",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.627911675009072e+37",
+      "companyName": "Diamond Safety Inc",
+      "domain": "diamondsafety.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.680530352231833e+37",
+      "companyName": "Los Angeles County Department Of Public Social Services",
+      "domain": "joom.ag",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.321258508118619e+37",
+      "companyName": "Python Development Company",
+      "domain": "pythondevelopmentcompany.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "South Africa",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.059041512192814e+37",
+      "companyName": "Mescoctc",
+      "domain": "mescoindia.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "India",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.567705330375498e+37",
+      "companyName": "United Human Rights Federation",
+      "domain": "uhrfinternational.org",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "India",
+      "industry": "Others",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.400702333144163e+37",
+      "companyName": "Kruger Capital",
+      "domain": "krugercapital.co.za",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "South Africa",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.7148781706613483e+37",
+      "companyName": "ITW Deltar Fasteners",
+      "domain": "itwef.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.983950769505572e+37",
+      "companyName": "Continuing Education Center For Scientists (CEC)",
+      "domain": "esspegypt.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Egypt",
+      "industry": "Public Administration",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.623413094314421e+37",
+      "companyName": "Part time job platform",
+      "domain": "partatime.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Saudi Arabia",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.3442696811701095e+37",
+      "companyName": "Aramark K12",
+      "domain": "aramarkeducation.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.6981724100608835e+37",
+      "companyName": "Украинская ассоциация владельцев оружия",
+      "domain": "zbroya.info",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Ukraine",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.4277008301492268e+37",
+      "companyName": "Click or Call Mobile Grocery",
+      "domain": "clickorcallmobilegrocery.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.130766677845093e+37",
+      "companyName": "H.U.S.T.L.E. Industries",
+      "domain": "ilove2hustle.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.9674595691527965e+37",
+      "companyName": "Numb",
+      "domain": "numb.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.2754673726471625e+37",
+      "companyName": "World Wide Welding",
+      "domain": "worldwidewelding.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.65391335316676e+37",
+      "companyName": "blockXblock DAO",
+      "domain": "digitalassetholdings.net",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.8457791730377513e+37",
+      "companyName": "Bakers Concepts Advertising and Affiliate Network",
+      "domain": "bcaani.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.340431648750523e+37",
+      "companyName": "Iqoption LTD",
+      "domain": "iqoptions.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.774143390289427e+37",
+      "companyName": "Ranjit Ghatge Legal Services Private Limited",
+      "domain": "rglegalservices.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "India",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.855258132053497e+37",
+      "companyName": "Morrison Healthcare",
+      "domain": "iammorrison.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.1170488414849364e+37",
+      "companyName": "Cofounder.Tv",
+      "domain": "cofounder.tv",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Costa Rica",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.664307123356199e+37",
+      "companyName": "Myktongco.Com",
+      "domain": "myktongco.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.8467129852081826e+37",
+      "companyName": "NEC Canada",
+      "domain": "necus.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Canada",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.342613799632275e+37",
+      "companyName": "Guangzhou Jintian Auto Parts & Accessories Manufacturing Industry",
+      "domain": "jtautoparts.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.014331741041879e+37",
+      "companyName": "GREENLYCOIN",
+      "domain": "greenlycoin.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.844000547774902e+37",
+      "companyName": "ICMA Bangladesh",
+      "domain": "icmab.org.bd",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Bangladesh",
+      "industry": "Public Administration",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.7985055836947484e+37",
+      "companyName": "Greenway USA",
+      "domain": "greenwayusa.shop",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.923986880784256e+37",
+      "companyName": "Taganrog Institute of Technology",
+      "domain": "tsure.ru",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Russian Federation (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.051488125958949e+37",
+      "companyName": "Woman Corp.",
+      "domain": "womancorp.org",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Industry Associations",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.9206642480898e+36",
+      "companyName": "Findjobs",
+      "domain": "findjobs.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United Arab Emirates (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.036509262510106e+37",
+      "companyName": "Online Konnect",
+      "domain": "onlinekonnect.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.636885864952635e+37",
+      "companyName": "Jc Insurance",
+      "domain": "themcquadeagency.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.7615352225082782e+37",
+      "companyName": "Mey Diageo",
+      "domain": "mey.com.tr",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Turkey",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.0750240423634309e+37",
+      "companyName": "Vionta",
+      "domain": "vionta.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Spain",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.411364694289577e+37",
+      "companyName": "Apleni Towers",
+      "domain": "aplenitowers.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "South Africa",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.44264631144951e+37",
+      "companyName": "Uko Associates Inc.",
+      "domain": "ukoassociates.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.919070714998282e+36",
+      "companyName": "Alex Luna",
+      "domain": "alexlunamarketing.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United States of America (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.825784695023387e+37",
+      "companyName": "TSEBO Egypt",
+      "domain": "tseboegypt.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Egypt",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.5028575238116386e+37",
+      "companyName": "British Film Festival",
+      "domain": "britishfilmfestival.co.uk",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.4105903693046576e+37",
+      "companyName": "Renewable Energy Jobs",
+      "domain": "renewableenergyjobs.co.uk",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.663337855294379e+37",
+      "companyName": "Nukraft LTD",
+      "domain": "nukraft.co.uk",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.916579898825249e+37",
+      "companyName": "Guarantor",
+      "domain": "guarante.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Saudi Arabia",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.4657390812377982e+37",
+      "companyName": "Universal flow University",
+      "domain": "chernobyladventure.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 500000000,
+      "employeeCount": 10000,
+      "employeesRange": "Above 10,000",
+      "country": "Canada",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.815146991701963e+37",
+      "companyName": "FUJI MACHINERY CO.LTD.",
+      "domain": "fmc.subaru.co.jp",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 292155392,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.3343945475062035e+37",
+      "companyName": "Oda Group Holding AS",
+      "domain": "oda.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 315767123,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Norway",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.486782354045693e+37",
+      "companyName": "ASTILLEROS ARMON SA",
+      "domain": "astillerosarmon.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 87111680,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Spain",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.066088503662792e+37",
+      "companyName": "Must AS",
+      "domain": "fondsfinans.no",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 247085939,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Norway",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.306183706586098e+37",
+      "companyName": "VISIONLAB SA",
+      "domain": "visionlab.es",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 44875554,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Spain",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.195570631140546e+37",
+      "companyName": "SOLXYZ CO., LTD.",
+      "domain": "solxyz.co.jp",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 106104031,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.90141907228133e+37",
+      "companyName": "SOMPO SIGORTA ANONIM SIRKETI",
+      "domain": "somposigorta.com.tr",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 468587894,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Turkey",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.2014182817186003e+37",
+      "companyName": "VINCENZO ZUCCHI - SPA",
+      "domain": "zucchi.it",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 89416350,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Italy",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.1305644182525454e+37",
+      "companyName": "LifeTech Scientific Corporation",
+      "domain": "lifetechmed.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 97585129,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Cayman Islands (the)",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.892366459140352e+37",
+      "companyName": "Ellos AB",
+      "domain": "ellos.se",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 260658984,
+      "employeeCount": 791,
+      "employeesRange": "From 500 to 999",
+      "country": "Sweden",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.075555043925931e+37",
+      "companyName": "Operation Smile Inc.",
+      "domain": "operationsmile.org",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 95066189,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Industry Associations",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.350756787786036e+37",
+      "companyName": "EVS Broadcast Equipment",
+      "domain": "evs.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 233927770,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "Belgium",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.641089046348193e+37",
+      "companyName": "Stulz Investment Corporation of America",
+      "domain": "stulz-usa.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 102420050,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.768613268559737e+37",
+      "companyName": "MN INTER-FASHION LTD.",
+      "domain": "mn-interfashion.com",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 1205901375,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.218293048830849e+37",
+      "companyName": "WERNICK GROUP (HOLDINGS) LIMITED",
+      "domain": "wernick.co.uk",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 231750000,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.873156269722621e+36",
+      "companyName": "Qingdao Radio and Tv University (Qingdao Venture University)",
+      "domain": "qdtvu.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 76606992,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.520824892344365e+36",
+      "companyName": "HATAY PHARMACEUTICAL JOINT STOCK COMPANY",
+      "domain": "hataphar.com.vn",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 81971450,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "Viet Nam",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.397015488024717e+37",
+      "companyName": "TAISEI ONCHO CO.,LTD.",
+      "domain": "taisei-oncho.co.jp",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 405718761,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.939861436874191e+37",
+      "companyName": "ENERGY ASSETS TOPCO LIMITED",
+      "domain": "energyassets.co.uk",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 77566280,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.894937576815788e+37",
+      "companyName": "POLICLINICO DI MONZA CASA DI CURA PRIVATA SPA",
+      "domain": "policlinicodimonza.it",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 193541810,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "Italy",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.128167315862954e+37",
+      "companyName": "Aava Terveyspalvelut OY",
+      "domain": "aava.fi",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 181198494,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "Finland",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.501076993254609e+37",
+      "companyName": "SALUBRIZARE SECTOR 5 S.A.",
+      "domain": "salubrizare5.ro",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 35616987,
+      "employeeCount": 792,
+      "employeesRange": "From 500 to 999",
+      "country": "Romania",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.412121139265219e+37",
+      "companyName": "PAROC POLSKA SP Z O O",
+      "domain": "paroc.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 191242587,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "Poland",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.0164511857658719e+37",
+      "companyName": "Waterlogic USA Inc.",
+      "domain": "waterlogic.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 107891956,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.7737852254395141e+37",
+      "companyName": "Huarun Dadong Dockyard Co., Ltd.",
+      "domain": "hrdd.com.cn",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 71520594,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.6957705603492705e+37",
+      "companyName": "FUJISAWA CITY HOSPITAL",
+      "domain": "fujisawacity-hosp.jp",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 27358208,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.8692519298206717e+37",
+      "companyName": "SHOWROOMPRIVE.COM",
+      "domain": "showroomprive.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 594920408,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.321479304803128e+37",
+      "companyName": "TOTTENHAM HOTSPUR LIMITED",
+      "domain": "tottenhamhotspur.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 547559797,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Media and Entertainment",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.839315844854152e+37",
+      "companyName": "YASUDAYA CO., LTD.",
+      "domain": "yasudaya.co.jp",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 945583500,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Media and Entertainment",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.784470522253659e+36",
+      "companyName": "Alten Belgium",
+      "domain": "alten.be",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 95582250,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "Belgium",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.9107410621358577e+37",
+      "companyName": "Hitachi High-Tech America, Inc.",
+      "domain": "hitachi-hightech.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 227181804,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.316750815647645e+37",
+      "companyName": "THUN SPA",
+      "domain": "thun.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 120570410,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "Italy",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.3326212157341912e+37",
+      "companyName": "KURUME CITY PLAZA",
+      "domain": "kurumecityplaza.jp",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 18117045,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.6951384978198376e+37",
+      "companyName": "Youngy Co. Ltd.",
+      "domain": "younergy.cn",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 169312694,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.570177964670219e+37",
+      "companyName": "BETA GLASS PLC",
+      "domain": "frigoglass.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 71342690,
+      "employeeCount": 793,
+      "employeesRange": "From 500 to 999",
+      "country": "Nigeria",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.293126557161436e+37",
+      "companyName": "Zhuhai Speedbird Pvc Film Laminated Metal Sheet Co.,Ltd.",
+      "domain": "zhspb.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 158825959,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.585623047446863e+37",
+      "companyName": "Cyberlinks Co. Ltd.",
+      "domain": "cyber-l.co.jp",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 100353640,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.348780377070561e+37",
+      "companyName": "FEU - DR. NICANOR REYES MEDICAL FOUNDATION, INC.",
+      "domain": "feu-nrmf.edu.ph",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 34489676,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Philippines (the)",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.1326527431507415e+37",
+      "companyName": "NESTLE HELLAS SINGLE MEMBER S.A.",
+      "domain": "nestle.gr",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 444614229,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Greece",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.802372644229885e+36",
+      "companyName": "Korea Testing and Research Institute",
+      "domain": "ktr.or.kr",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 151569186,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Korea (the Republic of)",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.976555104447901e+37",
+      "companyName": "AMALGAMATED TELECOM HOLDINGS LIMITED",
+      "domain": "ath.com.fj",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 344804007,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Fiji",
+      "industry": "Telecommunications",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.916675275427867e+37",
+      "companyName": "IJS",
+      "domain": "ijs.si",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 75692366,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Slovenia",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.9555502721215285e+37",
+      "companyName": "HKBN Enterprise Solutions HK Limited",
+      "domain": "hkbnes.net",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 269652240,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Hong Kong",
+      "industry": "Telecommunications",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.545410392499444e+37",
+      "companyName": "Social Discovery Group",
+      "domain": "socialdiscoverygroup.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 185000000,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Malta",
+      "industry": "Computer and Electronic Product Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.0921044122781754e+36",
+      "companyName": "Army War College",
+      "domain": "armywarcollege.edu",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 76897170,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "India",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.1493056769102e+37",
+      "companyName": "KELLOGG COMPANY OF GREAT BRITAIN,LIMITED",
+      "domain": "kelloggs.co.uk",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 177309732,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.1064746670405674e+37",
+      "companyName": "Krungthai-Axa Life Insurance Public Co. Ltd.",
+      "domain": "krungthai-axa.co.th",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 1515989267,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Thailand",
+      "industry": "Insurance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.270477122039177e+37",
+      "companyName": "Ter Hell & Co. GmbH",
+      "domain": "terchemicals.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 879873789,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.9142663545099605e+37",
+      "companyName": "FOUR CS MAT",
+      "domain": "arthurmellows.org",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 56516642,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.867481497036656e+37",
+      "companyName": "Hamburger Energiewerke GmbH",
+      "domain": "hamburger-energiewerke.de",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 1551765760,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Utilities",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.3168599325621832e+37",
+      "companyName": "Torghatten Nord AS",
+      "domain": "torghatten-nord.no",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 187028110,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Norway",
+      "industry": "Travel and Tourism",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.031255293338025e+37",
+      "companyName": "Huntington Union Free School District 3",
+      "domain": "hufsd.edu",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 152202566,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.251335500034148e+37",
+      "companyName": "Yunnan Bingchen Highway Engineering Co. Ltd.",
+      "domain": "yncegc.com.cn",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 792498039,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.1133415343345e+37",
+      "companyName": "TIGERAIR TAIWAN CO., LTD.",
+      "domain": "tigerairtw.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 42919029,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Taiwan (Province of China)",
+      "industry": "Travel and Tourism",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.7394829068245413e+35",
+      "companyName": "Splendid Drinks Holding GmbH",
+      "domain": "splendid-drinks.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 284538168,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.1920940333486524e+37",
+      "companyName": "Bømlo Kommune Helse- og Sosialadministrasjon",
+      "domain": "bomlo.kommune.no",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 54878976,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Norway",
+      "industry": "Public Administration",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.1115010922164093e+37",
+      "companyName": "L'ACTION GIROD",
+      "domain": "signaux-girod.fr",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 112067009,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.6854350012471784e+37",
+      "companyName": "Oblastní nemocnice Trutnov a.s.",
+      "domain": "nemtru.cz",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 39441196,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "Czechia",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.597482163632264e+37",
+      "companyName": "Elior India Food Services LLP",
+      "domain": "elior.in",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 12993063,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "India",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.012922585444519e+37",
+      "companyName": "CHARLES TYRWHITT SHIRTS LIMITED",
+      "domain": "charlestyrwhitt.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 334751554,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.129133950835761e+37",
+      "companyName": "CITYSPRINT (UK) LIMITED",
+      "domain": "citysprint.co.uk",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 177205669,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Transportation and Warehousing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.298668866686874e+37",
+      "companyName": "KAULIN MFG. CO., LTD.",
+      "domain": "siruba.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 80661179,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "Taiwan (Province of China)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.284797335810331e+37",
+      "companyName": "IWB Renewable Power AG",
+      "domain": "iwb.ch",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 104165356,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "Switzerland",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "9.999047936838389e+36",
+      "companyName": "CASSA CENTRALE BANCA CREDITO COOPERATIVO ITALIANO S.P.A. IN FORMA ABBREVIATO CASSA CENTRAL",
+      "domain": "cassacentrale.it",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 216497730,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "Italy",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.8353538563294826e+37",
+      "companyName": "Seah Steel Corp.",
+      "domain": "seahsteel.co.kr",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 1333619655,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "Korea (the Republic of)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.715070110615021e+37",
+      "companyName": "Heilongjiang Interchina Water Treatment Co., Ltd.",
+      "domain": "interchinawater.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 57597194,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Utilities",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.804366115595913e+37",
+      "companyName": "F.W. FARNSWORTH LIMITED",
+      "domain": "2sfg.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 142321782,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.619530687647092e+37",
+      "companyName": "Hubei Heyuan Gas Co., Ltd.",
+      "domain": "hbhy-gas.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 125213174,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Utilities",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.661013110227242e+37",
+      "companyName": "Ted's Montana Grill, Inc.",
+      "domain": "tedsmontanagrill.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 75613822,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.048157866747106e+37",
+      "companyName": "MARCHE CORPORATION",
+      "domain": "marche.co.jp",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 31067481,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.3655078580931343e+37",
+      "companyName": "CNPC East China Design Institute Co., Ltd.",
+      "domain": "cnpc.com.cn",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 77121256,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.939859947160234e+37",
+      "companyName": "Link-Belt Cranes, L.P., LLLP",
+      "domain": "linkbelt.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 226592663,
+      "employeeCount": 796,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.91137430912155e+37",
+      "companyName": "THE ARSENAL FOOTBALL CLUB LIMITED",
+      "domain": "arsenal.com",
+      "revenue": "From $500,000,000 to $999,999,999",
+      "revenueAmount": 846073079,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Media and Entertainment",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.069620702027933e+37",
+      "companyName": "BGF HUMANNET CO.,LTD.",
+      "domain": "bgfhumannet.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 65093148,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Korea (the Republic of)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.098921950172036e+37",
+      "companyName": "HUON AQUACULTURE GROUP PTY LTD",
+      "domain": "huonaqua.com.au",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 338065997,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.830256288021011e+37",
+      "companyName": "BANCO COLUMBIA S.A.",
+      "domain": "bancocolumbia.com.ar",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 121233429,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Argentina",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.1803446134582575e+37",
+      "companyName": "Municipio de Nioaque",
+      "domain": "nioaque.ms.gov.br",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 39210009,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Brazil",
+      "industry": "Public Administration",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.590826520382271e+36",
+      "companyName": "Fujian Newland Payment Technology Co., Ltd.",
+      "domain": "newlandnpt.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 187532080,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.92643564034625e+36",
+      "companyName": "SHATE-M PLYUS, OOO",
+      "domain": "shate-m.ru",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 186497960,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Russian Federation (the)",
+      "industry": "Wholesale Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.684568463338924e+37",
+      "companyName": "CHENG SHIU UNIVERSITY",
+      "domain": "csu.edu.tw",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 77090622,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Taiwan (Province of China)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.6950957582048056e+37",
+      "companyName": "Sichuan Xichang Electric Power Co., Ltd.",
+      "domain": "scxcdl.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 146144100,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Utilities",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.0346399206828346e+37",
+      "companyName": "HONOUR LAB LIMITED",
+      "domain": "honourlab.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 137171021,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "India",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.177375354664901e+36",
+      "companyName": "Jinzhou Forklift General Factory",
+      "domain": "forkliftnet.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 49302900,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "9.584087697278891e+36",
+      "companyName": "Sfc Holdings Co. Ltd.",
+      "domain": "suntekcorps.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 237796882,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.926295355780757e+35",
+      "companyName": "Mccormick Hospital",
+      "domain": "mccormick.in.th",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 56803784,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Thailand",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.122052298888517e+37",
+      "companyName": "LEADERS IT SERVICES PTY LTD",
+      "domain": "leaders.com.au",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 72373179,
+      "employeeCount": 797,
+      "employeesRange": "From 500 to 999",
+      "country": "Australia",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.172191351610208e+37",
+      "companyName": "Association District Association Frankfurt am Main eV",
+      "domain": "awo-frankfurt.de",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 50215746,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.191283914107816e+37",
+      "companyName": "SATOE GAKUEN EDUCATIONAL ASSOCIATION",
+      "domain": "satoegakuen.ac.jp",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 79565954,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.447728081132825e+37",
+      "companyName": "SENDAI CITY HOSPITAL",
+      "domain": "hospital.city.sendai.jp",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 146406638,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.4364481649902347e+35",
+      "companyName": "MedMen",
+      "domain": "medmen.com",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 140811689,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.1411210926250795e+37",
+      "companyName": "J.J. Darboven Holding AG & Co. KG",
+      "domain": "darboven.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 359255203,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "1.5749647171584448e+37",
+      "companyName": "T H C, K.K.",
+      "domain": "trial-holdings.inc",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 164980233,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.423295832244434e+37",
+      "companyName": "HAKUEI-KAI MEDICAL CO.",
+      "domain": "hakueikai.or.jp",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 67771844,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Health Care and Social Assistance",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.333122663601475e+37",
+      "companyName": "KINKI SANGYO SHINYO KUMIAI",
+      "domain": "kinsan.co.jp",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 232674675,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.025600485411345e+37",
+      "companyName": "GRUPO AGROINDUSTRIAL HACIENDA LA GLORIA S A SUCURSAL COLOMBIA",
+      "domain": "haciendalagloria.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 16582135,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Colombia",
+      "industry": "",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.158520459797783e+37",
+      "companyName": "VEEDA CLINICAL RESEARCH LIMITED",
+      "domain": "veedacr.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 30060497,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "India",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.519435823676162e+37",
+      "companyName": "CHARLES TAYLOR ADMINISTRATION SERVICES LIMITED",
+      "domain": "charlestaylor.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 31435920,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "industry": "Professional, Scientific and Technical Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.196596535541989e+37",
+      "companyName": "GAZSTROIPROEKT, AO",
+      "domain": "zaogsp.ru",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 62888079,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Russian Federation (the)",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "7.657553153149526e+37",
+      "companyName": "Bornholms Regionskommune",
+      "domain": "brk.dk",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 446355779,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Denmark",
+      "industry": "Public Administration",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.147734902678275e+37",
+      "companyName": "Bethlehem Central School District Music Association Inc.",
+      "domain": "bethlehemschools.org",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 104450069,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "United States of America (the)",
+      "industry": "Educational Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "2.8176339109758454e+37",
+      "companyName": "SOC COOPER GROUPEM ACHAT CENTRE LECLERC",
+      "domain": "e.leclerc",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 195492490,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "France",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.413606620413616e+37",
+      "companyName": "Luis Losi S.A.",
+      "domain": "luislosiweb.com.ar",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 80451637,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Argentina",
+      "industry": "Construction and Real Estate",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.775388133367495e+37",
+      "companyName": "Vermaat Bedrijfshoreca B.V.",
+      "domain": "vermaatgroep.nl",
+      "revenue": "From $100,000,000 to $199,999,999",
+      "revenueAmount": 104014753,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Netherlands (the)",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.0185144938927354e+37",
+      "companyName": "OTIS a.s.",
+      "domain": "otis.com",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 96422629,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Czechia",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "8.857279148227607e+36",
+      "companyName": "hagebau Handelsgesellschaft für Baustoffe mbH & Co. KG",
+      "domain": "hagebau.com",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 6695555645,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Germany",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "5.712630001251631e+37",
+      "companyName": "MALAY-SINO CHEMICAL INDUSTRIES SDN. BHD.",
+      "domain": "malay-sino.com.my",
+      "revenue": "From $50,000,000 to $99,999,999",
+      "revenueAmount": 87407106,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Malaysia",
+      "industry": "Pharmaceuticals and Chemicals Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "4.2419014289199386e+37",
+      "companyName": "Gerdau Metaldom S.A.",
+      "domain": "gerdaumetaldom.com",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 337029000,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Dominican Republic (the)",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "3.877192975870598e+37",
+      "companyName": "Shanghai Gaodi Property Management Co.,Ltd.",
+      "domain": "fosun.com",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 12116970,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "China",
+      "industry": "Service Industry",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    },
+    {
+      "companyId": "6.862272429707927e+35",
+      "companyName": "DELEK GROUP LTD.",
+      "domain": "delek-group.com",
+      "revenue": "Over $1,000,000,000",
+      "revenueAmount": 1719123336,
+      "employeeCount": 799,
+      "employeesRange": "From 500 to 999",
+      "country": "Israel",
+      "industry": "Mining and Natural Resources",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned."
+    }
+  ]
+}

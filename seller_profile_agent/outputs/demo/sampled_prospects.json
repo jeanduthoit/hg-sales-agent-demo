@@ -1,0 +1,66 @@
+{
+  "stats": {
+    "sample_method": "uniform_random_without_replacement",
+    "sample_seed": null,
+    "requested_count": 3,
+    "sampled_count": 3,
+    "candidate_count": 156,
+    "sample_fraction": 0.019230769230769232
+  },
+  "prospects": [
+    {
+      "companyId": "4.597482163632264e+37",
+      "companyName": "Elior India Food Services LLP",
+      "domain": "elior.in",
+      "revenue": "From $10,000,000 to $49,999,999",
+      "revenueAmount": 12993063,
+      "employeeCount": 795,
+      "employeesRange": "From 500 to 999",
+      "country": "India",
+      "industry": "Retail Trade",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 1,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "5.333122663601475e+37",
+      "companyName": "KINKI SANGYO SHINYO KUMIAI",
+      "domain": "kinsan.co.jp",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 232674675,
+      "employeeCount": 798,
+      "employeesRange": "From 500 to 999",
+      "country": "Japan",
+      "industry": "Banking and Financial Services",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 2,
+      "sample_status": "selected_for_deep_prs"
+    },
+    {
+      "companyId": "1.1326527431507415e+37",
+      "companyName": "NESTLE HELLAS SINGLE MEMBER S.A.",
+      "domain": "nestle.gr",
+      "revenue": "From $200,000,000 to $499,999,999",
+      "revenueAmount": 444614229,
+      "employeeCount": 794,
+      "employeesRange": "From 500 to 999",
+      "country": "Greece",
+      "industry": "Manufacturing",
+      "_flags": [
+        "it_spend_unknown_in_search"
+      ],
+      "icp_status": "passed",
+      "icp_pass_reason": "Passed deterministic search/filter constraints; no score or rank assigned.",
+      "sample_position": 3,
+      "sample_status": "selected_for_deep_prs"
+    }
+  ]
+}

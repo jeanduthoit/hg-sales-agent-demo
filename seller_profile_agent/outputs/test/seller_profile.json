@@ -1,0 +1,1435 @@
+{
+  "seller_profile": {
+    "company_name": "Amazon.com, Inc.",
+    "company_found_in_hg": true,
+    "hg_company_id": "E48EDEB162A5FBFDAF2DCF707079F8F",
+    "industry": "Retail Trade",
+    "company_size": "1,576,000 employees",
+    "revenue_range": "$716.9B+",
+    "employee_range": "1,576,000 employees",
+    "technologies_detected": [
+      "Oracle Java",
+      "Unix",
+      "Perl",
+      "Microsoft 365 Apps & Services",
+      "JavaScript",
+      "Microsoft Office",
+      "C Programming Language",
+      "C++",
+      "Microsoft 365 Access",
+      "Apache",
+      "Microsoft PowerPoint",
+      "Ruby",
+      "Microsoft Windows",
+      "Microsoft Outlook",
+      "Python",
+      "Adobe",
+      "MySQL",
+      "C# (C Sharp)",
+      "Oracle Database",
+      "Adobe Photoshop",
+      "Ajax",
+      "Salesforce CRM",
+      "Apple",
+      "Microsoft SharePoint",
+      "Apache Hadoop",
+      "Adobe Illustrator",
+      "PHP",
+      "Cisco",
+      "Microsoft 365",
+      "Microsoft Project"
+    ],
+    "business_description": "Amazon.com, Inc. is a company operating in the Retail Trade industry. HG reports estimated IT spend of approximately $26,139,876,977.",
+    "available_products": [
+      {
+        "id": 1,
+        "product_name": "Alexa Certify",
+        "hg_product_id": "28332",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon.com, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon.com, Inc."
+      },
+      {
+        "id": 2,
+        "product_name": "Alexa for Amazon Business",
+        "hg_product_id": "21173",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 3,
+        "product_name": "Amazon AMS",
+        "hg_product_id": "27146",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon.com, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon.com, Inc."
+      },
+      {
+        "id": 4,
+        "product_name": "Amazon API Gateway",
+        "hg_product_id": "19836",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 5,
+        "product_name": "Amazon AppFlow",
+        "hg_product_id": "28703",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 6,
+        "product_name": "Amazon AppStream",
+        "hg_product_id": "18674",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 7,
+        "product_name": "Amazon Associates",
+        "hg_product_id": "31688",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon.com, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon.com, Inc."
+      },
+      {
+        "id": 8,
+        "product_name": "Amazon Athena",
+        "hg_product_id": "16238",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 9,
+        "product_name": "Amazon Augmented AI (Amazon A2I)",
+        "hg_product_id": "21158",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 10,
+        "product_name": "Amazon Aurora",
+        "hg_product_id": "18601",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 11,
+        "product_name": "Amazon Aurora PostgreSQL",
+        "hg_product_id": "31269",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 12,
+        "product_name": "Amazon Aurora Serverless",
+        "hg_product_id": "19835",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 13,
+        "product_name": "Amazon Bedrock",
+        "hg_product_id": "31273",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 14,
+        "product_name": "Amazon Braket",
+        "hg_product_id": "28383",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 15,
+        "product_name": "Amazon Business",
+        "hg_product_id": "17100",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon.com, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon.com, Inc."
+      },
+      {
+        "id": 16,
+        "product_name": "Amazon Chime",
+        "hg_product_id": "18535",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 17,
+        "product_name": "Amazon Cloud Directory",
+        "hg_product_id": "18679",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 18,
+        "product_name": "Amazon CloudEndure Migration",
+        "hg_product_id": "21198",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 19,
+        "product_name": "Amazon CloudFront",
+        "hg_product_id": "1287",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      },
+      {
+        "id": 20,
+        "product_name": "Amazon CloudSearch",
+        "hg_product_id": "18349",
+        "product_category": "HG technographic product",
+        "reasoning": "HG vendor catalog SKU (Amazon Web Services, Inc.).",
+        "source_type": "HG catalog SKU",
+        "vendor_name": "Amazon Web Services, Inc."
+      }
+    ],
+    "selected_product": {
+      "product_name": "Alexa Certify",
+      "product_category": "HG technographic product",
+      "why_this_product_makes_sense": "HG vendor catalog SKU (Amazon.com, Inc.).",
+      "source_type": "HG catalog SKU",
+      "hg_product_id": "28332",
+      "hg_binding": {
+        "hg_product_id": "28332",
+        "hg_product_name": "Alexa Certify",
+        "hg_vendor_id": null,
+        "hg_vendor_name": "Amazon.com, Inc.",
+        "hg_category_id": null,
+        "hg_category_name": null,
+        "hg_intent_topic_id": null,
+        "hg_intent_topic_name": null,
+        "hg_catalog_match_examples": [],
+        "binding_confidence": "high",
+        "binding_notes": [
+          "HG category not resolved via list_product_categories; need criterion may be unreliable.",
+          "HG intent topic not resolved; purchase intent criterion defaults to 0.",
+          "No HG competitor SKUs resolved from accepted get_product_information competitor/alternative fields (stored for audit only; not used in PRS)."
+        ],
+        "hg_competitor_products": [],
+        "competitor_resolution": {
+          "method": "get_product_information(includeCompetitors=True)",
+          "query_product_name": "Alexa Certify",
+          "accepted_source_keys": [
+            "alternativeProducts",
+            "alternative_products",
+            "alternatives",
+            "competingProducts",
+            "competing_products",
+            "competitorProducts",
+            "competitor_products",
+            "competitors"
+          ],
+          "source_paths": [
+            {
+              "path": "$.competitors",
+              "source_key": "competitors",
+              "rows_seen": 1,
+              "rows_extracted": 0
+            },
+            {
+              "path": "$.competitors.product.competitors",
+              "source_key": "competitors",
+              "rows_seen": 0,
+              "rows_extracted": 0
+            }
+          ],
+          "normalized_count": 0,
+          "status": "no_competitor_products_in_accepted_fields",
+          "tool_args": {
+            "productName": "Alexa Certify",
+            "includeCompetitors": true
+          },
+          "response_top_level_keys": [
+            "competitors",
+            "integrations",
+            "pricing",
+            "product"
+          ]
+        }
+      }
+    },
+    "prs_methodology": {
+      "methodology_version": "1.0",
+      "methodology_document": "la-methodologie.md",
+      "prs_formula": "PRS = 0.25*S_taille + 0.20*S_budget + 0.20*S_besoin + 0.20*S_achat + 0.15*S_dynamique",
+      "reliability_formula": "R_global = weighted sum of per-criterion reliability; renormalize if a criterion is skipped",
+      "weights": {
+        "taille": 0.25,
+        "budget": 0.2,
+        "besoin": 0.2,
+        "achat": 0.2,
+        "dynamique": 0.15
+      },
+      "criteria": [
+        {
+          "criterion_id": "taille",
+          "criterion_name": "Account size",
+          "weight": 0.25,
+          "prospect_mcp_tools": [
+            "company_firmographic"
+          ],
+          "prospect_fields": [
+            "revenue",
+            "employeeCount"
+          ],
+          "seller_profile_fields": [],
+          "formula": "S_taille = max(S_rev, S_emp)"
+        },
+        {
+          "criterion_id": "budget",
+          "criterion_name": "IT budget",
+          "weight": 0.2,
+          "prospect_mcp_tools": [
+            "company_spend",
+            "company_firmographic"
+          ],
+          "prospect_fields": [
+            "totalSpendAmount",
+            "itSpend"
+          ],
+          "seller_profile_fields": [],
+          "formula": "S_budget = max(0, min(100, 100 * log10(IT_budget / 100000) / 4))"
+        },
+        {
+          "criterion_id": "besoin",
+          "criterion_name": "Category need intensity",
+          "weight": 0.2,
+          "prospect_mcp_tools": [
+            "company_technographic"
+          ],
+          "prospect_fields": [
+            "intensity",
+            "categories"
+          ],
+          "seller_profile_fields": [
+            "selected_product.hg_binding.hg_category_name",
+            "selected_product.hg_binding.hg_category_id"
+          ],
+          "formula": "S_besoin = min(100, max intensity in target category)"
+        },
+        {
+          "criterion_id": "achat",
+          "criterion_name": "Purchase intent",
+          "weight": 0.2,
+          "prospect_mcp_tools": [
+            "company_intent"
+          ],
+          "prospect_fields": [
+            "topics.score",
+            "topics.last_seen_at"
+          ],
+          "seller_profile_fields": [
+            "selected_product.hg_binding.hg_intent_topic_name",
+            "selected_product.hg_binding.hg_product_name"
+          ],
+          "formula": "S_achat = min(100, score * freshness_tier)"
+        },
+        {
+          "criterion_id": "dynamique",
+          "criterion_name": "Product adoption momentum",
+          "weight": 0.15,
+          "prospect_mcp_tools": [
+            "company_install_time_series"
+          ],
+          "prospect_fields": [
+            "intensity_momentum"
+          ],
+          "seller_profile_fields": [
+            "selected_product.hg_binding.hg_product_id"
+          ],
+          "formula": "100 if intensity_momentum > 0; 50 if 0; 0 if < 0"
+        }
+      ],
+      "prospect_mcp_calls_per_account": [
+        {
+          "order": 1,
+          "tool": "company_firmographic",
+          "used_for": [
+            "taille"
+          ]
+        },
+        {
+          "order": 2,
+          "tool": "company_spend",
+          "used_for": [
+            "budget"
+          ],
+          "notes": "Use Total IT line totalSpendAmount when available"
+        },
+        {
+          "order": 3,
+          "tool": "company_technographic",
+          "used_for": [
+            "besoin"
+          ],
+          "params": {
+            "product_name": "Alexa Certify",
+            "category_name": null
+          }
+        },
+        {
+          "order": 4,
+          "tool": "company_intent",
+          "used_for": [
+            "achat"
+          ],
+          "params": {
+            "product_name": "Alexa Certify"
+          }
+        },
+        {
+          "order": 5,
+          "tool": "company_install_time_series",
+          "used_for": [
+            "dynamique"
+          ],
+          "params": {
+            "products": [
+              "28332"
+            ]
+          }
+        }
+      ],
+      "scoring_scope": "prospect_accounts_only",
+      "seller_profile_role": "Provides product binding and vendor context; all quantitative scores are computed from prospect MCP data."
+    },
+    "ideal_customer_profile": {
+      "purpose": "Filter prospect universe before PRS; does not replace PRS scoring.",
+      "derived_from_seller_profile": false,
+      "user_defined_floors": true,
+      "filters": [
+        {
+          "filter_id": "min_revenue_usd",
+          "operator": ">=",
+          "value": 10000000,
+          "hg_field": "company_firmographic.revenue",
+          "rationale": "Threshold entered by the sales user when creating the seller profile."
+        },
+        {
+          "filter_id": "min_employees",
+          "operator": ">=",
+          "value": 200,
+          "hg_field": "company_firmographic.employeeCount",
+          "rationale": "Threshold entered by the sales user when creating the seller profile."
+        },
+        {
+          "filter_id": "min_it_spend_usd",
+          "operator": ">=",
+          "value": 1000000,
+          "hg_field": "company_spend.totalSpendAmount (Total IT)",
+          "rationale": "Threshold entered by the sales user when creating the seller profile."
+        },
+        {
+          "filter_id": "category_adjacency_search",
+          "operator": "technographic_signal",
+          "value": "HG technographic product",
+          "hg_field": "company_technographic.categories / search_companies",
+          "rationale": "Prospects should show activity in the same HG category as the sold product to avoid scoring random accounts with zero category fit."
+        },
+        {
+          "filter_id": "exclude_target_product_installed",
+          "operator": "excludeTechnologies",
+          "value": "Alexa Certify",
+          "hg_field": "search_companies.excludeTechnologies",
+          "rationale": "Land motion only: exclude accounts where the seller HG SKU is already installed."
+        }
+      ],
+      "product_context": {
+        "hg_product_name": "Alexa Certify",
+        "note": "Seller SKU exclusion is enforced at universe retrieval (land motion)."
+      }
+    },
+    "raw_hg_data_used": {
+      "resolved_domain": "amazon.com",
+      "firmographic": {
+        "found": true,
+        "queriedIdentifier": "amazon.com",
+        "domain": "amazon.com",
+        "name": "Amazon.com, Inc.",
+        "industry": "Retail Trade",
+        "employeeCount": 1576000,
+        "revenue": 716924000000,
+        "location": {
+          "city": "Seattle",
+          "state": "WA",
+          "country": "United States of America (the)",
+          "postalCode": "98109",
+          "continent": "Americas",
+          "subcontinent": "Northern America",
+          "geopolitical": "AMER"
+        },
+        "website": "amazon.com",
+        "technologies": [],
+        "industryCodes": {
+          "naics": {
+            "code": "454111",
+            "name": "Electronic Shopping"
+          },
+          "sic": {
+            "codes": [
+              "G5961"
+            ],
+            "names": [
+              "Catalog and Mail-order Houses"
+            ]
+          }
+        },
+        "rankings": {
+          "fortune500": 2,
+          "forbes2000": 5
+        },
+        "itSpend": 26139876977,
+        "metadata": {
+          "provider": "hginsights",
+          "lastUpdated": "2026-05-18T02:22:25.988Z",
+          "hginsights_id": "E48EDEB162A5FBFDAF2DCF707079F8F",
+          "confidence": 0.9
+        },
+        "_resolved_domain": "amazon.com"
+      },
+      "technographic_summary": {
+        "product_count": 30,
+        "sample_products": [
+          "Oracle Java",
+          "Unix",
+          "Perl",
+          "Microsoft 365 Apps & Services",
+          "JavaScript",
+          "Microsoft Office",
+          "C Programming Language",
+          "C++",
+          "Microsoft 365 Access",
+          "Apache"
+        ]
+      },
+      "vendor_catalog_summary": {
+        "vendors_queried": [
+          {
+            "vendor_name": "Amazon Web Services",
+            "product_count": 276
+          },
+          {
+            "vendor_name": "Amazon",
+            "product_count": 293
+          }
+        ],
+        "catalog_product_count": 569
+      },
+      "technographic_raw": {
+        "companyId": "E48EDEB162A5FBFDAF2DCF707079F8F",
+        "companyDomain": "amazon.com",
+        "products": [
+          {
+            "productId": 814,
+            "productName": "Oracle Java",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Open Source",
+              "Programming Language",
+              "Programming Library",
+              "Computing"
+            ],
+            "productLocations": 1070,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7495,
+            "productDescription": "Oracle Java is a high-level, class-based, object-oriented programming language and computing platform designed for programmers and developers. It enables users to develop applications, automatically manage memory, evaluate declarations, statements, and expressions of the Java programming language in a read-eval-print loop (REPL), define classes and declare member variables, and improve the readability of code. Features include HotSpot JVM support, garbage collection, built-in security, portability, multithreading, and Apache Spark support.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 812,
+            "productName": "Unix",
+            "vendorName": "The Open Group",
+            "productAttributes": [
+              "Programming Language",
+              "Operating System (OS)",
+              "Server Operating System",
+              "IT Infrastructure and Management",
+              "Computing"
+            ],
+            "productLocations": 386,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7432,
+            "productDescription": "Unix is an operating system designed for application developers, individual users, and IT administrators. It enables users to drive business continuity, promote interoperability, and enhance IT agility in diverse computing environments. Features include reduced total cost of ownership, increased IT agility, scalability, and IEEE Portable Operating System Interface (POSIX) standard support.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 817,
+            "productName": "Perl",
+            "vendorName": "Perl",
+            "productAttributes": [
+              "Programming Language",
+              "Open Source",
+              "Computing"
+            ],
+            "productLocations": 262,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7427,
+            "productDescription": "Perl is a family of open-source programming languages designed for developers and systems administrators. These products enable users to manage object-oriented, procedural, and functional programming; handle encrypted web data with e-commerce transactions; and support third-party databases with Perl's database integration interface (DBI). Components include Perl database ORM, Perl web framework, Object-oriented Perl, Perl profiling, Perl testing, and Perl Plack/PSGI.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 25421,
+            "productName": "Microsoft 365 Apps & Services",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Process Optimization",
+              "User/Customer Experience (CX)",
+              "Unified Communications & Collaboration (UCC)",
+              "Managed Software as a Service (MSaaS)",
+              "Communications",
+              "Marketing",
+              "Business Management",
+              "Managed Cloud"
+            ],
+            "productLocations": 1553,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7386,
+            "productDescription": "Microsoft 365 Apps & Services is a comprehensive suite of productivity and collaboration tools designed for businesses across industries. These products enable users to create documents, collaborate with users using Microsoft Teams for communication, meetings, and real-time teamwork, and access and share files. Products include Advanced Threat Analytics, Microsoft Bookings, Cloud App Security, Clipchamp, Microsoft Defender, and Enterprise Mobility + Security.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 815,
+            "productName": "JavaScript",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Programming Language",
+              "Computing"
+            ],
+            "productLocations": 798,
+            "firstVerifiedDate": "2000-02-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7201,
+            "productDescription": "JavaScript is a multi-paradigm programming language designed for application developers. It enables users to load new page content without reloading the page, transmit information about the behavior for analytics, ad tracking, and personalization, build and deploy containerized applications, determine the object used for the new object's internal prototype, create a call stack frame with the function's arguments and local variables, change and manage one or more of the element's attributes, and make elements respond to an event. Features include array comprehensions, generator expressions, variadic functions, object composition, and animation of page elements.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 562,
+            "productName": "Microsoft Office",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Document Management & Creation Software",
+              "Content Management"
+            ],
+            "productLocations": 1342,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7161,
+            "productDescription": "Microsoft Office (now Microsoft 365) is a productivity suite designed for individuals and businesses across industries. These products enable users to create, edit, and share documents, spreadsheets, presentations, and emails; organize and manage information; and receive assistance in keeping track of deadlines and tasks. Products include Access (PC only), Advanced Threat Analytics 1, Bookings, Cloud App Security, Clipchamp, Defender (Microsoft 365 Defender), and Defender for Business (Microsoft Defender for Business).",
+            "countryCode": "US"
+          },
+          {
+            "productId": 23176,
+            "productName": "C Programming Language",
+            "vendorName": "Open Source",
+            "productAttributes": [
+              "Open Source",
+              "Programming Language",
+              "Computing"
+            ],
+            "productLocations": 174,
+            "firstVerifiedDate": "2000-07-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7136,
+            "productDescription": "C Programming Language is a high-level and procedural programming language designed for programmers and developers. It enables users to write portable code and run on different hardware and operating systems, optimize code for performance, and implement data structures and algorithms. Features include low-level memory manipulation, system-level programming, string handling, recursive function support, and code maintenance.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 23175,
+            "productName": "C++",
+            "vendorName": "Open Source",
+            "productAttributes": [
+              "Programming Library",
+              "Programming Language",
+              "Open Source",
+              "Computing"
+            ],
+            "productLocations": 168,
+            "firstVerifiedDate": "2000-07-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 7122,
+            "productDescription": "C++ is a general-purpose programming language designed for developers and programmers. It enables users to create reusable and modular code, access hardware resources, control memory usage, define custom behavior for operators, handle errors and exceptions, execute multiple tasks, and accelerate development. Features include low-level programming, memory management, standard template library (STL), high-performance computing, and operator overloading.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 625,
+            "productName": "Microsoft 365 Access",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Database Administration Tools",
+              "RDBMS",
+              "Data Management"
+            ],
+            "productLocations": 282,
+            "firstVerifiedDate": "2000-06-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6969,
+            "productDescription": "Microsoft 365 Access is a database software and application designed for businesses across industries. It enables users to create business applications from templates or scratch, build forms and reports, and generate aggregated visuals and insights using access connector libraries. Features include Visual Basic, scalability, long-term manageability, cyber threat protection, and SharePoint support.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 820,
+            "productName": "Apache",
+            "vendorName": "The Apache Software Foundation",
+            "productAttributes": [
+              "Application Development Tools",
+              "Web & Mobile Analytics",
+              "Application Virtualization",
+              "Density Optimized Server",
+              "Virtualization",
+              "Server",
+              "Application Development",
+              "Marketing"
+            ],
+            "productLocations": 345,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6959,
+            "productDescription": "Apache is an open-source suite of HTTP servers designed for IT and networking administrators. These products enable users to develop and maintain an open-source HTTP server for operating systems, including UNIX and Windows, protect user data, configure server settings, track website traffic and error messages, and optimize server performance. Products include Apache Traffic Server, Apache Traffic Control, Apache Tomcat, and Apache APR.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 628,
+            "productName": "Microsoft PowerPoint",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Presentation Software",
+              "Data Visualization",
+              "Visualization"
+            ],
+            "productLocations": 519,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6879,
+            "productDescription": "Microsoft PowerPoint (formerly Presenter) is a slide presentation software designed for individuals and businesses across industries. It enables users to edit and present slideshows; create presentations from Word documents, prompts, or outlines; and insert media into presentations. Features include Designer, Ideas, Presenter Coach, a media content library, 3D object and embedded animation support, and handwriting and hand-drawn shape conversion.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 21894,
+            "productName": "Ruby",
+            "vendorName": "Open Source",
+            "productAttributes": [
+              "Open Source",
+              "Programming Language",
+              "Computing"
+            ],
+            "productLocations": 318,
+            "firstVerifiedDate": "2004-12-31",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6811,
+            "productDescription": "Ruby is an open-source programming language designed for developers. It enables users to find classes, modules, and methods; automate the operating system's default editor; and handle package systems of distribution or third-party tools. Features include an integrated development environment (IDE), garbage collector, multithreading capability, and JIT compilers.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 34178,
+            "productName": "Microsoft Windows",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [],
+            "productLocations": 809,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6745,
+            "productDescription": "Microsoft Windows is a graphical operating system designed for individuals and businesses across industries. It enables users to protect devices from phishing and cyber-attacks, create and edit content from AI-powered tools, and build and share spreadsheets and presentations. Features include Microsoft Copilot for AI assistance, Microsoft phone link support, voice access capability, cinematic gaming technologies, and device synchronization support.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 143,
+            "productName": "Microsoft Outlook",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Communications Technology",
+              "Communications"
+            ],
+            "productLocations": 835,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6716,
+            "productDescription": "Microsoft Outlook (formerly Hotmail) is an email and calendar management software designed for individuals and businesses across industries. It enables users to send, receive, and organize emails, with the ability to attach files and save attachments to cloud services, set due dates, track progress and manage to-do lists, and open or edit Office documents. Features include appointment and event tracking, data management, enterprise-grade security, task management, and assistive device support.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 10851,
+            "productName": "Python",
+            "vendorName": "Python Software Foundation",
+            "productAttributes": [
+              "Query Language",
+              "Programming Language",
+              "Data Management",
+              "Computing"
+            ],
+            "productLocations": 625,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6709,
+            "productDescription": "Python is an interpreted, object-oriented programming language designed for developers and programmers. It enables users to create and use classes, objects, and inheritance to structure and organize code, write scripts to automate repetitive tasks, and build web applications and frameworks like Django and Flask. Features include HTML and XML format support, bug tracking, Atom feed parsing, win32 extension, and built-in data structures.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 791,
+            "productName": "Adobe",
+            "vendorName": "Adobe, Inc.",
+            "productAttributes": [
+              "Marketing Analytics",
+              "Data Visualization",
+              "Marketing",
+              "Visualization"
+            ],
+            "productLocations": 231,
+            "firstVerifiedDate": "2000-02-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6696,
+            "productDescription": "Adobe is a suite of creative, marketing, and document management software designed for businesses across industries. These products enable users to customize images, edit, share, and e-sign PDFs, and create cinematic visual effects, motion graphics, and animations for videos. Products include Adobe Real-Time CDP, Adobe Marketo Engage, Adobe Customer Journey Analytics, Acrobat Pro, Adobe Stock, Lightroom (1TB), Adobe Journey Optimizer, and Adobe Photoshop.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 816,
+            "productName": "MySQL",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Open Source",
+              "Query Language",
+              "RDBMS",
+              "Database Administration Tools",
+              "Data Management"
+            ],
+            "productLocations": 341,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6669,
+            "productDescription": "MySQL is a suite of relational database management solutions (RDBMS) designed for database administrators. It enables users to build applications for different use cases with instructions and code samples, run OLTP, OLAP, and machine learning workloads directly from the database, and meet the database challenges of next generation web, cloud, and communications services. Products include MySQL HeatWave, MySQL Enterprise, MySQL Standard, MySQL Cluster CGE, MySQL Classic, and MySQL Embedded.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 15371,
+            "productName": "C# (C Sharp)",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Programming Language",
+              "Programming Library",
+              "Computing"
+            ],
+            "productLocations": 291,
+            "firstVerifiedDate": "2004-10-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6526,
+            "productDescription": "C# (C Sharp) is an object-oriented programming language designed for programmers and developers. It enables users to create software components, automatically reclaim memory occupied by unreachable unused objects, protect against variables, build a common pattern for working with data from any source, define custom behaviors for client code, and convert the IL code to native machine instructions. Features include garbage collection, exception handling, Lambda expression support, language-integrated query (LINQ), performance management, and Visual Basic support.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 774,
+            "productName": "Oracle Database",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Database Administration Tools",
+              "RDBMS",
+              "Data Management"
+            ],
+            "productLocations": 129,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6423,
+            "productDescription": "Oracle Database is a multi-model database management software suite designed for application developers. These products enable users to manage relational database environments, protect against data security threats, and build SaaS applications with CI/CD, multitenant databases, Kubernetes, cloud-native, and low-code patterns. Products include Oracle Autonomous Database (Autonomous Data Warehouse, Autonomous JSON Database), Oracle Database on Exadata (Exadata Database Service, Exadata Cloud@Customer), Exadata X9M, Oracle Database 19c, Oracle Base Database Service, Oracle NoSQL Database, and Oracle MySQL HeatWave.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 26895,
+            "productName": "Adobe Photoshop",
+            "vendorName": "Adobe, Inc.",
+            "productAttributes": [
+              "Data Visualization",
+              "Media Software",
+              "Graphic Design Software",
+              "Visualization",
+              "Software - Other"
+            ],
+            "productLocations": 172,
+            "firstVerifiedDate": "2000-02-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6404,
+            "productDescription": "Adobe Photoshop is a suite of photo and design software designed for photo editors, photographers, designers, and video makers. These products enable users to design posters and print advertisements, transform letters into artistic expressions, combine multiple landscapes to create an unexplored one, create compelling adjustments and speed up the image editing process, edit guides and layouts, as well as manage preference and spring-loaded keyboard shortcuts. Products include Photoshop Elements, Photoshop Fix, Photoshop Mix, Photoshop Sketch, Photoshop Album, Photoshop Sketch, and Photoshop Camera.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 823,
+            "productName": "Ajax",
+            "vendorName": "General Technology",
+            "productAttributes": [
+              "Application Development Tools",
+              "Application Development"
+            ],
+            "productLocations": 94,
+            "firstVerifiedDate": "2001-06-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6361,
+            "productDescription": "Ajax (Asynchronous JavaScript and XML) is a web application development platform designed for web developers. It enables users to create approaches to develop web applications, exchange data between web browsers and servers, and update web pages asynchronously. Features include browser built-in XMLHttpRequest object, document object model (DOM), style sheet cascading, navigation, and browser data manipulation.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 22,
+            "productName": "Salesforce CRM",
+            "vendorName": "Salesforce.com, Inc.",
+            "productAttributes": [
+              "Sales Intelligence",
+              "Software as a Service (SaaS)",
+              "Customer Success",
+              "Customer Relationship Management",
+              "Sales"
+            ],
+            "productLocations": 390,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6186,
+            "productDescription": "Salesforce CRM is a customer relationship-building and sustainability platform designed for businesses across industries. It enables users to unite teams around customers, get actionable insights from data, attract prospects, and retain customers. Features include information analysis, MuleSoft integration, business intelligence (BI) support, workflow management, and customer compliance maintenance.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 1237,
+            "productName": "Apple",
+            "vendorName": "Apple, Inc.",
+            "productAttributes": [
+              "Operating System (OS)",
+              "Tablet",
+              "Laptop",
+              "IT Infrastructure and Management"
+            ],
+            "productLocations": 214,
+            "firstVerifiedDate": "2000-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 6161,
+            "productDescription": "Apple is a suite of electronic products designed for businesses across industries. These products enable users to create documents, artwork, music, and videos for personal or professional purposes, collaborate on projects, and access entertainment options (music, streaming, gaming). Products include Mac (MacBook Air, MacBook Pro, iMac, Max mini); iPad (iPad Pro, iPad Air, iPad mini); iPhone (iPhone 15 Pro, iPhone 15, iPhone 14, iPhone SE); Watch ( Apple Watch Series 9, Apple Watch Ultra 2); AirPods (AirPods Pro 2nd generation, AirPods 3rd generation, and AirPods Max), Apple TV, HomePod, Entertainment, and Accessories.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 24,
+            "productName": "Microsoft SharePoint",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Document Management & Creation Software",
+              "Content Collaboration Platform",
+              "Communications Technology",
+              "AI-Assisted Tools",
+              "Intranet",
+              "Computing",
+              "Content Management",
+              "Networking",
+              "Communications"
+            ],
+            "productLocations": 378,
+            "firstVerifiedDate": "2004-10-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5975,
+            "productDescription": "Microsoft SharePoint is a web-based team collaboration software designed for businesses across industries. It enables users to share and manage content, knowledge, and applications to optimize teamwork, collaborate with team members across devices, and streamline workflows to create digital experiences. Features include a mobile intranet, website customization, content management, and lists and libraries.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 1091,
+            "productName": "Apache Hadoop",
+            "vendorName": "The Apache Software Foundation",
+            "productAttributes": [
+              "NoSQL",
+              "Open Source",
+              "Big Data",
+              "High Performance Computing (HPC)",
+              "Programming Library",
+              "Data Storage Software",
+              "Software Framework",
+              "Computing",
+              "Data Management"
+            ],
+            "productLocations": 246,
+            "firstVerifiedDate": "2007-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5918,
+            "productDescription": "Apache Hadoop is an open-source software library designed for production and research teams. It enables users to distribute the processing of data sets across clusters of computers, and identify and handle failures at the application layer. Modules include Hadoop Common, Hadoop Distributed File System, Hadoop YARN, and Hadoop MapReduce.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 4734,
+            "productName": "Adobe Illustrator",
+            "vendorName": "Adobe, Inc.",
+            "productAttributes": [
+              "Media Software",
+              "Graphic Design Software",
+              "2D Computer Graphics",
+              "3D Modeling",
+              "Computer Graphics Rendering",
+              "Visualization",
+              "Software - Other"
+            ],
+            "productLocations": 155,
+            "firstVerifiedDate": "2000-12-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5833,
+            "productDescription": "Adobe Illustrator is a vector graphics editing software designed for individuals, designers, artists, and illustrators. It enables users to create logos, illustrations, icons, and typography; edit shapes, paths, lines, curves, and other vector elements with precision and control; and see trends, discover insights, and make decisions. Features include review insights, auto-adjusting, slider support, and a Quick Pen tool.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 826,
+            "productName": "PHP",
+            "vendorName": "The PHP Group",
+            "productAttributes": [
+              "Programming Language",
+              "Open Source",
+              "Computing"
+            ],
+            "productLocations": 104,
+            "firstVerifiedDate": "2000-12-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5801,
+            "productDescription": "PHP (HyperText Preprocessor) is a general-purpose scripting language designed for programmers and web developers. It enables users to create websites, incorporate them into HTML, and set up web servers to handle HTML files containing PHP code. Features include deprecated dynamic properties, performance optimization, Mersenne Twister algorithm support, and backward compatibility.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 511,
+            "productName": "Cisco",
+            "vendorName": "Cisco Systems, Inc.",
+            "productAttributes": [
+              "Network Management Hardware",
+              "Firewall",
+              "Router",
+              "Endpoint Detection and Response (EDR)",
+              "Security",
+              "Networking"
+            ],
+            "productLocations": 314,
+            "firstVerifiedDate": "2000-02-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5698,
+            "productDescription": "Cisco is a software, network, and cyber security solution suite designed for the education, IT, finance, and manufacturing sectors. These products enable users to segment workloads, protect against vulnerabilities, and address fundamental cybersecurity challenges; mitigate operating expenses with AI-powered analytics; and simplify access networks, converging services with programmable routers. Products include Networking (Cisco Catalyst 8300 Series and Cisco Access Networking), Security (Cisco Secure Firewall and Cisco XDR), and Collaboration (Cisco Contact Center and Cisco Call Control).",
+            "countryCode": "US"
+          },
+          {
+            "productId": 35,
+            "productName": "Microsoft 365",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Software as a Service (SaaS)",
+              "Content Collaboration Platform",
+              "Communications"
+            ],
+            "productLocations": 1389,
+            "firstVerifiedDate": "2010-10-02",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5687,
+            "productDescription": "Microsoft 365 (formerly Office 365) is a suite of productivity software, collaboration and cloud-based services designed for businesses across sectors. These products enable users to create, share, and collaborate in a centralized location; store bulk files in the cloud; and track updates, tasks, and comments across files. Products include Microsoft 365 Personal, Microsoft 365 Family, Microsoft 365 Apps for Business, Office 365 Enterprise, Microsoft 365 Education, and Office 365 operated by 21Vianet.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 15908,
+            "productName": "Microsoft Project",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Project Cost Management",
+              "Software as a Service (SaaS)",
+              "Process Optimization",
+              "Content Collaboration Platform",
+              "Communications",
+              "Business Management"
+            ],
+            "productLocations": 340,
+            "firstVerifiedDate": "2002-12-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5655,
+            "productDescription": "Microsoft Project is a project management tool designed for businesses across industries. It enables users to plan projects with dynamic scheduling capability, visualize status, and build desktop or mobile experiences with automated workflows. Features include pre-built reports, roadmap options, resource management, coauthoring ability, and timesheet submission.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 8426,
+            "productName": "R Project",
+            "vendorName": "Open Source",
+            "productAttributes": [
+              "Open Source",
+              "Programming Language",
+              "AI-Assisted Tools",
+              "Computing"
+            ],
+            "productLocations": 232,
+            "firstVerifiedDate": "2002-03-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5602,
+            "productDescription": "R Project is a programming language and software environment for graphics and statistical computing. It enables users to comply and run on UNIX platforms, produce publication-quality plots like mathematical symbols and formulae, and manipulate and calculate data. Features include data handling, a suite of operators, a coherent system, and a CRAN mirror.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 13681,
+            "productName": "Node.js",
+            "vendorName": "OpenJS Foundation",
+            "productAttributes": [
+              "Open Source",
+              "Application Development Tools",
+              "Application Development"
+            ],
+            "productLocations": 378,
+            "firstVerifiedDate": "2009-05-28",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5517,
+            "productDescription": "Node.js is an open-source, cross-platform, JavaScript runtime environment designed for developers. It enables users to build scalable network applications, create a web library or framework based on requirements, and share sockets between processes. Features include an event-driven architecture, asynchronous I/O support, scalability, unified API, and project governance.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 21574,
+            "productName": "Spring",
+            "vendorName": "VMware, LLC",
+            "productAttributes": [
+              "Software Framework",
+              "Application Development Tools",
+              "Computing",
+              "Application Development"
+            ],
+            "productLocations": 93,
+            "firstVerifiedDate": "2005-09-01",
+            "lastVerifiedDate": "2026-04-29",
+            "intensity": 5506,
+            "productDescription": "Spring is a Java framework designed for developers. It enables users to build applications using \"plain old Java objects\" (POJOs), manage object dependencies to assemble and configure applications, and schedule and prioritize work based on SLAs. Features include production-grade, asynchronous nonblocking, map-reduce frameworks, and cloud-based data services.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 630,
+            "productName": "Microsoft Visio",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Diagramming",
+              "Data Visualization",
+              "Visualization"
+            ],
+            "productLocations": 157,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5483,
+            "productDescription": "Microsoft Visio (formerly Microsoft Office Visio) is a flowchart maker and diagramming software designed for businesses across industries. It enables users to create visuals with premade templates, starter diagrams, and stencils, build a social distancing workspace with scalable templates, and simplify the system design process. Features include organizational charts, network diagrams, brainstorming, data privacy, and real-time collaboration.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 95,
+            "productName": "Autodesk",
+            "vendorName": "Autodesk, Inc.",
+            "productAttributes": [
+              "CAD/CAE/CAM",
+              "AI-Assisted Tools",
+              "Visualization",
+              "Computing"
+            ],
+            "productLocations": 437,
+            "firstVerifiedDate": "2001-02-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5483,
+            "productDescription": "Autodesk is a suite of 3D modeling, digital prototyping, visualization, and collaboration tools designed for businesses across industries. These products enable users to create building and infrastructure designs, optimize projects, improve predictability in the field, increase stakeholder buy-in and project predictability, connect to Fusion 360 to access next-generation capabilities and collaboration, automatically maintain an audit trail, and build sophisticated effects at scale with the ability to run Bifrost on up to 15 machines. Products include Revit, Autodesk Docs, 3DS Max, AutoCAD, Fusion 360, and Navisworks Manage.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 22199,
+            "productName": "MathWorks",
+            "vendorName": "The MathWorks, Inc.",
+            "productAttributes": [
+              "Data Visualization",
+              "Visualization"
+            ],
+            "productLocations": 199,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5356,
+            "productDescription": "MathWorks is a suite of mathematical computing software designed for engineers and scientists. These products enable users to analyze data, develop algorithms and create models; run simulations, test and verify embedded systems; and visualize progress. Products include MATLAB (Parallel Computing Toolbox, Curve Fitting Toolbox, Optimization Toolbox, MATLAB Coder, MATLAB Compiler) and Simulink (SimEvents, Simscape Driveline, Simscape Multibody, Simulink Real-Time, Simulink Compiler, Polyspace Code Prover).",
+            "countryCode": "US"
+          },
+          {
+            "productId": 17265,
+            "productName": "MathWorks MATLAB",
+            "vendorName": "The MathWorks, Inc.",
+            "productAttributes": [
+              "Numerical Analysis",
+              "Programming Language",
+              "Computing",
+              "Data Analysis"
+            ],
+            "productLocations": 198,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5356,
+            "productDescription": "MathWorks MATLAB (MATrix LABoratory) is a programming and numeric computing platform designed for engineers and scientists. It enables users to analyze data, develop algorithms, and create models. Features include graphics visualization, programming, external language interface, parallelized simulation, and data source integration.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 622,
+            "productName": "Microsoft SQL Server",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "RDBMS",
+              "Database Administration Tools",
+              "NoSQL",
+              "Data Management"
+            ],
+            "productLocations": 160,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5297,
+            "productDescription": "Microsoft SQL Server is a performance and security management platform designed for data administrators. It enables users to query and analyze the data state to gain insights, choose the desired language and platform with open-source support, and improve the stability and response time of the database. Features include mobile BI support, built-in threat detection, in-memory database capability, Kubernetes support, and application migration.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 24035,
+            "productName": "Microsoft Data Platform",
+            "vendorName": "Microsoft Corporation",
+            "productAttributes": [
+              "Data Center Infrastructure Management",
+              "Data Warehouse",
+              "IT Infrastructure and Management",
+              "Data Management"
+            ],
+            "productLocations": 160,
+            "firstVerifiedDate": "2001-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5297,
+            "productDescription": "Microsoft Data Platform is a comprehensive suite of data-related technologies and services designed for data scientists and businesses across industries. It enables users to manage, analyze, and derive insights from data, build, deploy, and integrate intelligent applications, and automate routine tasks (reporting, data entry, scheduling). Components include Microsoft SQL Server, Azure SQL Database, Azure Cosmos DB, Azure Data Factory, Azure Data Lake Storage, Azure HDInsight, and Power BI.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 25435,
+            "productName": "Objective-C",
+            "vendorName": "Apple, Inc.",
+            "productAttributes": [
+              "Programming Language",
+              "Computing"
+            ],
+            "productLocations": 55,
+            "firstVerifiedDate": "2007-01-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5247,
+            "productDescription": "Objective-C is a programming language designed for developers. It enables users to create customized classes, build applications for OS X or iOS, and schedule tasks for concurrent or asynchronous execution. Features include dynamic runtime support, object graph management, Grand Central Dispatch (GCD) technology, built-in protocols, and error handling capability.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 94,
+            "productName": "AutoCAD",
+            "vendorName": "Autodesk, Inc.",
+            "productAttributes": [
+              "CAD/CAE/CAM",
+              "3D Modeling",
+              "Visualization"
+            ],
+            "productLocations": 432,
+            "firstVerifiedDate": "2001-02-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5192,
+            "productDescription": "AutoCAD is a computer-aided design and drafting software designed for architects, engineers, and construction professionals. It enables users to organize and annotate 2D geometry and 3D models with solids, surfaces, and mesh objects, automate tasks (comparing drawings, counting objects), annotate drawings, and create a customized workspace to handle productivity with add-on apps and APIs. Features include AutoCAD LISP API, block palette, counting automation, Autodesk Docs support, and sheet set manager.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 19637,
+            "productName": "Adobe Creative Cloud",
+            "vendorName": "Adobe, Inc.",
+            "productAttributes": [
+              "Computer Graphics Rendering",
+              "Media Software",
+              "Software as a Service (SaaS)",
+              "Data Visualization",
+              "Visualization",
+              "Software - Other"
+            ],
+            "productLocations": 189,
+            "firstVerifiedDate": "2011-10-02",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 5064,
+            "productDescription": "Adobe Creative Cloud (CC) is a comprehensive suite of visual content creation tools designed for creators and illustrators. These products enable users to create, edit, and manage visual content (graphic design, video editing, web development), facilitate collaboration through cloud-based storage and share projects, and receive regular updates. Products include graphic design (Photoshop, Illustrator, Adobe Express, and Indesign), video (Animate, After Effects), marketing (Acrobat Pro), photo (Lightroom, Lightroom Classic), and illustration (Fresco, Adobe Firefly)",
+            "countryCode": "US"
+          },
+          {
+            "productId": 818,
+            "productName": "jQuery",
+            "vendorName": "OpenJS Foundation",
+            "productAttributes": [
+              "Programming Language",
+              "Programming Library",
+              "Open Source",
+              "Computing"
+            ],
+            "productLocations": 54,
+            "firstVerifiedDate": "2007-02-01",
+            "lastVerifiedDate": "2026-04-28",
+            "intensity": 4988,
+            "productDescription": "jQuery is a JavaScript library designed for programmers and developers. It enables users to create objects with elements, simplify and streamline working with the Document Object Model (DOM), create dynamic and interactive web pages using JavaScript, manipulate HTML elements, handle events, create animations and effects on a web page, and update content. Features include cross-browser compatibility, built-in animations, Ajax support, content management, and event triggering.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 21,
+            "productName": "Oracle PeopleSoft",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Process Optimization",
+              "Talent Management",
+              "Payroll",
+              "Benefits Administration",
+              "Workforce Planning",
+              "Customer Success",
+              "Sales Force Automation",
+              "HR",
+              "Business Management",
+              "Sales"
+            ],
+            "productLocations": 73,
+            "firstVerifiedDate": "2005-01-01",
+            "lastVerifiedDate": "2026-04-19",
+            "intensity": 4944,
+            "productDescription": "Oracle PeopleSoft is an enterprise software suite designed for businesses across industries. These products enable users to address business requirements, customize modules to align with workflow, and monitor performance metrics and key indicators. Products include PeopleSoft Human Capital Management (HCM), PeopleSoft Enterprise Learning Management, PeopleSoft Order Management, PeopleSoft eProcurement, and PeopleSoft Project Portfolio Management.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 32341,
+            "productName": "JSON",
+            "vendorName": "Open Source",
+            "productAttributes": [
+              "Open Source",
+              "Database Administration Tools",
+              "Data Management"
+            ],
+            "productLocations": 121,
+            "firstVerifiedDate": "2006-11-10",
+            "lastVerifiedDate": "2026-04-17",
+            "intensity": 4942,
+            "productDescription": "JSON (JavaScript Object Notation) is a data-interchange format designed for programmers. It enables users to store and transport data, convert JSON data into native JavaScript objects, and display it on a web page. Features include value collection, programming language support, object management, and text conversion.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 11047,
+            "productName": "Apache Hive",
+            "vendorName": "The Apache Software Foundation",
+            "productAttributes": [
+              "Open Source",
+              "Data Warehouse",
+              "Data Management"
+            ],
+            "productLocations": 121,
+            "firstVerifiedDate": "2010-10-03",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 4930,
+            "productDescription": "Apache Hive is a distributed, fault-tolerant data warehouse system designed for database administrators. It enables users to read, write, and manage petabytes of data using SQL and optimize SQL queries with a cost-based query optimizer (CBO) and query execution framework. Modules include Hive-Server 2, Hive Metastore Server, Hive ACID, Hive Data Compaction, Hive Replication, and Hive LLAP.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 18053,
+            "productName": "Git SCM",
+            "vendorName": "Open Source",
+            "productAttributes": [
+              "Open Source",
+              "Version Control",
+              "Programming Language",
+              "Application Development",
+              "Computing"
+            ],
+            "productLocations": 124,
+            "firstVerifiedDate": "2009-01-16",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 4905,
+            "productDescription": "Git SCM is an open-source distributed version control system designed for project developers. It enables users to track changes to source code and documents, manage discrepancies and resolve conflicts, and create tags to mark specific points in the project's history. Features include context switching, multiple backups, centralized workflow, and GitLab support.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 19798,
+            "productName": "Oracle Analytics Cloud",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Data Center Infrastructure Management",
+              "Data Storage Software",
+              "Predictive Analytics",
+              "Data Analysis",
+              "Data Management",
+              "IT Infrastructure and Management"
+            ],
+            "productLocations": 76,
+            "firstVerifiedDate": "2006-03-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 4899,
+            "productDescription": "Oracle Analytics Cloud is a cloud-based collaborative analytics platform designed for data analysts. It enables users to review and visualize data, manage disparate data inputs, analyze information by creating reports and dashboards, as well as access diagnostic logs for troubleshooting issues. Features include patching, lifecycle management automation, SSH access capability, database management, backup management, and load balancing optimization.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 21520,
+            "productName": "Oracle Business Analytics",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Data Warehouse",
+              "Data Center Infrastructure Management",
+              "IT Infrastructure and Management",
+              "Data Management"
+            ],
+            "productLocations": 76,
+            "firstVerifiedDate": "2006-03-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 4897,
+            "productDescription": "Oracle Business Analytics is a suite of cloud and on-premises data processing and prediction evaluation solutions designed for business users, data engineers, and data scientists. These products enable users to access workflow for connecting, preparing, modeling, and consuming business insights. Solutions include Oracle Analytics Platform, Oracle Fusion ERP Analytics, Oracle Fusion HCM Analytics, and Oracle Analytics mobile app.",
+            "countryCode": "US"
+          },
+          {
+            "productId": 31857,
+            "productName": "Oracle Business Intelligence (BI)",
+            "vendorName": "Oracle Corporation",
+            "productAttributes": [
+              "Enterprise Feedback Management",
+              "Data Warehouse",
+              "Data Management",
+              "Business Management"
+            ],
+            "productLocations": 76,
+            "firstVerifiedDate": "2006-03-01",
+            "lastVerifiedDate": "2026-04-30",
+            "intensity": 4883,
+            "productDescription": "Oracle Business Intelligence (BI) is a portfolio of integrated enterprise performance management (EPM) systems designed for business analysts, executives, financial teams, and IT departments. These products enable users to create actionable intelligence from data flowing through the process in real-time, define strategic goals and objectives with Oracle Scorecard and Strategy Management, and visualize data. Products include Oracle Business Intelligence Server, Oracle Business Intelligence Answers, Oracle Business Intelligence Dashboards, Oracle Business Intelligence Delivers, and Oracle Business Intelligence Publisher.",
+            "countryCode": "US"
+          }
+        ],
+        "totalCount": 50,
+        "lastUpdated": "2026-05-18T02:22:32.311Z"
+      }
+    },
+    "missing_data": [
+      "country"
+    ],
+    "icp_user_floors": {
+      "min_revenue_usd": 10000000,
+      "min_employees": 200,
+      "min_it_spend_usd": 1000000
+    },
+    "created_at": "2026-05-20T06:41:18Z"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "seller-profile-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build a seller profile JSON from HG Insights company data",
+  "scripts": {
+    "start": "python3 cli.py",
+    "profile:seller": "python3 profile_cli.py",
+    "pipeline": "python3 pipeline_cli.py",
+    "prs": "python3 prs_company_cli.py",
+    "prs:company": "python3 prs_company_cli.py",
+    "demo:web": "streamlit run streamlit_app.py"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "iteration": "Test",
+  "prospects": [
+    {
+      "rank": 1,
+      "company_name": "6Sigma EPCM",
+      "domain": "6s.co.za",
+      "prospect_revenue_score": 19.79,
+      "reliability_pct": "42%",
+      "reliability_raw": 0.425,
+      "sales_card": {
+        "rank": 1,
+        "company_name": "6Sigma EPCM",
+        "domain": "6s.co.za",
+        "prs": 19.79,
+        "prs_display": "19.8",
+        "prospect_revenue_score_line": "**Prospect Revenue Score:** 19.8/100",
+        "prs_calculation_lines": [
+          "- Company Size Fit = 33.3/100 because the score uses the stronger signal: revenue score 33.3 from $10.0M revenue, employee score 2 from 200 employees.",
+          "- Technology Category Need = 0/100 because the category `HG technographic product` is known, but `company_technographic` did not return a usable installed-product intensity in that category.",
+          "- Purchase Intent Signal = 0/100 because `company_intent` returned no matched topic score for `Alexa Certify`.",
+          "- Product Adoption Momentum = 50/100 because `company_install_time_series` did not find the target product; the scoring engine uses a neutral momentum value.",
+          "- Estimated IT Budget Capacity is not included in the PRS because it is not calculable.",
+          "- Final PRS = weighted average of calculable criteria only (active weight: 80%) = 19.8/100."
+        ],
+        "reliability_pct": "42%",
+        "reliability_detail_lines": [
+          "**PRS score reliability:** 42%",
+          "",
+          "- Company Size Fit: **2/2** HG fields (`company_firmographic.revenue`, `company_firmographic.employeeCount`) → reliability **100%**",
+          "- Estimated IT Budget Capacity: **0/2** HG fields (none among expected: `company_spend.spendByCategory[Total IT].totalSpendAmount`, `company_spend.unknownRowCount`) → reliability **0%**",
+          "- Technology Category Need: **1/2** HG fields (`list_product_categories (category)` (missing: `company_technographic.products.intensity`)) → reliability **50%**",
+          "- Purchase Intent Signal: **0/3** HG fields (none among expected: `company_intent.topics[].score`, `company_intent.topics[].last_seen_at`, `intent topic match`) → reliability **0%**",
+          "- Product Adoption Momentum: **0/1** HG fields (none among expected: `company_install_time_series.products[].intensity_momentum`) → reliability **50%**"
+        ],
+        "reliability_raw": 0.425,
+        "best_sales_opportunity": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "weakest_fit": "**No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+        "recommended_sales_angle": "Validate budget, category adjacency, and timing before proposing a deal structure.",
+        "strategic_interest": "Moderate strategic fit — confirm budget and technographics in discovery.",
+        "what_to_sell": "Lead with **Alexa Certify** (HG SKU: `Alexa Certify`).",
+        "timing": "No HG intent on the bound topic — build timing from business triggers only.",
+        "strongest_infrastructure_signal": "HG tracks **6** products at this domain. Category **`HG technographic product`** is identified but max intensity is 0 — limited proof of database-adjacent spend in HG.",
+        "sale_blockers": [
+          "HG `company_spend` did not return a usable Total IT line — budget capacity unverified."
+        ],
+        "sales_positive_signals": [],
+        "sales_risk_signals": [
+          "- **No intent evidence:** HG returned no `company_intent` topic match for `bound intent topic` — do not claim active buying signal in outreach.",
+          "- **Data gap:** PRS score reliability 42% — validate HG spend and technographics before prospection calls."
+        ],
+        "seller_impact_bullets": [
+          "- HG category **`HG technographic product`** drives Technology Category Need.",
+          "- Intent topic **`None`** drives Purchase Intent Signal.",
+          "- Product line **Alexa Certify** selected in `seller_profile.json`."
+        ],
+        "comparative_notes": [
+          "Highest Prospect Revenue Score: **6Sigma EPCM** (19.8/100).",
+          "Strongest Technology Category Need: **6Sigma EPCM** (intensity score 0/100).",
+          "Weakest Purchase Intent signals: **no prospect** shows HG intent on the product topic.",
+          "Highest PRS score reliability: **6Sigma EPCM** (42%).",
+          "Lowest PRS score reliability in cohort: **6Sigma EPCM** (42%)."
+        ]
+      },
+      "criteria": {
+        "company_size_fit": {
+          "display_name": "Company Size Fit",
+          "score": 33.333333333333336,
+          "reliability_pct": "100%",
+          "reliability_raw": 1.0,
+          "weight": 0.25,
+          "contribution": 8.33,
+          "raw_inputs": {
+            "revenue": 10000000.0,
+            "employees": 200.0,
+            "revenue_usd": 10000000.0,
+            "employee_count": 200.0,
+            "revenue_raw": "From $10,000,000 to $49,999,999",
+            "employees_raw": "From 200 to 499",
+            "data_source": "company_firmographic"
+          },
+          "explanation": "Account scale from HG revenue/headcount (rev=10000000.0, emp=200.0)."
+        },
+        "estimated_it_budget_capacity": {
+          "display_name": "Estimated IT Budget Capacity",
+          "score": null,
+          "reliability_pct": "0%",
+          "reliability_raw": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "it_budget": null,
+            "unknown_row_count": null,
+            "it_budget_usd": null,
+            "data_source": "company_firmographic"
+          },
+          "explanation": "IT budget from Total IT spend line when available; drives funding capacity."
+        },
+        "technology_category_need": {
+          "display_name": "Technology Category Need",
+          "score": 0.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "intensity_max": null,
+            "category_name": "HG technographic product",
+            "max_category_intensity": null
+          },
+          "explanation": "Max HG intensity in 'HG technographic product' category among installed products."
+        },
+        "purchase_intent_signal": {
+          "display_name": "Purchase Intent Signal",
+          "score": 0.0,
+          "reliability_pct": "0%",
+          "reliability_raw": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0,
+          "raw_inputs": {
+            "topic_score": null,
+            "last_seen_at": null,
+            "intent_topic": "Alexa Certify",
+            "intent_score": null
+          },
+          "explanation": "Purchase intent from HG topic score with freshness tiers."
+        },
+        "product_adoption_momentum": {
+          "display_name": "Product Adoption Momentum",
+          "score": 50.0,
+          "reliability_pct": "50%",
+          "reliability_raw": 0.5,
+          "weight": 0.15,
+          "contribution": 7.5,
+          "raw_inputs": {
+            "intensity_momentum": null,
+            "series_found": false,
+            "time_series_found": false
+          },
+          "explanation": "HG intensity_momentum on the bound seller SKU (24 months): rising, flat, or declining."
+        }
+      },
+      "notes": [
+        "company_spend: Error executing company_spend: Tool 'company_spend' execution failed: Company spend lookup failed: No spend data found for company: 6s.co.za. This error cannot be fixed by retrying with the same parameters. Report this error to the user."
+      ]
+    }
+  ]
+}
