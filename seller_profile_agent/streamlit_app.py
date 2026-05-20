@@ -224,11 +224,6 @@ with tab_pipeline:
             "Output folder name under outputs/",
             placeholder="e.g. demo, test_mai (optional)",
         )
-        enrich = st.checkbox(
-            "Enrich IT spend for every ICP row (slow)",
-            value=False,
-            help="1 HG call per candidate — use only for audits",
-        )
 
         log_box = st.empty()
 
@@ -251,7 +246,7 @@ with tab_pipeline:
                             run_name=run_name.strip() or None,
                             sample_seed=int(sample_seed) if sample_seed > 0 else None,
                             profile_slug=prof["slug"],
-                            enrich_icp_it_spend=enrich,
+                            enrich_icp_it_spend=False,
                             on_log=on_log,
                         )
                         st.session_state.pipeline_logs = out.get("logs") or logs
