@@ -74,6 +74,8 @@ if "profile_slug" not in st.session_state:
     st.session_state.profile_slug = None
 if "pipeline_logs" not in st.session_state:
     st.session_state.pipeline_logs = []
+if "profile_company_input_prev" not in st.session_state:
+    st.session_state.profile_company_input_prev = ""
 
 tab_profile, tab_pipeline, tab_prs, tab_reports = st.tabs(
     ["1 · Seller profile", "2 · Pipeline", "3 · Single PRS", "Reports"]
@@ -83,6 +85,13 @@ tab_profile, tab_pipeline, tab_prs, tab_reports = st.tabs(
 with tab_profile:
     st.subheader("Step 1 — Seller profile & ICP floors")
     company_input = st.text_input("Seller company name", placeholder="e.g. Amazon, Microsoft")
+    current_company_key = company_input.strip().lower()
+    previous_company_key = str(st.session_state.profile_company_input_prev).strip().lower()
+    if current_company_key != previous_company_key:
+        st.session_state.prefetch = None
+        st.session_state.profile_slug = None
+        st.session_state.product_labels = []
+        st.session_state.profile_company_input_prev = company_input.strip()
 
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -192,27 +201,17 @@ with tab_pipeline:
 
         c1, c2, c3 = st.columns(3)
         with c1:
-            product_index = st.number_input("Product index", min_value=1, max_value=20, value=1)
+            fixed_product_index = int(prof.get("product_index") or 1)
+            st.text_input("Product index", value=str(fixed_product_index), disabled=True)
         with c2:
             prs_count = st.number_input("Deep PRS count", min_value=1, max_value=10, value=3)
         with c3:
-            sample_seed = st.number_input(
-                "Sample seed (optional)",
-                min_value=0,
-                value=0,
-                help="0 = random each run",
-            )
+            st.markdown("")
 
         run_name = st.text_input(
             "Output folder name under outputs/",
             placeholder="e.g. demo, test_mai (optional)",
         )
-        enrich = st.checkbox(
-            "Enrich IT spend for every ICP row (slow)",
-            value=False,
-            help="1 HG call per candidate — use only for audits",
-        )
-
         log_box = st.empty()
 
         if st.button("Run full pipeline", type="primary"):
@@ -229,12 +228,12 @@ with tab_pipeline:
                     try:
                         out = run_pipeline_web(
                             company=prof["company_name"],
-                            product_index=int(product_index),
+                            product_index=fixed_product_index,
                             prs_count=int(prs_count),
                             run_name=run_name.strip() or None,
-                            sample_seed=int(sample_seed) if sample_seed > 0 else None,
+                            sample_seed=None,
                             profile_slug=prof["slug"],
-                            enrich_icp_it_spend=enrich,
+                            enrich_icp_it_spend=False,
                             on_log=on_log,
                         )
                         st.session_state.pipeline_logs = out.get("logs") or logs

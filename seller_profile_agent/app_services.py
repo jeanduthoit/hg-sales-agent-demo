@@ -88,6 +88,14 @@ def list_seller_profiles() -> list[dict[str, Any]]:
             seller = payload.get("seller_profile") or payload
             sel = seller.get("selected_product") or {}
             binding = sel.get("hg_binding") or {}
+            selected_name = (binding.get("hg_product_name") or sel.get("product_name") or "").strip().lower()
+            product_index = 1
+            for item in seller.get("available_products") or []:
+                name = str(item.get("product_name") or "").strip().lower()
+                pid = item.get("id")
+                if selected_name and name == selected_name and isinstance(pid, int):
+                    product_index = pid
+                    break
             rows.append(
                 {
                     "path": path,
@@ -95,6 +103,7 @@ def list_seller_profiles() -> list[dict[str, Any]]:
                     "company_name": seller.get("company_name") or path.stem,
                     "domain": seller.get("domain") or "",
                     "product_name": binding.get("hg_product_name") or sel.get("product_name") or "—",
+                    "product_index": product_index,
                     "mtime": path.stat().st_mtime,
                 }
             )
@@ -135,7 +144,28 @@ def build_seller_profile_web(
     apply_streamlit_secrets()
     client = HgMcpClient()
     company = company.strip()
-    guess_slug = (slug or company).strip().lower()
+    company_slug = company.lower()
+    resolved_prefetch: dict[str, Any] | None = None
+    if prefetch:
+        pre_company = str(prefetch.get("company_name") or "").strip().lower()
+        pre_domain = str(prefetch.get("domain") or "").strip().lower()
+        if (
+            company_slug == pre_company
+            or company_slug in pre_company
+            or pre_company in company_slug
+            or company_slug == pre_domain
+            or company_slug in pre_domain
+        ):
+            resolved_prefetch = prefetch
+
+    guess_slug = (
+        _output_slug(
+            str(resolved_prefetch.get("company_name") or company),
+            str(resolved_prefetch.get("domain") or ""),
+        )
+        if resolved_prefetch
+        else company_slug
+    )
     profile_path = profile_path_for_slug(guess_slug)
 
     stored_floors = read_icp_user_floors(profile_path)
@@ -144,7 +174,7 @@ def build_seller_profile_web(
 
     if needs_full:
         path, payload = build_seller_profile(
-            client, company, product_index, prefetch=prefetch, icp_floors=icp_floors
+            client, company, product_index, prefetch=resolved_prefetch, icp_floors=icp_floors
         )
     else:
         path, payload = update_product_binding_only(
