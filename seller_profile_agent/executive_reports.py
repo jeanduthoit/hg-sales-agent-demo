@@ -11,7 +11,6 @@ from typing import Any
 from comparative_insights import build_comparative_insights
 from icp_funnel import (
     build_icp_funnel_context,
-    render_icp_funnel_section,
 )
 from iteration_manager import slugify_run_name
 from methodology_formulas import (
@@ -23,90 +22,12 @@ from methodology_formulas import (
 from prs_criteria import CRITERION_ORDER, display_name
 from prs_engine import ProspectScore
 from report_format import (
-    fmt_money,
     format_criterion_reliability_line,
     prospect_revenue_score_line,
     reliability_pct,
     score_display,
 )
 from sales_insights import build_prospect_card
-
-
-def _render_icp_vs_seller_clarity(seller_profile: dict[str, Any], icp_ctx: dict[str, Any] | None) -> str:
-    """
-    Prevent readers from confusing user-entered ICP floors with the seller's own HG firmographics.
-    """
-    icp_meta = seller_profile.get("ideal_customer_profile") or {}
-    user_defined = bool(icp_meta.get("user_defined_floors"))
-    user_floors = seller_profile.get("icp_user_floors") or {}
-
-    lines: list[str] = [
-        "### ICP thresholds vs seller company (HG)",
-        "",
-    ]
-    if user_defined:
-        lines.extend(
-            [
-                "The **minimum revenue, employee count, and IT spend** applied to **prospect** `search_companies` "
-                "are the **Ideal Customer Profile floors you entered** when building the seller profile. "
-                "They describe **who you want to sell to**, not the seller firm’s own HG revenue or headcount "
-                "(unless you intentionally typed the same numbers).",
-                "",
-            ]
-        )
-        if user_floors:
-            lines.append("**Your ICP floors (inputs):**")
-            lines.append("")
-            mr = user_floors.get("min_revenue_usd")
-            me = user_floors.get("min_employees")
-            mit = user_floors.get("min_it_spend_usd")
-            if mr is not None:
-                lines.append(f"- Minimum revenue (prospect filter): **{fmt_money(mr)}**")
-            if me is not None:
-                lines.append(f"- Minimum employees (prospect filter): **{int(me):,}**")
-            if mit is not None:
-                lines.append(f"- Minimum IT spend (prospect filter): **{fmt_money(mit)}**")
-            lines.append("")
-    else:
-        lines.extend(
-            [
-                "Numeric ICP floors in `ideal_customer_profile` were **derived heuristically** from the seller’s "
-                "HG firmographics (legacy / non-interactive profile build), not typed by you. "
-                "See `seller_profile.json` → `ideal_customer_profile`.",
-                "",
-            ]
-        )
-
-    raw = seller_profile.get("raw_hg_data_used") or {}
-    firmo = raw.get("firmographic") or {}
-    rev = firmo.get("revenue") or firmo.get("revenueAmount")
-    emp = firmo.get("employeeCount") or firmo.get("employees")
-    it_sp = firmo.get("itSpend") or firmo.get("it_spend")
-
-    lines.append("**Seller company — HG firmographics (reference only, not your ICP input):**")
-    lines.append("")
-    lines.append("| Field | Value (HG) |")
-    lines.append("|-------|------------|")
-    rev_cell = fmt_money(rev) if rev not in (None, "") else "N/A"
-    try:
-        emp_cell = f"{int(float(emp)):,}" if emp not in (None, "") else "N/A"
-    except (TypeError, ValueError):
-        emp_cell = str(emp) if emp not in (None, "") else "N/A"
-    it_cell = fmt_money(it_sp) if it_sp not in (None, "") else "N/A"
-    if rev_cell == "N/A" and seller_profile.get("revenue_range"):
-        rev_cell = str(seller_profile.get("revenue_range"))
-    if emp_cell == "N/A" and seller_profile.get("company_size"):
-        emp_cell = str(seller_profile.get("company_size"))
-    lines.append(f"| Revenue | {rev_cell} |")
-    lines.append(f"| Employees | {emp_cell} |")
-    lines.append(f"| IT spend (firmographic, if present) | {it_cell} |")
-    lines.append("")
-
-    if icp_ctx:
-        lines.append("**How prospects were filtered this run:**")
-        lines.append("")
-        lines.extend(render_icp_funnel_section(icp_ctx))
-    return "\n".join(lines)
 
 
 def _prospect_to_json(prospect: ProspectScore, card: dict[str, Any]) -> dict[str, Any]:
@@ -184,8 +105,6 @@ def _render_executive_summary(
     for weight, name, definition in PRS_FORMULA_BULLETS:
         lines.append(f"- {weight} **{name}** — {definition}")
     lines.append("")
-    lines.append(_render_icp_vs_seller_clarity(seller_profile, icp_ctx))
-    lines.append("")
 
     lines.extend(["### Randomly Picked Companies From ICP Candidates", ""])
     if results:
@@ -224,21 +143,6 @@ def _render_impact_section_brief(
     selected = seller_profile.get("selected_product") or {}
     binding = selected.get("hg_binding") or {}
     category = binding.get("hg_category_name") or selected.get("product_category") or ""
-    icp_meta = seller_profile.get("ideal_customer_profile") or {}
-    user_defined = bool(icp_meta.get("user_defined_floors"))
-    if user_defined:
-        icp_floors_explain = (
-            "- **ICP numeric floors** (minimum prospect revenue / employees / IT spend) → **the thresholds you typed** "
-            "for your Ideal Customer Profile when building `seller_profile.json`. HG applies them to **prospects** via "
-            "`search_companies` (`revenueMin`, `employeesMin`, row checks) and deep `company_spend` for PRS. "
-            "**They are not the seller company’s own HG firmographic headcount or revenue unless you matched them on purpose.** "
-            "See the Executive Summary section above for a side-by-side with seller HG firmographics."
-        )
-    else:
-        icp_floors_explain = (
-            "- **ICP numeric floors** → derived heuristically from the seller’s HG firmographics when no user floors exist "
-            "(legacy / non-interactive build). See `ideal_customer_profile` in `seller_profile.json` and the Executive Summary above."
-        )
     lines = [
         "## 3. Seller Product Impact Analysis",
         "",
@@ -248,8 +152,10 @@ def _render_impact_section_brief(
         "",
         f"- **Seller product excluded from candidates** (`{binding.get('hg_product_name', '')}`) → excluded at ICP via "
         "`search_companies.excludeTechnologies`, so the candidate pool focuses on accounts that do not already use the sold product.",
-        icp_floors_explain,
-        f"- **Product sold by the sales user:** {selected.get('product_name', '')} → chosen during seller profile setup (CLI or Streamlit).",
+        "- **Minimum company size required for ICP** (revenue / employees / IT spend vs seller) → computed from seller `company_firmographic`; "
+        "`revenueMin` and `employeesMin` are sent to `search_companies`, while IT spend is checked when present "
+        "and measured in deep scoring with `company_spend`.",
+        f"- **Product sold by the sales user:** {selected.get('product_name', '')} → selected in the terminal.",
         "  - `methodology_binding.py` matches this business label to HG catalog data: product/SKU, category, intent topic, and competitor products.",
         "  - It then uses those HG parameters to build the ICP filters used by `search_companies`.",
         "",

@@ -25,7 +25,6 @@ from prompt_inputs import (
 )
 from prospect_scorer import score_prospect
 from methodology_formulas import PROSPECT_REVENUE_SCORE_NAME, WEIGHTED_RELIABILITY_LABEL
-from prospect_preflight import preflight_firmographic
 from report_format import fmt_money, reliability_pct
 from score_cli import _load_binding
 from seller_profile_builder import build_seller_profile, update_product_binding_only
@@ -83,16 +82,9 @@ def _render_candidate_companies_md(
     category_applied = bool(attempted.get("technologies"))
     product_exclusion_applied = bool(attempted.get("excludeTechnologies"))
     missing_rows = hygiene.get("removed_missing_domain_rows") or []
-    invalid_rows = hygiene.get("removed_invalid_domain_rows") or []
     duplicate_rows = hygiene.get("removed_duplicate_domain_rows") or []
     seller_rows = hygiene.get("removed_seller_domain_rows") or []
     missing_summary = "; ".join(row.get("company_name") or "Unknown" for row in missing_rows)
-    invalid_summary = "; ".join(
-        (
-            f"{row.get('company_name') or 'Unknown'} (`{row.get('normalized_domain') or row.get('raw_domain') or ''}`)"
-        )
-        for row in invalid_rows
-    )
     duplicate_summary = "; ".join(
         (
             f"{row.get('company_name') or 'Unknown'} (`{row.get('domain') or ''}`, "
@@ -193,10 +185,6 @@ def _render_candidate_companies_md(
         "  - Meaning: HG returned a company row, but neither `domain` nor `companyDomain` provided a usable value.",
         "  - Why removed: if no usable domain is available and `companyId` is serialized in scientific notation, the agent has no reliable identifier for the next deep calls (`company_firmographic`, `company_spend`, `company_technographic`, `company_intent`).",
         f"  - Rows removed: {missing_summary or 'none'}.",
-        f"- Removed because domain format failed hygiene: **{hygiene.get('removed_invalid_domain', 0)}**",
-        "  - Meaning: normalized host looked malformed (invalid labels/TLD), so deep HG company calls are unreliable.",
-        "  - Why removed: prevent wasting Step 3 scoring attempts on domains that almost always fail firmographic resolution.",
-        f"  - Rows removed: {invalid_summary or 'none'}.",
         f"- Removed because domain was duplicated: **{hygiene.get('removed_duplicate_domain', 0)}**",
         "  - Meaning: HG returned another company row with a domain already seen earlier in the same search response.",
         "  - Why removed: we want distinct companies in the candidate list, not several subsidiaries or rows attached to the same corporate website.",
@@ -406,17 +394,11 @@ def _run_pipeline_body(
 
     _log(f"--- Step 3/3: Deep analysis of prospects to score deeply ---")
     sampled_rows, sample_stats = sample_icp_candidates(candidates, prs_count, seed=sample_seed)
-    full_pool_rows, _ = sample_icp_candidates(candidates, len(candidates), seed=sample_seed)
-    sampled_domains = {
-        (row.get("domain") or row.get("companyDomain") or "").lower().strip()
-        for row in sampled_rows
-    }
-    replacement_rows = [
-        row
-        for row in full_pool_rows
-        if (row.get("domain") or row.get("companyDomain") or "").lower().strip() not in sampled_domains
-    ]
     candidate_stats["sample"] = sample_stats
+    (iteration_dir / "sampled_prospects.json").write_text(
+        json.dumps({"stats": sample_stats, "prospects": sampled_rows}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
     _log(
         f"  Randomly selected {len(sampled_rows)} companies from "
         f"{len(candidates)} ICP-compatible candidates."
@@ -428,87 +410,18 @@ def _run_pipeline_body(
     binding_loaded = _load_binding(seller)
     results = []
     skipped: list[dict[str, Any]] = []
-    scored_domains: set[str] = set()
-    selected_trace: list[dict[str, Any]] = []
-    preflight_stats: dict[str, Any] = {
-        "attempted": 0,
-        "passed": 0,
-        "failed": 0,
-    }
-    initial_queue = list(sampled_rows)
-    queue = initial_queue + replacement_rows
-
-    for idx, row in enumerate(queue, start=1):
-        if len(results) >= prs_count:
-            break
+    for row in sampled_rows:
         domain = row.get("domain") or "?"
-        domain_key = str(domain).lower().strip()
-        if domain_key in scored_domains:
-            continue
-        scored_domains.add(domain_key)
-        source = "initial_sample" if idx <= len(initial_queue) else "replacement_candidate"
-        preflight_stats["attempted"] += 1
-        pf = preflight_firmographic(client, row)
-        if not pf.get("scorable"):
-            preflight_stats["failed"] += 1
-            reason = str(pf.get("reason") or "preflight_not_scorable")
-            _log(f"  Skipping ({source}): {domain} — preflight failed: {reason}")
-            skipped.append(
-                {
-                    "domain": domain,
-                    "reason": f"preflight_failed: {reason}",
-                    "selection_source": source,
-                }
-            )
-            continue
-        preflight_stats["passed"] += 1
-        row_for_scoring = {
-            **row,
-            "domain": pf.get("canonical_domain") or (row.get("domain") or row.get("companyDomain")),
-            "companyDomain": pf.get("canonical_domain") or (row.get("domain") or row.get("companyDomain")),
-            "companyName": pf.get("company_name") or row.get("companyName"),
-            "_preflight": pf,
-        }
-        _log(f"  Scoring ({source}): {domain}...")
+        _log(f"  Scoring: {domain}...")
         try:
-            scored = score_prospect(client, row_for_scoring, binding_loaded)
-            results.append(scored)
-            selected_trace.append(
-                {
-                    **row,
-                    "sample_position": len(selected_trace) + 1,
-                    "sample_status": "selected_for_deep_prs",
-                    "selection_source": source,
-                }
-            )
+            results.append(score_prospect(client, row, binding_loaded))
         except Exception as exc:  # noqa: BLE001
             _log(f"    Skipped: {exc}")
-            skipped.append({"domain": domain, "reason": str(exc), "selection_source": source})
+            skipped.append({"domain": domain, "reason": str(exc)})
 
     if not results:
         _log("ERROR: no prospects scored.")
         return 1
-    if len(results) < prs_count:
-        _log(
-            f"  Warning: requested {prs_count} deep PRS scores but only {len(results)} were scorable "
-            f"after trying {len(scored_domains)} candidates."
-        )
-
-    sampled_payload_stats = {
-        **sample_stats,
-        "preflight": preflight_stats,
-        "replacement_pool_count": len(replacement_rows),
-        "replacement_attempts": max(0, len(scored_domains) - len(initial_queue)),
-        "attempted_count": len(scored_domains),
-        "scored_count": len(results),
-        "skipped_count": len(skipped),
-        "final_selected_count": len(selected_trace),
-    }
-    (iteration_dir / "sampled_prospects.json").write_text(
-        json.dumps({"stats": sampled_payload_stats, "prospects": selected_trace}, indent=2, ensure_ascii=False)
-        + "\n",
-        encoding="utf-8",
-    )
 
     _log("\n--- Reports: Markdown + JSON ---")
     results.sort(key=lambda r: r.prs, reverse=True)
@@ -518,9 +431,6 @@ def _run_pipeline_body(
     candidate_stats["deep_prs"] = {
         "requested_count": prs_count,
         "sampled_count": len(sampled_rows),
-        "preflight": preflight_stats,
-        "replacement_pool_count": len(replacement_rows),
-        "attempted_count": len(scored_domains),
         "scored_count": len(results),
         "skipped": skipped,
     }
@@ -619,7 +529,7 @@ def main() -> int:
 
     if interactive:
         print("=== PRS Pipeline — manual input ===")
-        last = load_last_profile_run()
+        last = load_last_profile_run() if company is None else None
         if last and company is None:
             company = last.get("company_name") or last["company_input"]
             profile_slug = last.get("company_slug")
@@ -636,16 +546,7 @@ def main() -> int:
             slug = company.strip().lower()
             profile_path = PROFILE_DIR / f"seller_profile_{slug}.json"
             if product_index is None:
-                if last and last.get("company_slug") == slug:
-                    product_index = int(last["product_index"])
-                    profile_slug = last.get("company_slug")
-                    pname = last.get("product_name") or "—"
-                    print(
-                        f"\nReusing seller profile product #{product_index} from last `npm run profile:seller` "
-                        f"({pname}). Pass `--product-index N` to override.\n"
-                    )
-                else:
-                    product_index = prompt_product_index(profile_path, default=1)
+                product_index = prompt_product_index(profile_path, default=1)
         if prs_count is None:
             prs_count = prompt_prs_count(3)
         if run_name is None and not ask_run_name:

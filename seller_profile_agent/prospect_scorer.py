@@ -27,44 +27,6 @@ def _company_args(domain: str, hg_id: str | None) -> dict[str, Any]:
     return {"companyDomain": domain}
 
 
-def _fetch_firmographic_with_fallback(
-    client: HgMcpClient,
-    *,
-    domain: str,
-    hg_id: str | None,
-) -> tuple[dict[str, Any] | None, str | None, str]:
-    """
-    Resolve firmographics robustly.
-
-    HG rows can have fragile identifiers (or domains that don't resolve). We try both
-    key types before failing so deep PRS can proceed whenever one identifier works.
-    """
-    attempts: list[tuple[str, dict[str, Any]]] = []
-    if hg_id:
-        attempts.append(("hg_id", {"hg_id": hg_id}))
-    if domain:
-        attempts.append(("companyDomain", {"companyDomain": domain}))
-    if hg_id and domain:
-        # Try reverse order as last resort for inconsistent records.
-        attempts.append(("companyDomain_fallback", {"companyDomain": domain}))
-        attempts.append(("hg_id_fallback", {"hg_id": hg_id}))
-
-    seen_args: set[str] = set()
-    tried: list[str] = []
-    for label, args in attempts:
-        key = str(sorted(args.items()))
-        if key in seen_args:
-            continue
-        seen_args.add(key)
-        tried.append(f"{label}={args}")
-        payload, err = client.call_tool_safe("company_firmographic", args)
-        if err:
-            continue
-        if payload and payload.get("found"):
-            return payload, None, "; ".join(tried)
-    return None, "not_found_or_unresolvable", "; ".join(tried)
-
-
 def _pick_total_it_spend(spend_payload: dict[str, Any]) -> tuple[float | None, Any]:
     rows = spend_payload.get("spendByCategory") or spend_payload.get("categories") or []
     unknown = spend_payload.get("unknownRowCount")
@@ -208,15 +170,9 @@ def score_prospect(
 
     firmo = preflight.get("firmographic")
     if not firmo:
-        firmo, ferr, tried = _fetch_firmographic_with_fallback(
-            client,
-            domain=domain,
-            hg_id=hg_id,
-        )
-        if not firmo:
-            raise HgMcpError(
-                f"Firmographic required but failed for {domain}: {ferr}; tried {tried}"
-            )
+        firmo, err = client.call_tool_safe("company_firmographic", base_args)
+        if err or not firmo or not firmo.get("found"):
+            raise HgMcpError(f"Firmographic required but failed for {domain}: {err}")
     mcp_evidence["firmographic"] = {"found": True, "domain": domain}
 
     revenue_raw = firmo.get("revenue") or firmo.get("revenueAmount")

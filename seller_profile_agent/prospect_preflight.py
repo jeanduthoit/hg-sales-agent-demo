@@ -16,16 +16,6 @@ SEARCH_REVENUE_BUCKET_FLOORS = {
     1_000_000_000,
 }
 SEARCH_EMPLOYEE_BUCKET_FLOORS = {200, 500, 1000, 5000, 10000}
-COMPOUND_PUBLIC_SUFFIXES = {
-    "co.uk",
-    "org.uk",
-    "ac.uk",
-    "gov.uk",
-    "com.br",
-    "com.tr",
-    "com.au",
-    "co.in",
-}
 
 
 def normalize_hg_id(raw: Any) -> str | None:
@@ -70,25 +60,6 @@ def resolve_canonical_domain(firmo: dict[str, Any], fallback: str) -> str:
     )
 
 
-def _domain_candidates(search_domain: str) -> list[str]:
-    """Try full domain first, then registrable/root fallbacks for subdomains."""
-    domain = (search_domain or "").strip().lower().split("/")[0]
-    if domain.startswith("www."):
-        domain = domain[4:]
-    out: list[str] = []
-    if domain:
-        out.append(domain)
-    parts = domain.split(".")
-    if len(parts) >= 3:
-        last2 = ".".join(parts[-2:])
-        if last2 not in out:
-            out.append(last2)
-        last3 = ".".join(parts[-3:])
-        if ".".join(parts[-2:]) in COMPOUND_PUBLIC_SUFFIXES and last3 not in out:
-            out.append(last3)
-    return out
-
-
 def preflight_firmographic(
     client: HgMcpClient,
     row: dict[str, Any],
@@ -99,29 +70,20 @@ def preflight_firmographic(
     search_domain = (row.get("domain") or row.get("companyDomain") or "").lower().strip()
     hg_id = normalize_hg_id(row.get("companyId"))
 
-    if not hg_id and not search_domain:
+    args: dict[str, Any] = {}
+    if hg_id:
+        args["hg_id"] = hg_id
+    elif search_domain:
+        args["companyDomain"] = search_domain
+    else:
         return {"scorable": False, "reason": "missing_domain", "search_domain": search_domain}
 
-    attempts: list[dict[str, Any]] = []
-    if hg_id:
-        attempts.append({"hg_id": hg_id})
-    for dom in _domain_candidates(search_domain):
-        attempts.append({"companyDomain": dom})
-
-    firmo = None
-    err = None
-    tried: list[str] = []
-    for args in attempts:
-        tried.append(str(args))
-        firmo, err = client.call_tool_safe("company_firmographic", args)
-        if not err and firmo and firmo.get("found"):
-            break
+    firmo, err = client.call_tool_safe("company_firmographic", args)
     if err or not firmo or not firmo.get("found"):
         return {
             "scorable": False,
             "reason": f"firmographic_miss: {err or 'not found'}",
             "search_domain": search_domain,
-            "tried": tried,
         }
 
     canonical = resolve_canonical_domain(firmo, search_domain)
