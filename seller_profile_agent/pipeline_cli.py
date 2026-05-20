@@ -406,7 +406,7 @@ def _run_pipeline_body(
 
     # Quietly pre-check a limited random pool for firmographic resolvability
     # so Step 3 can usually score the requested prospect count.
-    screening_pool = min(len(candidates), max(prs_count * 4, 8))
+    screening_pool = min(len(candidates), prs_count * 4)
     screening_rows, _ = sample_icp_candidates(candidates, screening_pool, seed=sample_seed)
     screened: list[dict[str, Any]] = []
     for row in screening_rows:
