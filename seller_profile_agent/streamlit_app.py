@@ -201,25 +201,15 @@ with tab_pipeline:
         prof = profile_options[selected_label]
         st.session_state.profile_slug = prof["slug"]
 
-        last = load_last_profile_run()
-        default_pi = 1
-        if last and last.get("company_slug") == prof["slug"]:
-            default_pi = int(last["product_index"])
-            st.caption(
-                f"Using seller profile’s product **#{default_pi}** "
-                f"({last.get('product_name', '—')}) — change only if you want a different SKU."
-            )
+        fixed_product_index = int(prof.get("product_index") or 1)
+        st.caption(
+            f"Using fixed seller profile product **#{fixed_product_index}** "
+            f"({prof.get('product_name', '—')})."
+        )
 
         c1, c2, c3 = st.columns(3)
         with c1:
-            product_index = st.number_input(
-                "Product index",
-                min_value=1,
-                max_value=20,
-                value=default_pi,
-                key=f"pipeline_pi_{prof['slug']}",
-                help="Matches the product line saved in seller_profile.json for this company.",
-            )
+            st.text_input("Product index", value=str(fixed_product_index), disabled=True)
         with c2:
             prs_count = st.number_input("Deep PRS count", min_value=1, max_value=10, value=3)
         with c3:
@@ -256,7 +246,7 @@ with tab_pipeline:
                     try:
                         out = run_pipeline_web(
                             company=prof["company_name"],
-                            product_index=int(product_index),
+                            product_index=fixed_product_index,
                             prs_count=int(prs_count),
                             run_name=run_name.strip() or None,
                             sample_seed=int(sample_seed) if sample_seed > 0 else None,

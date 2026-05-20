@@ -88,6 +88,14 @@ def list_seller_profiles() -> list[dict[str, Any]]:
             seller = payload.get("seller_profile") or payload
             sel = seller.get("selected_product") or {}
             binding = sel.get("hg_binding") or {}
+            selected_name = (binding.get("hg_product_name") or sel.get("product_name") or "").strip().lower()
+            product_index = 1
+            for item in seller.get("available_products") or []:
+                name = str(item.get("product_name") or "").strip().lower()
+                pid = item.get("id")
+                if selected_name and name == selected_name and isinstance(pid, int):
+                    product_index = pid
+                    break
             rows.append(
                 {
                     "path": path,
@@ -95,6 +103,7 @@ def list_seller_profiles() -> list[dict[str, Any]]:
                     "company_name": seller.get("company_name") or path.stem,
                     "domain": seller.get("domain") or "",
                     "product_name": binding.get("hg_product_name") or sel.get("product_name") or "—",
+                    "product_index": product_index,
                     "mtime": path.stat().st_mtime,
                 }
             )
