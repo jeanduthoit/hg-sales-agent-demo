@@ -22,6 +22,7 @@ from app_services import (
     read_text_if_exists,
     run_pipeline_web,
     run_single_prs_web,
+    streamlit_secret_debug,
 )
 
 st.set_page_config(
@@ -46,10 +47,19 @@ with st.sidebar:
     else:
         st.error("Not configured")
         st.markdown(
-            "Set **`HG_MCP_URL`** in Streamlit secrets or your environment, "
-            "or configure `hg-insights` in `~/.cursor/mcp.json`."
+            "**Streamlit Cloud:** open your app → **⚙️ Settings** → **Secrets**, "
+            "paste the block below, click **Save**, then **⋮ → Reboot app**."
         )
-        st.code('HG_MCP_URL = "https://…"', language="toml")
+        st.code(
+            'HG_MCP_URL = "https://phoenix.hginsights.com/api/ai/…/mcp"',
+            language="toml",
+        )
+        dbg = streamlit_secret_debug()
+        if dbg.get("secret_keys") is not None and not dbg.get("has_hg_mcp_url"):
+            st.warning(
+                f"Secrets loaded but **`HG_MCP_URL` is missing**. "
+                f"Keys found: `{', '.join(dbg['secret_keys']) or '(none)'}`"
+            )
 
     st.divider()
     profiles = list_seller_profiles()

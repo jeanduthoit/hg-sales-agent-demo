@@ -32,15 +32,39 @@ PRS_REPORTS_DIR = ROOT / "output" / "prs_reports"
 
 
 def apply_streamlit_secrets() -> None:
-    """Use Streamlit Cloud secrets for HG_MCP_URL when present."""
+    """Load HG_MCP_URL from env or Streamlit Cloud secrets into os.environ."""
+    if os.environ.get("HG_MCP_URL", "").strip():
+        return
     try:
         import streamlit as st
 
-        url = (st.secrets.get("HG_MCP_URL") or "").strip()
-        if url:
-            os.environ["HG_MCP_URL"] = url
+        candidates: list[str] = []
+        for key in ("HG_MCP_URL", "hg_mcp_url"):
+            if key in st.secrets:
+                candidates.append(str(st.secrets[key]))
+        if "hg" in st.secrets and "mcp_url" in st.secrets.get("hg", {}):
+            candidates.append(str(st.secrets["hg"]["mcp_url"]))
+        for raw in candidates:
+            url = raw.strip()
+            if url:
+                os.environ["HG_MCP_URL"] = url
+                return
     except Exception:
         pass
+
+
+def streamlit_secret_debug() -> dict[str, Any]:
+    """Non-sensitive hints when HG_MCP_URL is missing on Streamlit Cloud."""
+    info: dict[str, Any] = {"has_env": bool(os.environ.get("HG_MCP_URL", "").strip())}
+    try:
+        import streamlit as st
+
+        keys = list(st.secrets.keys()) if hasattr(st.secrets, "keys") else []
+        info["secret_keys"] = keys
+        info["has_hg_mcp_url"] = "HG_MCP_URL" in st.secrets
+    except Exception as exc:
+        info["secrets_error"] = str(exc)
+    return info
 
 
 def hg_connection_status() -> dict[str, Any]:

@@ -1,0 +1,1 @@
+-r seller_profile_agent/requirements.txt
