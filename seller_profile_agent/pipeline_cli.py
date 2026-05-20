@@ -25,6 +25,7 @@ from prompt_inputs import (
 )
 from prospect_scorer import score_prospect
 from methodology_formulas import PROSPECT_REVENUE_SCORE_NAME, WEIGHTED_RELIABILITY_LABEL
+from prospect_preflight import preflight_firmographic
 from report_format import fmt_money, reliability_pct
 from score_cli import _load_binding
 from seller_profile_builder import build_seller_profile, update_product_binding_only
@@ -418,6 +419,11 @@ def _run_pipeline_body(
     skipped: list[dict[str, Any]] = []
     scored_domains: set[str] = set()
     selected_trace: list[dict[str, Any]] = []
+    preflight_stats: dict[str, Any] = {
+        "attempted": 0,
+        "passed": 0,
+        "failed": 0,
+    }
     initial_queue = list(sampled_rows)
     queue = initial_queue + replacement_rows
 
@@ -430,9 +436,31 @@ def _run_pipeline_body(
             continue
         scored_domains.add(domain_key)
         source = "initial_sample" if idx <= len(initial_queue) else "replacement_candidate"
+        preflight_stats["attempted"] += 1
+        pf = preflight_firmographic(client, row)
+        if not pf.get("scorable"):
+            preflight_stats["failed"] += 1
+            reason = str(pf.get("reason") or "preflight_not_scorable")
+            _log(f"  Skipping ({source}): {domain} — preflight failed: {reason}")
+            skipped.append(
+                {
+                    "domain": domain,
+                    "reason": f"preflight_failed: {reason}",
+                    "selection_source": source,
+                }
+            )
+            continue
+        preflight_stats["passed"] += 1
+        row_for_scoring = {
+            **row,
+            "domain": pf.get("canonical_domain") or (row.get("domain") or row.get("companyDomain")),
+            "companyDomain": pf.get("canonical_domain") or (row.get("domain") or row.get("companyDomain")),
+            "companyName": pf.get("company_name") or row.get("companyName"),
+            "_preflight": pf,
+        }
         _log(f"  Scoring ({source}): {domain}...")
         try:
-            scored = score_prospect(client, row, binding_loaded)
+            scored = score_prospect(client, row_for_scoring, binding_loaded)
             results.append(scored)
             selected_trace.append(
                 {
@@ -457,6 +485,7 @@ def _run_pipeline_body(
 
     sampled_payload_stats = {
         **sample_stats,
+        "preflight": preflight_stats,
         "replacement_pool_count": len(replacement_rows),
         "replacement_attempts": max(0, len(scored_domains) - len(initial_queue)),
         "attempted_count": len(scored_domains),
@@ -478,6 +507,7 @@ def _run_pipeline_body(
     candidate_stats["deep_prs"] = {
         "requested_count": prs_count,
         "sampled_count": len(sampled_rows),
+        "preflight": preflight_stats,
         "replacement_pool_count": len(replacement_rows),
         "attempted_count": len(scored_domains),
         "scored_count": len(results),
